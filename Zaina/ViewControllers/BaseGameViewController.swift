@@ -29,15 +29,19 @@ class BaseGameViewController: UIViewController {
       for object2 in subviews {
         if object1 != object2 { 
           if object1.frame.intersects(object2.frame) {
+            object1.onCollisionEnter(with: object2)
+            object2.onCollisionEnter(with: object1)
             objectsDidCollide(object1: object1, object2: object2)
+            return
+          } else {
+            object1.onCollisionEnter(with: nil)
+            object2.onCollisionEnter(with: nil)
           }
         }
       }
     }
   }
 
-  func objectsDidCollide(object1: Object, object2: Object) {
-
-  }
+  func objectsDidCollide(object1: Object, object2: Object) { }
 
 }

@@ -1,5 +1,5 @@
 //
-//  Player.swift
+//  Sprite.swift
 //  Zaina
 //
 //  Created by abedalkareem omreyh on 7/21/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Player: Object {
+class Sprite: Object {
 
   let imageView = UIImageView()
 
@@ -20,8 +20,17 @@ class Player: Object {
     }
   }
 
-  var speed = 5
+  var speed: CGFloat = 5 {
+    didSet {
+      xSpeed = speed
+      ySpeed = speed
+    }
+  }
   var frames = Frames()
+  var stopWhenCollideTyps = [Int]()
+
+  private var xSpeed: CGFloat = 5
+  private var ySpeed: CGFloat = 5
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -74,9 +83,26 @@ class Player: Object {
     imageView.frame = bounds
   }
 
+  override func onCollisionEnter(with object: Object?) {
+    guard let object = object, stopWhenCollideTyps.contains(object.type) else {
+      xSpeed = speed
+      ySpeed = speed
+      return
+    }
+
+    let x = frame.origin.x
+    let y = frame.origin.y
+    let objectX = object.frame.origin.x
+    let objectY = object.frame.origin.x
+
+    frame.origin.x += (x > objectX ? (speed * 0.5) : (speed * -0.5))
+    frame.origin.y += (y > objectY ? (speed * -0.5) : (speed * 0.5))
+
+  }
+
   func moveWith(x: CGFloat, y: CGFloat, direction: Direction?) {
-    frame.origin.x += (5*x)
-    frame.origin.y += (5*y)
+    frame.origin.x += (xSpeed*x)
+    frame.origin.y += (ySpeed*y)
     self.direction = direction ?? .center
   }
 }

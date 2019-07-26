@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: BaseGameViewController {
 
-  var player: Player!
+  var player: Sprite!
   var analog: Analog?
   var pointsLabel: UILabel!
 
@@ -28,6 +28,7 @@ class ViewController: BaseGameViewController {
     (0...10).forEach({ _ in addRandomFood() })
     setupController()
     setupPointsLabel()
+    addTree()
   }
 
   private func setupPointsLabel() {
@@ -36,6 +37,15 @@ class ViewController: BaseGameViewController {
     pointsLabel.font = UIFont(name: "RetroComputer", size: 17)
     view.addSubview(pointsLabel)
     points = 0
+  }
+
+  private func addTree() {
+    let randomX = (100..<Int(view.bounds.width - 50)).randomElement() ?? 0
+    let randomY = (100..<Int(view.bounds.height - 50)).randomElement() ?? 0
+    let node = Node(frame: CGRect(x: randomX, y: randomY, width: 142, height: 165))
+    node.image = #imageLiteral(resourceName: "tree2")
+    node.type = 3
+    view.addSubview(node)
   }
 
   private func setupBackground() {
@@ -53,24 +63,25 @@ class ViewController: BaseGameViewController {
   }
 
   private func setupPlayer() {
-    player = Player(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+    player = Sprite(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
     player.frames.top = [#imageLiteral(resourceName: "top2"), #imageLiteral(resourceName: "top1")]
     player.frames.left = [#imageLiteral(resourceName: "left2"), #imageLiteral(resourceName: "left1")]
     player.frames.right = [#imageLiteral(resourceName: "right2"), #imageLiteral(resourceName: "right1")]
     player.frames.bottom = [#imageLiteral(resourceName: "bottom1"), #imageLiteral(resourceName: "bottom2")]
     player.frames.idel = [#imageLiteral(resourceName: "idel"), #imageLiteral(resourceName: "idel2")]
+    player.stopWhenCollideTyps = [3]
     player.type = 1
     view.addSubview(player)
   }
 
   private func addRandomFood() {
-    let food = [#imageLiteral(resourceName: "chocolate"),#imageLiteral(resourceName: "apple"),#imageLiteral(resourceName: "chicken"),#imageLiteral(resourceName: "cookie"),#imageLiteral(resourceName: "watermelon")]
+    let food = [#imageLiteral(resourceName: "chocolate"),#imageLiteral(resourceName: "apple"),#imageLiteral(resourceName: "chicken"),#imageLiteral(resourceName: "cookie"),#imageLiteral(resourceName: "watermelon"),#imageLiteral(resourceName: "cacke2"),#imageLiteral(resourceName: "soup"),#imageLiteral(resourceName: "eggs"),#imageLiteral(resourceName: "cacke1")]
     let randomX = (50..<Int(view.bounds.width - 50)).randomElement() ?? 0
     let randomY = (50..<Int(view.bounds.height - 50)).randomElement() ?? 0
-    let enemy = Node(frame: CGRect(x: randomX, y: randomY, width: 40, height: 40))
-    enemy.image = food.randomElement()
-    enemy.type = 2
-    view.addSubview(enemy)
+    let node = Node(frame: CGRect(x: randomX, y: randomY, width: 40, height: 40))
+    node.image = food.randomElement()
+    node.type = 2
+    view.addSubview(node)
   }
 
   override func update() {
@@ -84,9 +95,7 @@ class ViewController: BaseGameViewController {
     if object1.type == 2 {
       object1.removeFromSuperview()
       points += 1
-    }
-
-    if object2.type == 2 {
+    } else if object2.type == 2 {
       object2.removeFromSuperview()
       points += 1
     }

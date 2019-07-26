@@ -13,5 +13,6 @@ class Object: UIView {
   var id: String = { return UUID().uuidString }()
 
   var type = 0
-  
+
+  func onCollisionEnter(with object: Object?) { }
 }
