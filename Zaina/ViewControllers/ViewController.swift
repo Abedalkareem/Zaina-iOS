@@ -12,18 +12,30 @@ class ViewController: BaseGameViewController {
 
   var player: Player!
   var analog: Analog?
+  var pointsLabel: UILabel!
+
+  var points = 0 {
+    didSet {
+      pointsLabel.text = "\(points) Points"
+    }
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
     setupBackground()
-
     setupPlayer()
-
-    setupEnemy()
-
+    (0...10).forEach({ _ in addRandomFood() })
     setupController()
+    setupPointsLabel()
+  }
 
+  private func setupPointsLabel() {
+    pointsLabel = UILabel(frame: CGRect(x: view.bounds.width-130, y: 10, width: 130, height: 30))
+    pointsLabel.textColor = .white
+    pointsLabel.font = UIFont(name: "RetroComputer", size: 17)
+    view.addSubview(pointsLabel)
+    points = 0
   }
 
   private func setupBackground() {
@@ -33,6 +45,7 @@ class ViewController: BaseGameViewController {
 
   private func setupController() {
     let controller = Controller(frame: CGRect(x: 20, y: view.bounds.height - 170, width: 150, height: 150))
+    controller.alpha = 0.7
     view.addSubview(controller)
     controller.analogDidMove { (analog) in
       self.analog = analog
@@ -46,17 +59,17 @@ class ViewController: BaseGameViewController {
     player.frames.right = [#imageLiteral(resourceName: "right2"), #imageLiteral(resourceName: "right1")]
     player.frames.bottom = [#imageLiteral(resourceName: "bottom1"), #imageLiteral(resourceName: "bottom2")]
     player.frames.idel = [#imageLiteral(resourceName: "idel"), #imageLiteral(resourceName: "idel2")]
+    player.type = 1
     view.addSubview(player)
   }
 
-  private func setupEnemy() {
-    let enemy = Player(frame: CGRect(x: 200, y: 200, width: 50, height: 50))
-    enemy.frames.top = [#imageLiteral(resourceName: "top2"), #imageLiteral(resourceName: "top1")]
-    enemy.frames.left = [#imageLiteral(resourceName: "left2"), #imageLiteral(resourceName: "left1")]
-    enemy.frames.right = [#imageLiteral(resourceName: "right2"), #imageLiteral(resourceName: "right1")]
-    enemy.frames.bottom = [#imageLiteral(resourceName: "bottom1"), #imageLiteral(resourceName: "bottom2")]
-    enemy.frames.idel = [#imageLiteral(resourceName: "idel"), #imageLiteral(resourceName: "idel2")]
-    enemy.direction = .center
+  private func addRandomFood() {
+    let food = [#imageLiteral(resourceName: "chocolate"),#imageLiteral(resourceName: "apple"),#imageLiteral(resourceName: "chicken"),#imageLiteral(resourceName: "cookie"),#imageLiteral(resourceName: "watermelon")]
+    let randomX = (50..<Int(view.bounds.width - 50)).randomElement() ?? 0
+    let randomY = (50..<Int(view.bounds.height - 50)).randomElement() ?? 0
+    let enemy = Node(frame: CGRect(x: randomX, y: randomY, width: 40, height: 40))
+    enemy.image = food.randomElement()
+    enemy.type = 2
     view.addSubview(enemy)
   }
 
@@ -65,6 +78,18 @@ class ViewController: BaseGameViewController {
     let x: CGFloat = analog?.x ?? 0
     let y: CGFloat = analog?.y ?? 0
     player.moveWith(x: x, y: y, direction: analog?.direction)
+  }
+
+  override func objectsDidCollide(object1: Object, object2: Object) {
+    if object1.type == 2 {
+      object1.removeFromSuperview()
+      points += 1
+    }
+
+    if object2.type == 2 {
+      object2.removeFromSuperview()
+      points += 1
+    }
   }
 
 }

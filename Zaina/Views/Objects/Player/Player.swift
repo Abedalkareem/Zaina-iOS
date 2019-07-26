@@ -78,6 +78,5 @@ class Player: Object {
     frame.origin.x += (5*x)
     frame.origin.y += (5*y)
     self.direction = direction ?? .center
-
   }
 }

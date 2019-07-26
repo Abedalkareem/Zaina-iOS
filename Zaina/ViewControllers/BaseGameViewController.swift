@@ -20,20 +20,24 @@ class BaseGameViewController: UIViewController {
 
   @objc
   func update() {
-    objectsDidColide()
+    checkIfObjectsCollided()
   }
 
-  func objectsDidColide() {
-    let subviews = view.subviews.filter({ $0 is Object })
-    for subview in subviews {
-      for subView2 in subviews {
-        if subview != subView2 {
-          if subview.frame.intersects(subView2.frame) {
-
-            print("fucking yea! \((subview as! Object).id), \((subView2 as! Object).id)")
+  func checkIfObjectsCollided() {
+    let subviews = view.subviews.compactMap({ $0 as? Object })
+    for object1 in subviews {
+      for object2 in subviews {
+        if object1 != object2 { 
+          if object1.frame.intersects(object2.frame) {
+            objectsDidCollide(object1: object1, object2: object2)
           }
         }
       }
     }
   }
+
+  func objectsDidCollide(object1: Object, object2: Object) {
+
+  }
+
 }

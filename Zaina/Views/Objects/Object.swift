@@ -12,5 +12,6 @@ class Object: UIView {
 
   var id: String = { return UUID().uuidString }()
 
+  var type = 0
   
 }

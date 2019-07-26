@@ -20,6 +20,8 @@
 		C67BC1B522EAD78500C7D44E /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1B422EAD78500C7D44E /* Direction.swift */; };
 		C67BC1B722EAD79C00C7D44E /* Analog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1B622EAD79C00C7D44E /* Analog.swift */; };
 		C67BC1BA22EAD9AD00C7D44E /* Frames.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1B922EAD9AD00C7D44E /* Frames.swift */; };
+		C67BC1BC22EAE91E00C7D44E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1BB22EAE91E00C7D44E /* Node.swift */; };
+		C67BC1BE22EAECA500C7D44E /* pixel_font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C67BC1BD22EAECA200C7D44E /* pixel_font.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		C67BC1B422EAD78500C7D44E /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		C67BC1B622EAD79C00C7D44E /* Analog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analog.swift; sourceTree = "<group>"; };
 		C67BC1B922EAD9AD00C7D44E /* Frames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frames.swift; sourceTree = "<group>"; };
+		C67BC1BB22EAE91E00C7D44E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		C67BC1BD22EAECA200C7D44E /* pixel_font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pixel_font.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				C6792AF322E4D142000A34A6 /* Assets.xcassets */,
+				C67BC1BD22EAECA200C7D44E /* pixel_font.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 				C67BC1B822EAD9A100C7D44E /* Player */,
 				C6792B0922E4D3FB000A34A6 /* Object.swift */,
 				C67BC1B222EAC86E00C7D44E /* Background.swift */,
+				C67BC1BB22EAE91E00C7D44E /* Node.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -220,6 +226,7 @@
 			files = (
 				C6792AF722E4D142000A34A6 /* LaunchScreen.storyboard in Resources */,
 				C6792AF422E4D142000A34A6 /* Assets.xcassets in Resources */,
+				C67BC1BE22EAECA500C7D44E /* pixel_font.ttf in Resources */,
 				C6792AF222E4D140000A34A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +241,7 @@
 				C6792B1422E5EF43000A34A6 /* Controller.swift in Sources */,
 				C6792B0A22E4D3FB000A34A6 /* Object.swift in Sources */,
 				C6792B0822E4D385000A34A6 /* Player.swift in Sources */,
+				C67BC1BC22EAE91E00C7D44E /* Node.swift in Sources */,
 				C67BC1B322EAC86E00C7D44E /* Background.swift in Sources */,
 				C6792AEF22E4D140000A34A6 /* ViewController.swift in Sources */,
 				C6792AED22E4D140000A34A6 /* AppDelegate.swift in Sources */,
