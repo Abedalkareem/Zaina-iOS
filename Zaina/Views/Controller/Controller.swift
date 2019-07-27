@@ -12,16 +12,20 @@ class Controller: UIView {
 
   typealias AnalogMoved = ((Analog) -> Void)
 
+  // MARK: - Properties
+
   private let backgroundImageView = UIImageView()
   private let analogImageView = UIImageView()
 
-  var analog: Analog = Analog(direction: .center, x: 0, y: 0) {
+  private var analog: Analog = Analog(direction: .center, x: 0, y: 0) {
     didSet {
       analogMoved?(analog)
     }
   }
 
-  var analogMoved: AnalogMoved?
+  private var analogMoved: AnalogMoved?
+
+  // MARK: - init
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -40,6 +44,8 @@ class Controller: UIView {
     addSubview(analogImageView)
   }
 
+  // MARK: - View lifecycle
+
   override func layoutSubviews() {
     super.layoutSubviews()
     analogImageView.frame = CGRect(x: 0, y: 0, width: 70, height: 70)
@@ -47,6 +53,8 @@ class Controller: UIView {
 
     backgroundImageView.frame = bounds
   }
+
+  // MARK: - Touches
 
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     super.touchesBegan(touches, with: event)
@@ -98,6 +106,8 @@ class Controller: UIView {
     analog = Analog(direction: direction, x: x, y: y)
 
   }
+
+  // MARK: - Public methods
 
   public func analogDidMove(analogMoved: @escaping AnalogMoved) {
     self.analogMoved = analogMoved
