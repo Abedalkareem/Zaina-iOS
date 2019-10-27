@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: BaseGameViewController {
 
-  var player: Sprite!
+  var player: SpriteView!
   var analog: Analog?
   var pointsLabel: UILabel!
 
@@ -26,7 +26,7 @@ class ViewController: BaseGameViewController {
     setupBackground()
     setupPlayer()
     (0...10).forEach({ _ in addRandomFood() })
-    setupController()
+    setupAnalogView()
     setupPointsLabel()
     addTree()
   }
@@ -42,19 +42,19 @@ class ViewController: BaseGameViewController {
   private func addTree() {
     let randomX = (100..<Int(view.bounds.width - 50)).randomElement() ?? 0
     let randomY = (100..<Int(view.bounds.height - 50)).randomElement() ?? 0
-    let node = Node(frame: CGRect(x: randomX, y: randomY, width: 142, height: 165))
+    let node = NodeView(frame: CGRect(x: randomX, y: randomY, width: 142, height: 165))
     node.image = #imageLiteral(resourceName: "tree2")
     node.type = 3
     view.addSubview(node)
   }
 
   private func setupBackground() {
-    let background = Background(frame: view.bounds, image: #imageLiteral(resourceName: "background"))
+    let background = BackgroundView(frame: view.bounds, image: #imageLiteral(resourceName: "background"))
     view.addSubview(background)
   }
 
-  private func setupController() {
-    let controller = Controller(frame: CGRect(x: 20, y: view.bounds.height - 170, width: 150, height: 150))
+  private func setupAnalogView() {
+    let controller = AnalogView(frame: CGRect(x: 20, y: view.bounds.height - 170, width: 150, height: 150))
     controller.alpha = 0.7
     view.addSubview(controller)
     controller.analogDidMove { (analog) in
@@ -63,7 +63,7 @@ class ViewController: BaseGameViewController {
   }
 
   private func setupPlayer() {
-    player = Sprite(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+    player = SpriteView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
     player.frames.top = [#imageLiteral(resourceName: "top2"), #imageLiteral(resourceName: "top1")]
     player.frames.left = [#imageLiteral(resourceName: "left2"), #imageLiteral(resourceName: "left1")]
     player.frames.right = [#imageLiteral(resourceName: "right2"), #imageLiteral(resourceName: "right1")]
@@ -74,14 +74,17 @@ class ViewController: BaseGameViewController {
     view.addSubview(player)
   }
 
+  @objc
   private func addRandomFood() {
     let food = [#imageLiteral(resourceName: "chocolate"),#imageLiteral(resourceName: "apple"),#imageLiteral(resourceName: "chicken"),#imageLiteral(resourceName: "cookie"),#imageLiteral(resourceName: "watermelon"),#imageLiteral(resourceName: "cacke2"),#imageLiteral(resourceName: "soup"),#imageLiteral(resourceName: "eggs"),#imageLiteral(resourceName: "cacke1")]
     let randomX = (50..<Int(view.bounds.width - 50)).randomElement() ?? 0
     let randomY = (50..<Int(view.bounds.height - 50)).randomElement() ?? 0
-    let node = Node(frame: CGRect(x: randomX, y: randomY, width: 40, height: 40))
-    node.image = food.randomElement()
-    node.type = 2
-    view.addSubview(node)
+    let node = NodeView(frame: CGRect(x: randomX, y: randomY, width: 40, height: 40))
+    if let image = food.randomElement() {
+      node.image = image
+      node.type = 2
+      view.addSubview(node)
+    }
   }
 
   override func update() {
@@ -91,7 +94,7 @@ class ViewController: BaseGameViewController {
     player.moveWith(x: x, y: y, direction: analog?.direction)
   }
 
-  override func objectsDidCollide(object1: Object, object2: Object) {
+  override func objectsDidCollide(object1: ObjectView, object2: ObjectView) {
     if object1.type == 2 {
       object1.removeFromSuperview()
       points += 1

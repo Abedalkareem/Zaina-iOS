@@ -1,5 +1,5 @@
 //
-//  Sprite.swift
+//  SpriteView.swift
 //  Zaina
 //
 //  Created by abedalkareem omreyh on 7/21/19.
@@ -8,7 +8,8 @@
 
 import UIKit
 
-class Sprite: Object {
+@IBDesignable
+class SpriteView: ObjectView {
 
   let imageView = UIImageView()
 
@@ -83,7 +84,7 @@ class Sprite: Object {
     imageView.frame = bounds
   }
 
-  override func onCollisionEnter(with object: Object?) {
+  override func onCollisionEnter(with object: ObjectView?) {
     guard let object = object, stopWhenCollideTyps.contains(object.type) else {
       xSpeed = speed
       ySpeed = speed

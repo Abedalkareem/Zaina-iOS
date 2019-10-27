@@ -1,5 +1,5 @@
 //
-//  Background.swift
+//  BackgroundView.swift
 //  Zaina
 //
 //  Created by abedalkareem omreyh on 7/26/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Background: UIView {
+class BackgroundView: UIView {
 
   let imageView = UIImageView()
 

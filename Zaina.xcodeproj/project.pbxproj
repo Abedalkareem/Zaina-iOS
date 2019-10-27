@@ -13,18 +13,21 @@
 		C6792AF422E4D142000A34A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6792AF322E4D142000A34A6 /* Assets.xcassets */; };
 		C6792AF722E4D142000A34A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6792AF522E4D142000A34A6 /* LaunchScreen.storyboard */; };
 		C6792B0522E4D1F5000A34A6 /* BaseGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792B0422E4D1F5000A34A6 /* BaseGameViewController.swift */; };
-		C6792B0822E4D385000A34A6 /* Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792B0722E4D385000A34A6 /* Sprite.swift */; };
-		C6792B0A22E4D3FB000A34A6 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792B0922E4D3FB000A34A6 /* Object.swift */; };
-		C6792B1422E5EF43000A34A6 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792B1322E5EF43000A34A6 /* Controller.swift */; };
-		C67BC1B322EAC86E00C7D44E /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1B222EAC86E00C7D44E /* Background.swift */; };
+		C6792B0822E4D385000A34A6 /* SpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792B0722E4D385000A34A6 /* SpriteView.swift */; };
+		C6792B0A22E4D3FB000A34A6 /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792B0922E4D3FB000A34A6 /* ObjectView.swift */; };
+		C6792B1422E5EF43000A34A6 /* AnalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792B1322E5EF43000A34A6 /* AnalogView.swift */; };
+		C67BC1B322EAC86E00C7D44E /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1B222EAC86E00C7D44E /* BackgroundView.swift */; };
 		C67BC1B522EAD78500C7D44E /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1B422EAD78500C7D44E /* Direction.swift */; };
 		C67BC1B722EAD79C00C7D44E /* Analog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1B622EAD79C00C7D44E /* Analog.swift */; };
 		C67BC1BA22EAD9AD00C7D44E /* Frames.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1B922EAD9AD00C7D44E /* Frames.swift */; };
-		C67BC1BC22EAE91E00C7D44E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1BB22EAE91E00C7D44E /* Node.swift */; };
+		C67BC1BC22EAE91E00C7D44E /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1BB22EAE91E00C7D44E /* NodeView.swift */; };
 		C67BC1BE22EAECA500C7D44E /* pixel_font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C67BC1BD22EAECA200C7D44E /* pixel_font.ttf */; };
+		C6801B0C2366028700A3085C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6801B0B2366028700A3085C /* SplashViewController.swift */; };
+		C6801B0E2366056100A3085C /* Level1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6801B0D2366056100A3085C /* Level1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C602795F234DDEC6006769E8 /* Zaina.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Zaina.entitlements; sourceTree = "<group>"; };
 		C6792AE922E4D140000A34A6 /* Zaina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zaina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6792AEC22E4D140000A34A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6792AEE22E4D140000A34A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,15 +36,17 @@
 		C6792AF622E4D142000A34A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6792AF822E4D142000A34A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6792B0422E4D1F5000A34A6 /* BaseGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameViewController.swift; sourceTree = "<group>"; };
-		C6792B0722E4D385000A34A6 /* Sprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sprite.swift; sourceTree = "<group>"; };
-		C6792B0922E4D3FB000A34A6 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
-		C6792B1322E5EF43000A34A6 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
-		C67BC1B222EAC86E00C7D44E /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		C6792B0722E4D385000A34A6 /* SpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteView.swift; sourceTree = "<group>"; };
+		C6792B0922E4D3FB000A34A6 /* ObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectView.swift; sourceTree = "<group>"; };
+		C6792B1322E5EF43000A34A6 /* AnalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogView.swift; sourceTree = "<group>"; };
+		C67BC1B222EAC86E00C7D44E /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		C67BC1B422EAD78500C7D44E /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		C67BC1B622EAD79C00C7D44E /* Analog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analog.swift; sourceTree = "<group>"; };
 		C67BC1B922EAD9AD00C7D44E /* Frames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frames.swift; sourceTree = "<group>"; };
-		C67BC1BB22EAE91E00C7D44E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		C67BC1BB22EAE91E00C7D44E /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
 		C67BC1BD22EAECA200C7D44E /* pixel_font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pixel_font.ttf; sourceTree = "<group>"; };
+		C6801B0B2366028700A3085C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		C6801B0D2366056100A3085C /* Level1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +79,11 @@
 		C6792AEB22E4D140000A34A6 /* Zaina */ = {
 			isa = PBXGroup;
 			children = (
-				C6792B0022E4D15A000A34A6 /* Views */,
+				C602795F234DDEC6006769E8 /* Zaina.entitlements */,
 				C6792AFF22E4D154000A34A6 /* AppDelegate */,
 				C6792AFE22E4D149000A34A6 /* ViewControllers */,
 				C6792B0222E4D1A0000A34A6 /* Resources */,
+				C6801B0A2366025B00A3085C /* Classes */,
 				C6792B0322E4D1A8000A34A6 /* SupportFiles */,
 			);
 			path = Zaina;
@@ -86,8 +92,9 @@
 		C6792AFE22E4D149000A34A6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C6801B0B2366028700A3085C /* SplashViewController.swift */,
+				C6801B0D2366056100A3085C /* Level1ViewController.swift */,
 				C6792AEE22E4D140000A34A6 /* ViewController.swift */,
-				C6792B0422E4D1F5000A34A6 /* BaseGameViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -103,7 +110,7 @@
 		C6792B0022E4D15A000A34A6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C6792B1222E5EF23000A34A6 /* Controller */,
+				C6792B1222E5EF23000A34A6 /* AnalogView */,
 				C6792B0622E4D34D000A34A6 /* Objects */,
 				C6792B0122E4D161000A34A6 /* Storyboards */,
 			);
@@ -139,31 +146,40 @@
 		C6792B0622E4D34D000A34A6 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				C67BC1B822EAD9A100C7D44E /* Player */,
-				C6792B0922E4D3FB000A34A6 /* Object.swift */,
-				C67BC1B222EAC86E00C7D44E /* Background.swift */,
-				C67BC1BB22EAE91E00C7D44E /* Node.swift */,
+				C6792B0922E4D3FB000A34A6 /* ObjectView.swift */,
+				C67BC1B822EAD9A100C7D44E /* SpriteView */,
+				C67BC1B222EAC86E00C7D44E /* BackgroundView.swift */,
+				C67BC1BB22EAE91E00C7D44E /* NodeView.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
 		};
-		C6792B1222E5EF23000A34A6 /* Controller */ = {
+		C6792B1222E5EF23000A34A6 /* AnalogView */ = {
 			isa = PBXGroup;
 			children = (
-				C6792B1322E5EF43000A34A6 /* Controller.swift */,
+				C6792B1322E5EF43000A34A6 /* AnalogView.swift */,
 				C67BC1B422EAD78500C7D44E /* Direction.swift */,
 				C67BC1B622EAD79C00C7D44E /* Analog.swift */,
 			);
-			path = Controller;
+			path = AnalogView;
 			sourceTree = "<group>";
 		};
-		C67BC1B822EAD9A100C7D44E /* Player */ = {
+		C67BC1B822EAD9A100C7D44E /* SpriteView */ = {
 			isa = PBXGroup;
 			children = (
-				C6792B0722E4D385000A34A6 /* Sprite.swift */,
+				C6792B0722E4D385000A34A6 /* SpriteView.swift */,
 				C67BC1B922EAD9AD00C7D44E /* Frames.swift */,
 			);
-			path = Player;
+			path = SpriteView;
+			sourceTree = "<group>";
+		};
+		C6801B0A2366025B00A3085C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C6792B0422E4D1F5000A34A6 /* BaseGameViewController.swift */,
+				C6792B0022E4D15A000A34A6 /* Views */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,16 +254,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6792B1422E5EF43000A34A6 /* Controller.swift in Sources */,
-				C6792B0A22E4D3FB000A34A6 /* Object.swift in Sources */,
-				C6792B0822E4D385000A34A6 /* Sprite.swift in Sources */,
-				C67BC1BC22EAE91E00C7D44E /* Node.swift in Sources */,
-				C67BC1B322EAC86E00C7D44E /* Background.swift in Sources */,
+				C6792B1422E5EF43000A34A6 /* AnalogView.swift in Sources */,
+				C6792B0A22E4D3FB000A34A6 /* ObjectView.swift in Sources */,
+				C6792B0822E4D385000A34A6 /* SpriteView.swift in Sources */,
+				C6801B0C2366028700A3085C /* SplashViewController.swift in Sources */,
+				C67BC1BC22EAE91E00C7D44E /* NodeView.swift in Sources */,
+				C67BC1B322EAC86E00C7D44E /* BackgroundView.swift in Sources */,
 				C6792AEF22E4D140000A34A6 /* ViewController.swift in Sources */,
 				C6792AED22E4D140000A34A6 /* AppDelegate.swift in Sources */,
 				C67BC1B722EAD79C00C7D44E /* Analog.swift in Sources */,
 				C6792B0522E4D1F5000A34A6 /* BaseGameViewController.swift in Sources */,
 				C67BC1B522EAD78500C7D44E /* Direction.swift in Sources */,
+				C6801B0E2366056100A3085C /* Level1ViewController.swift in Sources */,
 				C67BC1BA22EAD9AD00C7D44E /* Frames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,7 +412,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Zaina/Zaina.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = H3MRF55H66;
 				INFOPLIST_FILE = "$(SRCROOT)/Zaina/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -403,6 +423,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = abedalkareem.Zaina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -412,7 +433,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Zaina/Zaina.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = H3MRF55H66;
 				INFOPLIST_FILE = "$(SRCROOT)/Zaina/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -421,6 +444,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = abedalkareem.Zaina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

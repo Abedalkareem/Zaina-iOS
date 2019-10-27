@@ -12,10 +12,23 @@ class BaseGameViewController: UIViewController {
 
   var timer: Timer?
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    startTimer()
+  }
 
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    stopTimer()
+  }
+
+  private func startTimer() {
     timer = Timer.scheduledTimer(timeInterval: 0.016, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+  }
+
+  private func stopTimer() {
+    timer?.invalidate()
+    timer = nil
   }
 
   @objc
@@ -24,7 +37,7 @@ class BaseGameViewController: UIViewController {
   }
 
   func checkIfObjectsCollided() {
-    let subviews = view.subviews.compactMap({ $0 as? Object })
+    let subviews = view.subviews.compactMap({ $0 as? ObjectView })
     for object1 in subviews {
       for object2 in subviews {
         if object1 != object2 { 
@@ -42,6 +55,6 @@ class BaseGameViewController: UIViewController {
     }
   }
 
-  func objectsDidCollide(object1: Object, object2: Object) { }
+  func objectsDidCollide(object1: ObjectView, object2: ObjectView) { }
 
 }

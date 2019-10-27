@@ -1,5 +1,5 @@
 //
-//  Node.swift
+//  NodeView.swift
 //  Zaina
 //
 //  Created by abedalkareem omreyh on 7/26/19.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class Node: Object {
+@IBDesignable
+class NodeView: ObjectView {
 
-  let imageView = UIImageView()
+  var imageView: UIImageView!
 
-  var image: UIImage? {
+  @IBInspectable var image: UIImage = UIImage() {
     didSet {
       imageView.image = image
     }
@@ -29,6 +30,7 @@ class Node: Object {
   }
 
   private func setup() {
+    imageView = UIImageView()
     addSubview(imageView)
   }
 

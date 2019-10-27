@@ -1,5 +1,5 @@
 //
-//  Controller.swift
+//  AnalogView.swift
 //  Zaina
 //
 //  Created by abedalkareem omreyh on 7/22/19.
@@ -8,7 +8,8 @@
 
 import UIKit
 
-class Controller: UIView {
+/// An Analog controller to control the `Sprite` movement.
+class AnalogView: UIView {
 
   typealias AnalogMoved = ((Analog) -> Void)
 
@@ -38,8 +39,14 @@ class Controller: UIView {
   }
 
   private func setupViews() {
+    #if !TARGET_INTERFACE_BUILDER
     analogImageView.image = #imageLiteral(resourceName: "controller_analog")
     backgroundImageView.image = #imageLiteral(resourceName: "controller_background")
+    #else
+    analogImageView.backgroundColor = .gray
+    backgroundImageView.backgroundColor = .lightGray
+    #endif
+
     addSubview(backgroundImageView)
     addSubview(analogImageView)
   }
@@ -72,6 +79,7 @@ class Controller: UIView {
 
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     super.touchesEnded(touches, with: event)
+    // animate the analog back to center
     UIView.animate(withDuration: 0.3) {
       self.moveTo(point: CGPoint(x: self.bounds.midX, y: self.bounds.midY))
     }
@@ -89,17 +97,30 @@ class Controller: UIView {
       analogImageView.center.x = point.x
     }
 
+    // convert the values from normal width and height to
+    // a value from 0 to 1
     var x = point.x / frame.width
     var y = point.y / frame.height
 
+    // if x and y values less than 0 then set the value to 0
     x = x < 0 ? 0 : x
     y = y < 0 ? 0 : y
 
+    // if x and y values more than 1 then set the value to 1
     x = x > 1 ? 1 : x
     y = y > 1 ? 1 : y
 
+    // get the direction of the analog depending on the x and y
     let direction = Direction(x: x, y: y)
 
+    // convert the values from 0 to 1, to -0.5 to 0.5,
+    // so you can use this value to move the `Sprite` from left to
+    // right with a speed depending on how much the user is pushing the
+    // analog.
+    // The value in negative means that the analog is
+    // going left in case of x and top in case of y,
+    // while the value in positive means that the user move to
+    // right in case of y or bottom in case of x.
     x = x - 0.5
     y = y - 0.5
 
