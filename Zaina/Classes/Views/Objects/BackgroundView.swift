@@ -8,9 +8,16 @@
 
 import UIKit
 
+@IBDesignable
 class BackgroundView: UIView {
 
-  let imageView = UIImageView()
+  @IBInspectable var image: UIImage = UIImage() {
+     didSet {
+       imageView.image = image
+     }
+   }
+  
+  private let imageView = UIImageView()
 
   init(frame: CGRect, image: UIImage) {
     super.init(frame: frame)

@@ -10,10 +10,28 @@ import UIKit
 
 class SplashViewController: UIViewController {
 
+  @IBOutlet weak var logoImageView: UIImageView!
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    hideLogo()
     startTimer()
+  }
+
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    showLogo()
+  }
+
+  private func hideLogo() {
+    logoImageView.alpha = 0
+  }
+
+  private func showLogo() {
+    UIView.animate(withDuration: 0.5) {
+      self.logoImageView.alpha = 1
+    }
   }
 
   private func startTimer() {

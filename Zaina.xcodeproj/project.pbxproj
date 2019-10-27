@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C61B0B2C2366113100CB376F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B0B2B2366113100CB376F /* MainViewController.swift */; };
 		C6792AED22E4D140000A34A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792AEC22E4D140000A34A6 /* AppDelegate.swift */; };
 		C6792AEF22E4D140000A34A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792AEE22E4D140000A34A6 /* ViewController.swift */; };
 		C6792AF222E4D140000A34A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6792AF022E4D140000A34A6 /* Main.storyboard */; };
@@ -24,10 +25,12 @@
 		C67BC1BE22EAECA500C7D44E /* pixel_font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C67BC1BD22EAECA200C7D44E /* pixel_font.ttf */; };
 		C6801B0C2366028700A3085C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6801B0B2366028700A3085C /* SplashViewController.swift */; };
 		C6801B0E2366056100A3085C /* Level1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6801B0D2366056100A3085C /* Level1ViewController.swift */; };
+		C6801B10236606F800A3085C /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6801B0F236606F800A3085C /* SceneView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C602795F234DDEC6006769E8 /* Zaina.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Zaina.entitlements; sourceTree = "<group>"; };
+		C61B0B2B2366113100CB376F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C6792AE922E4D140000A34A6 /* Zaina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zaina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6792AEC22E4D140000A34A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6792AEE22E4D140000A34A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		C67BC1BD22EAECA200C7D44E /* pixel_font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pixel_font.ttf; sourceTree = "<group>"; };
 		C6801B0B2366028700A3085C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		C6801B0D2366056100A3085C /* Level1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level1ViewController.swift; sourceTree = "<group>"; };
+		C6801B0F236606F800A3085C /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 				C602795F234DDEC6006769E8 /* Zaina.entitlements */,
 				C6792AFF22E4D154000A34A6 /* AppDelegate */,
 				C6792AFE22E4D149000A34A6 /* ViewControllers */,
+				C6792B0122E4D161000A34A6 /* Storyboards */,
 				C6792B0222E4D1A0000A34A6 /* Resources */,
 				C6801B0A2366025B00A3085C /* Classes */,
 				C6792B0322E4D1A8000A34A6 /* SupportFiles */,
@@ -93,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				C6801B0B2366028700A3085C /* SplashViewController.swift */,
+				C61B0B2B2366113100CB376F /* MainViewController.swift */,
 				C6801B0D2366056100A3085C /* Level1ViewController.swift */,
 				C6792AEE22E4D140000A34A6 /* ViewController.swift */,
 			);
@@ -112,7 +118,6 @@
 			children = (
 				C6792B1222E5EF23000A34A6 /* AnalogView */,
 				C6792B0622E4D34D000A34A6 /* Objects */,
-				C6792B0122E4D161000A34A6 /* Storyboards */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 				C67BC1B822EAD9A100C7D44E /* SpriteView */,
 				C67BC1B222EAC86E00C7D44E /* BackgroundView.swift */,
 				C67BC1BB22EAE91E00C7D44E /* NodeView.swift */,
+				C6801B0F236606F800A3085C /* SceneView.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -257,11 +263,13 @@
 				C6792B1422E5EF43000A34A6 /* AnalogView.swift in Sources */,
 				C6792B0A22E4D3FB000A34A6 /* ObjectView.swift in Sources */,
 				C6792B0822E4D385000A34A6 /* SpriteView.swift in Sources */,
+				C6801B10236606F800A3085C /* SceneView.swift in Sources */,
 				C6801B0C2366028700A3085C /* SplashViewController.swift in Sources */,
 				C67BC1BC22EAE91E00C7D44E /* NodeView.swift in Sources */,
 				C67BC1B322EAC86E00C7D44E /* BackgroundView.swift in Sources */,
 				C6792AEF22E4D140000A34A6 /* ViewController.swift in Sources */,
 				C6792AED22E4D140000A34A6 /* AppDelegate.swift in Sources */,
+				C61B0B2C2366113100CB376F /* MainViewController.swift in Sources */,
 				C67BC1B722EAD79C00C7D44E /* Analog.swift in Sources */,
 				C6792B0522E4D1F5000A34A6 /* BaseGameViewController.swift in Sources */,
 				C67BC1B522EAD78500C7D44E /* Direction.swift in Sources */,

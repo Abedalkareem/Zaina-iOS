@@ -10,21 +10,31 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  @IBOutlet weak var startButton: UIButton!
 
-        // Do any additional setup after loading the view.
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    hideButton()
+  }
+
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    showButton()
+  }
+
+  private func showButton() {
+    let orginalFrame = startButton.frame
+    var newFrame = orginalFrame
+    newFrame.origin.y = view.frame.height
+    startButton.frame = newFrame
+    startButton.alpha = 1
+    UIView.animate(withDuration: 1.5) {
+      self.startButton.frame = orginalFrame
     }
-    
+  }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  private func hideButton() {
+    startButton.alpha = 0
+  }
 
 }

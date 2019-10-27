@@ -11,13 +11,14 @@ import UIKit
 @IBDesignable
 class NodeView: ObjectView {
 
-  var imageView: UIImageView!
-
   @IBInspectable var image: UIImage = UIImage() {
     didSet {
+      backgroundColor = .clear
       imageView.image = image
     }
   }
+
+  private var imageView: UIImageView!
 
   override init(frame: CGRect) {
     super.init(frame: frame)

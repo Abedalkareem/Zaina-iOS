@@ -13,3 +13,11 @@ struct Analog {
   var x: CGFloat
   var y: CGFloat
 }
+
+extension Analog: Equatable {
+  static func ==(lhs: Analog, rhs: Analog) -> Bool {
+      return lhs.direction == rhs.direction
+  }
+}
+
+

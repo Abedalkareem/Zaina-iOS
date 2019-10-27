@@ -91,7 +91,7 @@ class ViewController: BaseGameViewController {
     super.update()
     let x: CGFloat = analog?.x ?? 0
     let y: CGFloat = analog?.y ?? 0
-    player.moveWith(x: x, y: y, direction: analog?.direction)
+    player.moveXandYBy(x: x, y: y)
   }
 
   override func objectsDidCollide(object1: ObjectView, object2: ObjectView) {

@@ -10,7 +10,15 @@ import UIKit
 
 class BaseGameViewController: UIViewController {
 
-  var timer: Timer?
+  // MARK: - IBOutlet
+
+  @IBOutlet private weak var sceneView: SceneView!
+
+  // MARK: - Properties
+
+  private var timer: Timer?
+
+  // MARK: - ViewController lifecycle
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -31,13 +39,15 @@ class BaseGameViewController: UIViewController {
     timer = nil
   }
 
+  /// override to make changes or move objects.
   @objc
   func update() {
     checkIfObjectsCollided()
   }
 
+  /// check if any two objects collided.
   func checkIfObjectsCollided() {
-    let subviews = view.subviews.compactMap({ $0 as? ObjectView })
+    let subviews = sceneView.subviews.compactMap({ $0 as? ObjectView })
     for object1 in subviews {
       for object2 in subviews {
         if object1 != object2 { 
@@ -55,6 +65,7 @@ class BaseGameViewController: UIViewController {
     }
   }
 
+  /// override this method to get notify when two objects collided
   func objectsDidCollide(object1: ObjectView, object2: ObjectView) { }
 
 }

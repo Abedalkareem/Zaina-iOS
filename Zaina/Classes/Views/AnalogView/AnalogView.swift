@@ -9,11 +9,25 @@
 import UIKit
 
 /// An Analog controller to control the `Sprite` movement.
+@IBDesignable
 class AnalogView: UIView {
 
   typealias AnalogMoved = ((Analog) -> Void)
 
   // MARK: - Properties
+
+  @IBInspectable var analogImage: UIImage = UIImage() {
+    didSet {
+      analogImageView.image = analogImage
+    }
+  }
+  @IBInspectable var backgroundImage: UIImage = UIImage() {
+     didSet {
+       backgroundImageView.image = backgroundImage
+     }
+   }
+
+  // MARK: Private properties
 
   private let backgroundImageView = UIImageView()
   private let analogImageView = UIImageView()
@@ -39,13 +53,11 @@ class AnalogView: UIView {
   }
 
   private func setupViews() {
-    #if !TARGET_INTERFACE_BUILDER
-    analogImageView.image = #imageLiteral(resourceName: "controller_analog")
-    backgroundImageView.image = #imageLiteral(resourceName: "controller_background")
-    #else
-    analogImageView.backgroundColor = .gray
-    backgroundImageView.backgroundColor = .lightGray
-    #endif
+
+    backgroundColor = .clear
+
+    analogImageView.image = analogImage
+    backgroundImageView.image = backgroundImage
 
     addSubview(backgroundImageView)
     addSubview(analogImageView)
