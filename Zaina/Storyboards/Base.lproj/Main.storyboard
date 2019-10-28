@@ -72,9 +72,25 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOw-18-7Dc" customClass="NodeView" customModule="Zaina" customModuleProvider="target">
+                                        <rect key="frame" x="495" y="16" width="140" height="140"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="4ue-gL-7Z1"/>
+                                            <constraint firstAttribute="height" constant="140" id="roy-MJ-w3I"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="hose"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="bOw-18-7Dc" firstAttribute="top" secondItem="hZ3-6a-arg" secondAttribute="top" constant="16" id="A9s-bA-54O"/>
+                                    <constraint firstAttribute="trailing" secondItem="bOw-18-7Dc" secondAttribute="trailing" constant="32" id="E7Y-ac-4KL"/>
                                     <constraint firstItem="P0A-va-VFs" firstAttribute="centerX" secondItem="hZ3-6a-arg" secondAttribute="centerX" id="GEC-Gj-wSj"/>
                                     <constraint firstAttribute="bottom" secondItem="fBS-Ki-eyS" secondAttribute="bottom" constant="8" id="Jxa-mr-NXT"/>
                                     <constraint firstItem="fBS-Ki-eyS" firstAttribute="leading" secondItem="hZ3-6a-arg" secondAttribute="leading" constant="8" id="RgX-bK-Fop"/>
@@ -101,10 +117,41 @@
                         <outlet property="analogView" destination="fBS-Ki-eyS" id="9s8-FI-v67"/>
                         <outlet property="playerView" destination="B94-Fh-ZdS" id="YLe-mz-sYS"/>
                         <outlet property="sceneView" destination="hZ3-6a-arg" id="Kfx-Rt-IVI"/>
+                        <segue destination="WKw-gL-JDL" kind="presentation" identifier="housePage" id="P8R-f3-sBX"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="103" y="1026"/>
+            <point key="canvasLocation" x="103" y="966"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cO6-Ox-BGW">
+            <objects>
+                <viewController id="WKw-gL-JDL" customClass="ViewController" customModule="Zaina" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0x3-8D-HNo">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="viG-TI-OEN" customClass="SceneView" customModule="Zaina" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="viG-TI-OEN" firstAttribute="bottom" secondItem="0x3-8D-HNo" secondAttribute="bottom" id="Xtp-MJ-8AP"/>
+                            <constraint firstItem="viG-TI-OEN" firstAttribute="leading" secondItem="0x3-8D-HNo" secondAttribute="leading" id="gyR-Jw-HEE"/>
+                            <constraint firstItem="viG-TI-OEN" firstAttribute="top" secondItem="0x3-8D-HNo" secondAttribute="top" id="wYF-YL-2d5"/>
+                            <constraint firstItem="viG-TI-OEN" firstAttribute="trailing" secondItem="0x3-8D-HNo" secondAttribute="trailing" id="yZ3-yW-lUR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bcu-ah-oH5"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="viG-TI-OEN" id="HWI-fO-Sa0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gzb-kM-Cg1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102.99850074962519" y="1804"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="zu2-Vj-usN">
@@ -118,7 +165,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zainalogo" translatesAutoresizingMaskIntoConstraints="NO" id="wFp-1g-l26">
-                                <rect key="frame" x="120.5" y="74.5" width="426" height="226"/>
+                                <rect key="frame" x="120.5" y="74.5" width="426.00000000000023" height="226"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="426" id="7d9-kJ-S1J"/>
                                     <constraint firstAttribute="height" constant="226" id="KQf-ED-58E"/>
@@ -157,14 +204,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zainalogo" translatesAutoresizingMaskIntoConstraints="NO" id="nwW-9u-Gw3">
-                                <rect key="frame" x="120.5" y="74.5" width="426" height="226"/>
+                                <rect key="frame" x="120.5" y="74.5" width="426.00000000000023" height="226"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="426" id="TQH-JU-UxY"/>
                                     <constraint firstAttribute="height" constant="226" id="WRD-zw-rAi"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khe-hm-T5G">
-                                <rect key="frame" x="306.5" y="300.5" width="54" height="42"/>
+                                <rect key="frame" x="280.5" y="300.5" width="106" height="45"/>
                                 <fontDescription key="fontDescription" name="RetroComputer" family="Retro Computer" pointSize="25"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -200,6 +247,7 @@
         <image name="background" width="1280" height="711"/>
         <image name="controller_analog" width="189" height="189"/>
         <image name="controller_background" width="400" height="400"/>
+        <image name="hose" width="200" height="165"/>
         <image name="idel" width="100" height="100"/>
         <image name="tree2" width="142" height="165"/>
         <image name="zainalogo" width="823" height="292"/>

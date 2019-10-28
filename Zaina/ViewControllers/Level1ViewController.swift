@@ -19,7 +19,7 @@ class Level1ViewController: BaseGameViewController {
     setupPlayer()
 
     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-      self.playerView.moveTo(x: 400, y: 50)
+      self.playerView.moveTo(x: 400, y: 150)
     }
   }
 
@@ -29,8 +29,18 @@ class Level1ViewController: BaseGameViewController {
     playerView.frames.right = [#imageLiteral(resourceName: "right2"), #imageLiteral(resourceName: "right1")]
     playerView.frames.bottom = [#imageLiteral(resourceName: "bottom1"), #imageLiteral(resourceName: "bottom2")]
     playerView.frames.idel = [#imageLiteral(resourceName: "idel"), #imageLiteral(resourceName: "idel2")]
-    playerView.stopWhenCollideTyps = [3]
+    playerView.stopWhenCollideTyps = [3, 4]
     playerView.attachTo(analogView)
+  }
+
+  override func objectsDidCollide(object1: ObjectView, object2: ObjectView) {
+
+    if object1.type == 4 {
+      self.performSegue(withIdentifier: "housePage", sender: nil)
+    } else if object2.type == 4 {
+      self.performSegue(withIdentifier: "housePage", sender: nil)
+    }
+
   }
 
 }

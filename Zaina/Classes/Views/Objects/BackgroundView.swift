@@ -19,7 +19,7 @@ class BackgroundView: UIView {
   
   private let imageView = UIImageView()
 
-  init(frame: CGRect, image: UIImage) {
+  init(frame: CGRect = .zero, image: UIImage) {
     super.init(frame: frame)
     setup(image: image)
   }

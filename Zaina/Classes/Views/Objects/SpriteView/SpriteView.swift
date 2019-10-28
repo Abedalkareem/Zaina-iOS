@@ -116,52 +116,51 @@ class SpriteView: ObjectView {
     desireX = x
     desireY = y
 
+    // get the defrence between the x and y,
+    // so if the x equal to 100, and the y equal to 50,
+    // the y should be the half of the x movement percentage.
+    let yWithoutTheStartPoint = y - frame.origin.y
+    let xWithoutTheStartPoint = x - frame.origin.x
     var yDefrence: CGFloat = 1
     var xDefrence: CGFloat = 1
-
-    let yme = y - frame.origin.y
-    let xme = x - frame.origin.x
-    if xme > yme {
-      yDefrence = yme / xme
+    if xWithoutTheStartPoint > yWithoutTheStartPoint {
+      yDefrence = yWithoutTheStartPoint / xWithoutTheStartPoint
     } else {
-      xDefrence = xme / yme
+      xDefrence = xWithoutTheStartPoint / yWithoutTheStartPoint
     }
 
-    let movmentY: CGFloat = y > frame.origin.y ? 0.5 : -0.5
-    let movmentX: CGFloat = x > frame.origin.x ? 0.5 : -0.5
+    // to get the movment percentage, so in case of x, 0.5 move to right, -0.5 move to left.
+    // and in case of y, 0.5 move to bottom, -0.5 move to top.
+    let yMovementPercentage: CGFloat = y > frame.origin.y ? 0.5 : -0.5
+    let xMovementPercentage: CGFloat = x > frame.origin.x ? 0.5 : -0.5
 
+    // direction value is from 0 to 1 as the `Direction` enum.
+    // check `Direction` enum.
     let directionY: CGFloat = y > frame.origin.y ? 1 : 0
     let directionX: CGFloat = x > frame.origin.x ? 1 : 0
 
-    // convert the values from normal x and y to
-    // a value from 0 to 1
-    let x = x / (superview?.frame.width ?? 1)
-    let y = y / (superview?.frame.height ?? 1)
+    let x = (xMovementPercentage * xDefrence)
+    let y = (yMovementPercentage * yDefrence)
 
-    analog = Analog(direction: Direction(x: directionX, y: directionY), x: (movmentX * xDefrence), y: (movmentY * yDefrence))
-    print(analog)
+    analog = Analog(direction: Direction(x: directionX, y: directionY), x: x, y: y)
   }
 
   func moveXandYBy(x: CGFloat?, y: CGFloat?) {
     if let x = x, let y = y {
-      frame.origin.x += (xSpeed*x)
-      frame.origin.y += (ySpeed*y)
+      frame.origin.x += (xSpeed * x)
+      frame.origin.y += (ySpeed * y)
     }
   }
 
   func attachTo(_ analogView: AnalogView) {
     analogView.analogDidMove { [unowned self] (analog) in
       self.analog = analog
-      print(analog)
     }
   }
 
   override func update() {
     if let desireX = desireX, let desireY = desireY {
-      let xRange = desireX...(desireX + 2)
-      let yRange = desireY...(desireY + 2)
-      print("\(xRange) \(frame.origin.x) \(yRange) \(frame.origin.y) ")
-      if xRange.contains(frame.origin.x) && yRange.contains(frame.origin.y) {
+      if frame.origin.x > desireX && frame.origin.y > desireY {
         self.desireX = nil
         self.desireY = nil
         self.analog = Analog(direction: .center, x: 0, y: 0)

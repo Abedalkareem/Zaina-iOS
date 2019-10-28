@@ -12,7 +12,7 @@ class BaseGameViewController: UIViewController {
 
   // MARK: - IBOutlet
 
-  @IBOutlet private weak var sceneView: SceneView!
+  @IBOutlet weak var sceneView: SceneView!
 
   // MARK: - Properties
 

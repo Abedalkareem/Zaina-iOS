@@ -13,6 +13,7 @@ class ViewController: BaseGameViewController {
   var player: SpriteView!
   var analog: Analog?
   var pointsLabel: UILabel!
+  var analogView: AnalogView!
 
   var points = 0 {
     didSet {
@@ -24,40 +25,48 @@ class ViewController: BaseGameViewController {
     super.viewDidLoad()
 
     setupBackground()
+    setupAnalogView()
     setupPlayer()
     (0...10).forEach({ _ in addRandomFood() })
-    setupAnalogView()
     setupPointsLabel()
     addTree()
   }
 
   private func setupPointsLabel() {
-    pointsLabel = UILabel(frame: CGRect(x: view.bounds.width-130, y: 10, width: 130, height: 30))
+    pointsLabel = UILabel(frame: CGRect(x: sceneView.bounds.width-130, y: 10, width: 130, height: 30))
     pointsLabel.textColor = .white
     pointsLabel.font = UIFont(name: "RetroComputer", size: 17)
-    view.addSubview(pointsLabel)
+    sceneView.addSubview(pointsLabel)
     points = 0
   }
 
   private func addTree() {
-    let randomX = (100..<Int(view.bounds.width - 50)).randomElement() ?? 0
-    let randomY = (100..<Int(view.bounds.height - 50)).randomElement() ?? 0
+    let randomX = (100..<Int(sceneView.bounds.width - 50)).randomElement() ?? 0
+    let randomY = (100..<Int(sceneView.bounds.height - 50)).randomElement() ?? 0
     let node = NodeView(frame: CGRect(x: randomX, y: randomY, width: 142, height: 165))
     node.image = #imageLiteral(resourceName: "tree2")
     node.type = 3
-    view.addSubview(node)
+    sceneView.addSubview(node)
   }
 
   private func setupBackground() {
-    let background = BackgroundView(frame: view.bounds, image: #imageLiteral(resourceName: "background"))
-    view.addSubview(background)
+    let background = BackgroundView(image: #imageLiteral(resourceName: "background"))
+    sceneView.addSubview(background)
+
+    background.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+    background.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    background.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+    background.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+
   }
 
   private func setupAnalogView() {
-    let controller = AnalogView(frame: CGRect(x: 20, y: view.bounds.height - 170, width: 150, height: 150))
-    controller.alpha = 0.7
-    view.addSubview(controller)
-    controller.analogDidMove { (analog) in
+    analogView = AnalogView(frame: CGRect(x: 20, y: sceneView.bounds.height - 170, width: 150, height: 150))
+    analogView.alpha = 0.7
+    analogView.analogImage = #imageLiteral(resourceName: "controller_analog")
+    analogView.backgroundImage = #imageLiteral(resourceName: "controller_background")
+    sceneView.addSubview(analogView)
+    analogView.analogDidMove { (analog) in
       self.analog = analog
     }
   }
@@ -71,27 +80,21 @@ class ViewController: BaseGameViewController {
     player.frames.idel = [#imageLiteral(resourceName: "idel"), #imageLiteral(resourceName: "idel2")]
     player.stopWhenCollideTyps = [3]
     player.type = 1
-    view.addSubview(player)
+    player.attachTo(analogView)
+    sceneView.addSubview(player)
   }
 
   @objc
   private func addRandomFood() {
     let food = [#imageLiteral(resourceName: "chocolate"),#imageLiteral(resourceName: "apple"),#imageLiteral(resourceName: "chicken"),#imageLiteral(resourceName: "cookie"),#imageLiteral(resourceName: "watermelon"),#imageLiteral(resourceName: "cacke2"),#imageLiteral(resourceName: "soup"),#imageLiteral(resourceName: "eggs"),#imageLiteral(resourceName: "cacke1")]
-    let randomX = (50..<Int(view.bounds.width - 50)).randomElement() ?? 0
-    let randomY = (50..<Int(view.bounds.height - 50)).randomElement() ?? 0
+    let randomX = (50..<Int(sceneView.bounds.width - 50)).randomElement() ?? 0
+    let randomY = (50..<Int(sceneView.bounds.height - 50)).randomElement() ?? 0
     let node = NodeView(frame: CGRect(x: randomX, y: randomY, width: 40, height: 40))
     if let image = food.randomElement() {
       node.image = image
       node.type = 2
-      view.addSubview(node)
+      sceneView.addSubview(node)
     }
-  }
-
-  override func update() {
-    super.update()
-    let x: CGFloat = analog?.x ?? 0
-    let y: CGFloat = analog?.y ?? 0
-    player.moveXandYBy(x: x, y: y)
   }
 
   override func objectsDidCollide(object1: ObjectView, object2: ObjectView) {
