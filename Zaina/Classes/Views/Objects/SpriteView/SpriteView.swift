@@ -35,12 +35,12 @@ class SpriteView: ObjectView {
   private var desireY: CGFloat?
 
   private var analog: Analog? {
-     didSet {
-       if oldValue != analog {
-         changeMovment()
-       }
-     }
-   }
+    didSet {
+      if oldValue != analog {
+        changeMovment()
+      }
+    }
+  }
 
   private let imageView = UIImageView()
 
@@ -119,8 +119,8 @@ class SpriteView: ObjectView {
     // get the defrence between the x and y,
     // so if the x equal to 100, and the y equal to 50,
     // the y should be the half of the x movement percentage.
-    let yWithoutTheStartPoint = y - frame.origin.y
-    let xWithoutTheStartPoint = x - frame.origin.x
+    let yWithoutTheStartPoint = abs(y - frame.origin.y)
+    let xWithoutTheStartPoint = abs(x - frame.origin.x)
     var yDefrence: CGFloat = 1
     var xDefrence: CGFloat = 1
     if xWithoutTheStartPoint > yWithoutTheStartPoint {
@@ -139,10 +139,11 @@ class SpriteView: ObjectView {
     let directionY: CGFloat = y > frame.origin.y ? 1 : 0
     let directionX: CGFloat = x > frame.origin.x ? 1 : 0
 
-    let x = (xMovementPercentage * xDefrence)
-    let y = (yMovementPercentage * yDefrence)
+    let newX = (xMovementPercentage * xDefrence)
+    let newY = (yMovementPercentage * yDefrence)
 
-    analog = Analog(direction: Direction(x: directionX, y: directionY), x: x, y: y)
+    analog = Analog(direction: Direction(x: directionX, y: directionY), x: newX, y: newY)
+    print(analog)
   }
 
   func moveXandYBy(x: CGFloat?, y: CGFloat?) {
@@ -160,7 +161,9 @@ class SpriteView: ObjectView {
 
   override func update() {
     if let desireX = desireX, let desireY = desireY {
-      if frame.origin.x > desireX && frame.origin.y > desireY {
+      let xRange = (desireX - 5)...(desireX + 5)
+      let yRange = (desireY - 5)...(desireY + 5)
+      if xRange.contains(frame.origin.x) && yRange.contains(frame.origin.y) {
         self.desireX = nil
         self.desireY = nil
         self.analog = Analog(direction: .center, x: 0, y: 0)

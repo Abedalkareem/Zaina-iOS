@@ -18,9 +18,31 @@ class Level1ViewController: BaseGameViewController {
 
     setupPlayer()
 
-    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-      self.playerView.moveTo(x: 400, y: 150)
-    }
+//    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+//      self.playerView.moveTo(x: 400, y: 150)
+//    }
+
+    Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(throghw), userInfo: nil, repeats: true)
+  }
+
+  @objc
+  private func throghw() {
+
+    let x = CGFloat(Int.random(in: (0...Int(view.frame.width))))
+    let y = CGFloat(Int.random(in: (0...Int(view.frame.height))))
+//    let katana = SpriteView(frame: CGRect(x: x, y: y, width: 30, height: 30))
+//    katana.frames.idel = [#imageLiteral(resourceName: "katana")]
+//    katana.frames.left = [#imageLiteral(resourceName: "katana")]
+//    katana.frames.bottom = [#imageLiteral(resourceName: "katana")]
+//    katana.frames.right = [#imageLiteral(resourceName: "katana")]
+//    katana.frames.bottom = [#imageLiteral(resourceName: "katana")]
+//    katana.speed = 10
+//    view.addSubview(katana)
+//    katana.moveTo(x: playerView.frame.origin.x, y: playerView.frame.origin.y)
+
+
+    print("\(x), \(y)")
+    playerView.moveTo(x: x, y: y)
   }
 
   private func setupPlayer() {
@@ -35,10 +57,9 @@ class Level1ViewController: BaseGameViewController {
 
   override func objectsDidCollide(object1: ObjectView, object2: ObjectView) {
 
-    if object1.type == 4 {
-      self.performSegue(withIdentifier: "housePage", sender: nil)
-    } else if object2.type == 4 {
-      self.performSegue(withIdentifier: "housePage", sender: nil)
+    if object1.type == 4 || object2.type == 4 {
+//      self.performSegue(withIdentifier: "housePage", sender: nil)
+      print("och, och")
     }
 
   }
