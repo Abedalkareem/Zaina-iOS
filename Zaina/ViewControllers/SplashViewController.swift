@@ -17,6 +17,8 @@ class SplashViewController: UIViewController {
 
     hideLogo()
     startTimer()
+
+    MusicPlayer.shared.play()
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -36,7 +38,7 @@ class SplashViewController: UIViewController {
 
   private func startTimer() {
     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-      self.performSegue(withIdentifier: "mainPage", sender: self)
+      self.changeViewController(UIStoryboard.create(storyboard: .main, controller: MainViewController.self))
     }
   }
 

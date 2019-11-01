@@ -17,16 +17,23 @@ class BaseGameViewController: UIViewController {
   // MARK: - Properties
 
   private var timer: Timer?
+  private var shouldKeepUpdatingTheScene = true
 
   // MARK: - ViewController lifecycle
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    
+    shouldKeepUpdatingTheScene = true
+
     startTimer()
   }
 
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
+
+    shouldKeepUpdatingTheScene = false
+
     stopTimer()
   }
 
@@ -54,8 +61,9 @@ class BaseGameViewController: UIViewController {
           if object1.frame.intersects(object2.frame) {
             object1.onCollisionEnter(with: object2)
             object2.onCollisionEnter(with: object1)
-            objectsDidCollide(object1: object1, object2: object2)
-            return
+            if shouldKeepUpdatingTheScene {
+              shouldKeepUpdatingTheScene = objectsDidCollide(object1: object1, object2: object2)
+            }
           } else {
             object1.onCollisionEnter(with: nil)
             object2.onCollisionEnter(with: nil)
@@ -65,7 +73,8 @@ class BaseGameViewController: UIViewController {
     }
   }
 
-  /// override this method to get notify when two objects collided
-  func objectsDidCollide(object1: ObjectView, object2: ObjectView) { }
+  /// override this method to get notify when two objects collided.
+  /// return true if you want to still get updates aftet two objects collide.
+  func objectsDidCollide(object1: ObjectView, object2: ObjectView) -> Bool { true }
 
 }

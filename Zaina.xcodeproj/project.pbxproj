@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C61B0B2C2366113100CB376F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B0B2B2366113100CB376F /* MainViewController.swift */; };
 		C6792AED22E4D140000A34A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792AEC22E4D140000A34A6 /* AppDelegate.swift */; };
-		C6792AEF22E4D140000A34A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792AEE22E4D140000A34A6 /* ViewController.swift */; };
+		C6792AEF22E4D140000A34A6 /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792AEE22E4D140000A34A6 /* HouseViewController.swift */; };
 		C6792AF222E4D140000A34A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6792AF022E4D140000A34A6 /* Main.storyboard */; };
 		C6792AF422E4D142000A34A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6792AF322E4D142000A34A6 /* Assets.xcassets */; };
 		C6792AF722E4D142000A34A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6792AF522E4D142000A34A6 /* LaunchScreen.storyboard */; };
@@ -24,16 +24,22 @@
 		C67BC1BC22EAE91E00C7D44E /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1BB22EAE91E00C7D44E /* NodeView.swift */; };
 		C67BC1BE22EAECA500C7D44E /* pixel_font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C67BC1BD22EAECA200C7D44E /* pixel_font.ttf */; };
 		C6801B0C2366028700A3085C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6801B0B2366028700A3085C /* SplashViewController.swift */; };
-		C6801B0E2366056100A3085C /* Level1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6801B0D2366056100A3085C /* Level1ViewController.swift */; };
+		C6801B0E2366056100A3085C /* IntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6801B0D2366056100A3085C /* IntranceViewController.swift */; };
 		C6801B10236606F800A3085C /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6801B0F236606F800A3085C /* SceneView.swift */; };
+		C687C4A6236CAC1900E83B61 /* ZainaSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687C4A5236CAC1900E83B61 /* ZainaSpriteView.swift */; };
+		C687C4A8236CB10400E83B61 /* CollideTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687C4A7236CB10400E83B61 /* CollideTypes.swift */; };
+		C687C4AA236CB81300E83B61 /* SpiderSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687C4A9236CB81300E83B61 /* SpiderSpriteView.swift */; };
+		C687C4AE236CBEEC00E83B61 /* background.wav in Resources */ = {isa = PBXBuildFile; fileRef = C687C4AD236CBEEC00E83B61 /* background.wav */; };
+		C687C4B0236CC7D500E83B61 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687C4AF236CC7D500E83B61 /* MusicPlayer.swift */; };
+		C6B6392D236CA52D00C282FC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B6392C236CA52D00C282FC /* UIViewController.swift */; };
+		C6B63930236CA5B000C282FC /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B6392F236CA5B000C282FC /* UIStoryboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C602795F234DDEC6006769E8 /* Zaina.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Zaina.entitlements; sourceTree = "<group>"; };
 		C61B0B2B2366113100CB376F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C6792AE922E4D140000A34A6 /* Zaina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zaina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6792AEC22E4D140000A34A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C6792AEE22E4D140000A34A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C6792AEE22E4D140000A34A6 /* HouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
 		C6792AF122E4D140000A34A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6792AF322E4D142000A34A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6792AF622E4D142000A34A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,8 +55,15 @@
 		C67BC1BB22EAE91E00C7D44E /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
 		C67BC1BD22EAECA200C7D44E /* pixel_font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pixel_font.ttf; sourceTree = "<group>"; };
 		C6801B0B2366028700A3085C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		C6801B0D2366056100A3085C /* Level1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level1ViewController.swift; sourceTree = "<group>"; };
+		C6801B0D2366056100A3085C /* IntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntranceViewController.swift; sourceTree = "<group>"; };
 		C6801B0F236606F800A3085C /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
+		C687C4A5236CAC1900E83B61 /* ZainaSpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZainaSpriteView.swift; sourceTree = "<group>"; };
+		C687C4A7236CB10400E83B61 /* CollideTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollideTypes.swift; sourceTree = "<group>"; };
+		C687C4A9236CB81300E83B61 /* SpiderSpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderSpriteView.swift; sourceTree = "<group>"; };
+		C687C4AD236CBEEC00E83B61 /* background.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = background.wav; sourceTree = "<group>"; };
+		C687C4AF236CC7D500E83B61 /* MusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		C6B6392C236CA52D00C282FC /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		C6B6392F236CA5B000C282FC /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +96,12 @@
 		C6792AEB22E4D140000A34A6 /* Zaina */ = {
 			isa = PBXGroup;
 			children = (
-				C602795F234DDEC6006769E8 /* Zaina.entitlements */,
 				C6792AFF22E4D154000A34A6 /* AppDelegate */,
+				C687C4A4236CABF300E83B61 /* Sprites */,
 				C6792AFE22E4D149000A34A6 /* ViewControllers */,
 				C6792B0122E4D161000A34A6 /* Storyboards */,
 				C6792B0222E4D1A0000A34A6 /* Resources */,
+				C687C4B1236CCB0900E83B61 /* Helpers */,
 				C6801B0A2366025B00A3085C /* Classes */,
 				C6792B0322E4D1A8000A34A6 /* SupportFiles */,
 			);
@@ -99,8 +113,8 @@
 			children = (
 				C6801B0B2366028700A3085C /* SplashViewController.swift */,
 				C61B0B2B2366113100CB376F /* MainViewController.swift */,
-				C6801B0D2366056100A3085C /* Level1ViewController.swift */,
-				C6792AEE22E4D140000A34A6 /* ViewController.swift */,
+				C6801B0D2366056100A3085C /* IntranceViewController.swift */,
+				C6792AEE22E4D140000A34A6 /* HouseViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -134,8 +148,9 @@
 		C6792B0222E4D1A0000A34A6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C687C4AC236CBED600E83B61 /* music */,
+				C687C4AB236CBED200E83B61 /* fonts */,
 				C6792AF322E4D142000A34A6 /* Assets.xcassets */,
-				C67BC1BD22EAECA200C7D44E /* pixel_font.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -184,8 +199,52 @@
 			children = (
 				C6792B0422E4D1F5000A34A6 /* BaseGameViewController.swift */,
 				C6792B0022E4D15A000A34A6 /* Views */,
+				C6B6392E236CA56C00C282FC /* Extensions */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		C687C4A4236CABF300E83B61 /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				C687C4A5236CAC1900E83B61 /* ZainaSpriteView.swift */,
+				C687C4A9236CB81300E83B61 /* SpiderSpriteView.swift */,
+			);
+			path = Sprites;
+			sourceTree = "<group>";
+		};
+		C687C4AB236CBED200E83B61 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C67BC1BD22EAECA200C7D44E /* pixel_font.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		C687C4AC236CBED600E83B61 /* music */ = {
+			isa = PBXGroup;
+			children = (
+				C687C4AD236CBEEC00E83B61 /* background.wav */,
+			);
+			path = music;
+			sourceTree = "<group>";
+		};
+		C687C4B1236CCB0900E83B61 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C687C4A7236CB10400E83B61 /* CollideTypes.swift */,
+				C687C4AF236CC7D500E83B61 /* MusicPlayer.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C6B6392E236CA56C00C282FC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C6B6392C236CA52D00C282FC /* UIViewController.swift */,
+				C6B6392F236CA5B000C282FC /* UIStoryboard.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6792AF722E4D142000A34A6 /* LaunchScreen.storyboard in Resources */,
+				C687C4AE236CBEEC00E83B61 /* background.wav in Resources */,
 				C6792AF422E4D142000A34A6 /* Assets.xcassets in Resources */,
 				C67BC1BE22EAECA500C7D44E /* pixel_font.ttf in Resources */,
 				C6792AF222E4D140000A34A6 /* Main.storyboard in Resources */,
@@ -264,16 +324,22 @@
 				C6792B0A22E4D3FB000A34A6 /* ObjectView.swift in Sources */,
 				C6792B0822E4D385000A34A6 /* SpriteView.swift in Sources */,
 				C6801B10236606F800A3085C /* SceneView.swift in Sources */,
+				C687C4A6236CAC1900E83B61 /* ZainaSpriteView.swift in Sources */,
+				C687C4A8236CB10400E83B61 /* CollideTypes.swift in Sources */,
 				C6801B0C2366028700A3085C /* SplashViewController.swift in Sources */,
 				C67BC1BC22EAE91E00C7D44E /* NodeView.swift in Sources */,
 				C67BC1B322EAC86E00C7D44E /* BackgroundView.swift in Sources */,
-				C6792AEF22E4D140000A34A6 /* ViewController.swift in Sources */,
+				C6792AEF22E4D140000A34A6 /* HouseViewController.swift in Sources */,
 				C6792AED22E4D140000A34A6 /* AppDelegate.swift in Sources */,
+				C687C4B0236CC7D500E83B61 /* MusicPlayer.swift in Sources */,
 				C61B0B2C2366113100CB376F /* MainViewController.swift in Sources */,
 				C67BC1B722EAD79C00C7D44E /* Analog.swift in Sources */,
 				C6792B0522E4D1F5000A34A6 /* BaseGameViewController.swift in Sources */,
+				C687C4AA236CB81300E83B61 /* SpiderSpriteView.swift in Sources */,
+				C6B63930236CA5B000C282FC /* UIStoryboard.swift in Sources */,
 				C67BC1B522EAD78500C7D44E /* Direction.swift in Sources */,
-				C6801B0E2366056100A3085C /* Level1ViewController.swift in Sources */,
+				C6801B0E2366056100A3085C /* IntranceViewController.swift in Sources */,
+				C6B6392D236CA52D00C282FC /* UIViewController.swift in Sources */,
 				C67BC1BA22EAD9AD00C7D44E /* Frames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,8 +487,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Zaina/Zaina.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = H3MRF55H66;
 				INFOPLIST_FILE = "$(SRCROOT)/Zaina/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -431,7 +497,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = abedalkareem.Zaina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -442,8 +509,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Zaina/Zaina.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = H3MRF55H66;
 				INFOPLIST_FILE = "$(SRCROOT)/Zaina/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -452,7 +519,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = abedalkareem.Zaina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

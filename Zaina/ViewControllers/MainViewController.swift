@@ -37,4 +37,8 @@ class MainViewController: UIViewController {
     startButton.alpha = 0
   }
 
+  @IBAction func start(_ sender: Any) {
+    changeViewController(UIStoryboard.create(storyboard: .main, controller: IntranceViewController.self))
+  }
+
 }

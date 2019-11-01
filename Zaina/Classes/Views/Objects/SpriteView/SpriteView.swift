@@ -26,7 +26,7 @@ class SpriteView: ObjectView {
   }
 
   var frames = Frames()
-  var stopWhenCollideTyps = [Int]()
+  var stopWhenCollideTypes = [Int]()
 
   private var xSpeed: CGFloat = 5
   private var ySpeed: CGFloat = 5
@@ -54,7 +54,7 @@ class SpriteView: ObjectView {
     setup()
   }
 
-  private func setup() {
+  func setup() {
     addSubview(imageView)
   }
 
@@ -96,7 +96,7 @@ class SpriteView: ObjectView {
   }
 
   override func onCollisionEnter(with object: ObjectView?) {
-    guard let object = object, stopWhenCollideTyps.contains(object.type) else {
+    guard let object = object, stopWhenCollideTypes.contains(object.type) else {
       xSpeed = speed
       ySpeed = speed
       return
@@ -134,16 +134,19 @@ class SpriteView: ObjectView {
     let yMovementPercentage: CGFloat = y > frame.origin.y ? 0.5 : -0.5
     let xMovementPercentage: CGFloat = x > frame.origin.x ? 0.5 : -0.5
 
-    // direction value is from 0 to 1 as the `Direction` enum.
-    // check `Direction` enum.
-    let directionY: CGFloat = y > frame.origin.y ? 1 : 0
-    let directionX: CGFloat = x > frame.origin.x ? 1 : 0
-
     let newX = (xMovementPercentage * xDefrence)
     let newY = (yMovementPercentage * yDefrence)
 
+    // direction value is from 0 to 1 as the `Direction` enum.
+    // check `Direction` enum.
+    var directionX: CGFloat = newX + 0.5
+    var directionY: CGFloat = newY + 0.5
+
+    directionX = directionX > 1 ? 1 : directionX
+    directionY = directionY > 1 ? 1 : directionY
+
+
     analog = Analog(direction: Direction(x: directionX, y: directionY), x: newX, y: newY)
-    print(analog)
   }
 
   func moveXandYBy(x: CGFloat?, y: CGFloat?) {
@@ -154,6 +157,7 @@ class SpriteView: ObjectView {
   }
 
   func attachTo(_ analogView: AnalogView) {
+    analog = analogView.analog
     analogView.analogDidMove { [unowned self] (analog) in
       self.analog = analog
     }

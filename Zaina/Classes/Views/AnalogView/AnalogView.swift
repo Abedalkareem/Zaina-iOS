@@ -32,7 +32,7 @@ class AnalogView: UIView {
   private let backgroundImageView = UIImageView()
   private let analogImageView = UIImageView()
 
-  private var analog: Analog = Analog(direction: .center, x: 0, y: 0) {
+  var analog: Analog = Analog(direction: .center, x: 0, y: 0) {
     didSet {
       analogMoved?(analog)
     }
@@ -91,6 +91,14 @@ class AnalogView: UIView {
 
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     super.touchesEnded(touches, with: event)
+    // animate the analog back to center
+    UIView.animate(withDuration: 0.3) {
+      self.moveTo(point: CGPoint(x: self.bounds.midX, y: self.bounds.midY))
+    }
+  }
+
+  override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+    super.touchesCancelled(touches, with: event)
     // animate the analog back to center
     UIView.animate(withDuration: 0.3) {
       self.moveTo(point: CGPoint(x: self.bounds.midX, y: self.bounds.midY))
