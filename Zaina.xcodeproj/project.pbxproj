@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C607126C2375DC0200039AE6 /* main_screen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C607126B2375DC0200039AE6 /* main_screen.mp3 */; };
+		C607126E2375DD7F00039AE6 /* darkforest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C607126D2375DD7F00039AE6 /* darkforest.mp3 */; };
 		C61B0B2C2366113100CB376F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B0B2B2366113100CB376F /* MainViewController.swift */; };
 		C6792AED22E4D140000A34A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792AEC22E4D140000A34A6 /* AppDelegate.swift */; };
 		C6792AEF22E4D140000A34A6 /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792AEE22E4D140000A34A6 /* HouseViewController.swift */; };
@@ -26,6 +28,11 @@
 		C6801B0C2366028700A3085C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6801B0B2366028700A3085C /* SplashViewController.swift */; };
 		C6801B0E2366056100A3085C /* IntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6801B0D2366056100A3085C /* IntranceViewController.swift */; };
 		C6801B10236606F800A3085C /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6801B0F236606F800A3085C /* SceneView.swift */; };
+		C68513EF23756A0300D55020 /* OmarSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68513EE23756A0300D55020 /* OmarSpriteView.swift */; };
+		C68513F223756C2500D55020 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68513F123756C2500D55020 /* DialogView.swift */; };
+		C68513F6237595CB00D55020 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68513F5237595CB00D55020 /* Status.swift */; };
+		C68513F92375963A00D55020 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C68513FB2375963A00D55020 /* Localizable.strings */; };
+		C68513FD237596FB00D55020 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68513FC237596FB00D55020 /* String+Helpers.swift */; };
 		C687C4A6236CAC1900E83B61 /* ZainaSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687C4A5236CAC1900E83B61 /* ZainaSpriteView.swift */; };
 		C687C4A8236CB10400E83B61 /* CollideTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687C4A7236CB10400E83B61 /* CollideTypes.swift */; };
 		C687C4AA236CB81300E83B61 /* SpiderSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687C4A9236CB81300E83B61 /* SpiderSpriteView.swift */; };
@@ -33,9 +40,17 @@
 		C687C4B0236CC7D500E83B61 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687C4AF236CC7D500E83B61 /* MusicPlayer.swift */; };
 		C6B6392D236CA52D00C282FC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B6392C236CA52D00C282FC /* UIViewController.swift */; };
 		C6B63930236CA5B000C282FC /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B6392F236CA5B000C282FC /* UIStoryboard.swift */; };
+		C6EF56202375E5EC00711E0F /* DiningRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EF561F2375E5EC00711E0F /* DiningRoomViewController.swift */; };
+		C6EF56222375EA6600711E0F /* DarkSoulSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EF56212375EA6600711E0F /* DarkSoulSpriteView.swift */; };
+		C6EF56262375F02100711E0F /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EF56252375F02100711E0F /* GameOverViewController.swift */; };
+		C6EF56282375F14D00711E0F /* game_over.wav in Resources */ = {isa = PBXBuildFile; fileRef = C6EF56272375F14D00711E0F /* game_over.wav */; };
+		C6EF562A2375FA7000711E0F /* piano90e.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C6EF56292375FA7000711E0F /* piano90e.mp3 */; };
+		C6EF562C2376008E00711E0F /* LightNodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EF562B2376008E00711E0F /* LightNodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C607126B2375DC0200039AE6 /* main_screen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = main_screen.mp3; sourceTree = "<group>"; };
+		C607126D2375DD7F00039AE6 /* darkforest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = darkforest.mp3; sourceTree = "<group>"; };
 		C61B0B2B2366113100CB376F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C6792AE922E4D140000A34A6 /* Zaina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zaina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6792AEC22E4D140000A34A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +72,11 @@
 		C6801B0B2366028700A3085C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		C6801B0D2366056100A3085C /* IntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntranceViewController.swift; sourceTree = "<group>"; };
 		C6801B0F236606F800A3085C /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
+		C68513EE23756A0300D55020 /* OmarSpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmarSpriteView.swift; sourceTree = "<group>"; };
+		C68513F123756C2500D55020 /* DialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
+		C68513F5237595CB00D55020 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		C68513FA2375963A00D55020 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C68513FC237596FB00D55020 /* String+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
 		C687C4A5236CAC1900E83B61 /* ZainaSpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZainaSpriteView.swift; sourceTree = "<group>"; };
 		C687C4A7236CB10400E83B61 /* CollideTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollideTypes.swift; sourceTree = "<group>"; };
 		C687C4A9236CB81300E83B61 /* SpiderSpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderSpriteView.swift; sourceTree = "<group>"; };
@@ -64,6 +84,12 @@
 		C687C4AF236CC7D500E83B61 /* MusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		C6B6392C236CA52D00C282FC /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		C6B6392F236CA5B000C282FC /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		C6EF561F2375E5EC00711E0F /* DiningRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningRoomViewController.swift; sourceTree = "<group>"; };
+		C6EF56212375EA6600711E0F /* DarkSoulSpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSoulSpriteView.swift; sourceTree = "<group>"; };
+		C6EF56252375F02100711E0F /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		C6EF56272375F14D00711E0F /* game_over.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = game_over.wav; sourceTree = "<group>"; };
+		C6EF56292375FA7000711E0F /* piano90e.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano90e.mp3; sourceTree = "<group>"; };
+		C6EF562B2376008E00711E0F /* LightNodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightNodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +141,8 @@
 				C61B0B2B2366113100CB376F /* MainViewController.swift */,
 				C6801B0D2366056100A3085C /* IntranceViewController.swift */,
 				C6792AEE22E4D140000A34A6 /* HouseViewController.swift */,
+				C6EF561F2375E5EC00711E0F /* DiningRoomViewController.swift */,
+				C6EF56252375F02100711E0F /* GameOverViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -130,6 +158,7 @@
 		C6792B0022E4D15A000A34A6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C68513F023756C1000D55020 /* DialogView */,
 				C6792B1222E5EF23000A34A6 /* AnalogView */,
 				C6792B0622E4D34D000A34A6 /* Objects */,
 			);
@@ -159,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				C6792AF822E4D142000A34A6 /* Info.plist */,
+				C68513FB2375963A00D55020 /* Localizable.strings */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -204,11 +234,30 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		C68513F023756C1000D55020 /* DialogView */ = {
+			isa = PBXGroup;
+			children = (
+				C68513F123756C2500D55020 /* DialogView.swift */,
+			);
+			path = DialogView;
+			sourceTree = "<group>";
+		};
+		C68513FE2375AB5C00D55020 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C68513FC237596FB00D55020 /* String+Helpers.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C687C4A4236CABF300E83B61 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
 				C687C4A5236CAC1900E83B61 /* ZainaSpriteView.swift */,
 				C687C4A9236CB81300E83B61 /* SpiderSpriteView.swift */,
+				C68513EE23756A0300D55020 /* OmarSpriteView.swift */,
+				C6EF56212375EA6600711E0F /* DarkSoulSpriteView.swift */,
+				C6EF562B2376008E00711E0F /* LightNodeView.swift */,
 			);
 			path = Sprites;
 			sourceTree = "<group>";
@@ -224,6 +273,10 @@
 		C687C4AC236CBED600E83B61 /* music */ = {
 			isa = PBXGroup;
 			children = (
+				C607126D2375DD7F00039AE6 /* darkforest.mp3 */,
+				C607126B2375DC0200039AE6 /* main_screen.mp3 */,
+				C6EF56292375FA7000711E0F /* piano90e.mp3 */,
+				C6EF56272375F14D00711E0F /* game_over.wav */,
 				C687C4AD236CBEEC00E83B61 /* background.wav */,
 			);
 			path = music;
@@ -232,8 +285,10 @@
 		C687C4B1236CCB0900E83B61 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C68513FE2375AB5C00D55020 /* Extensions */,
 				C687C4A7236CB10400E83B61 /* CollideTypes.swift */,
 				C687C4AF236CC7D500E83B61 /* MusicPlayer.swift */,
+				C68513F5237595CB00D55020 /* Status.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -306,8 +361,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6792AF722E4D142000A34A6 /* LaunchScreen.storyboard in Resources */,
+				C607126E2375DD7F00039AE6 /* darkforest.mp3 in Resources */,
+				C6EF56282375F14D00711E0F /* game_over.wav in Resources */,
+				C68513F92375963A00D55020 /* Localizable.strings in Resources */,
 				C687C4AE236CBEEC00E83B61 /* background.wav in Resources */,
+				C607126C2375DC0200039AE6 /* main_screen.mp3 in Resources */,
 				C6792AF422E4D142000A34A6 /* Assets.xcassets in Resources */,
+				C6EF562A2375FA7000711E0F /* piano90e.mp3 in Resources */,
 				C67BC1BE22EAECA500C7D44E /* pixel_font.ttf in Resources */,
 				C6792AF222E4D140000A34A6 /* Main.storyboard in Resources */,
 			);
@@ -322,14 +382,21 @@
 			files = (
 				C6792B1422E5EF43000A34A6 /* AnalogView.swift in Sources */,
 				C6792B0A22E4D3FB000A34A6 /* ObjectView.swift in Sources */,
+				C6EF56222375EA6600711E0F /* DarkSoulSpriteView.swift in Sources */,
 				C6792B0822E4D385000A34A6 /* SpriteView.swift in Sources */,
+				C6EF562C2376008E00711E0F /* LightNodeView.swift in Sources */,
+				C6EF56262375F02100711E0F /* GameOverViewController.swift in Sources */,
 				C6801B10236606F800A3085C /* SceneView.swift in Sources */,
+				C68513EF23756A0300D55020 /* OmarSpriteView.swift in Sources */,
 				C687C4A6236CAC1900E83B61 /* ZainaSpriteView.swift in Sources */,
 				C687C4A8236CB10400E83B61 /* CollideTypes.swift in Sources */,
 				C6801B0C2366028700A3085C /* SplashViewController.swift in Sources */,
 				C67BC1BC22EAE91E00C7D44E /* NodeView.swift in Sources */,
 				C67BC1B322EAC86E00C7D44E /* BackgroundView.swift in Sources */,
+				C68513FD237596FB00D55020 /* String+Helpers.swift in Sources */,
 				C6792AEF22E4D140000A34A6 /* HouseViewController.swift in Sources */,
+				C6EF56202375E5EC00711E0F /* DiningRoomViewController.swift in Sources */,
+				C68513F6237595CB00D55020 /* Status.swift in Sources */,
 				C6792AED22E4D140000A34A6 /* AppDelegate.swift in Sources */,
 				C687C4B0236CC7D500E83B61 /* MusicPlayer.swift in Sources */,
 				C61B0B2C2366113100CB376F /* MainViewController.swift in Sources */,
@@ -338,6 +405,7 @@
 				C687C4AA236CB81300E83B61 /* SpiderSpriteView.swift in Sources */,
 				C6B63930236CA5B000C282FC /* UIStoryboard.swift in Sources */,
 				C67BC1B522EAD78500C7D44E /* Direction.swift in Sources */,
+				C68513F223756C2500D55020 /* DialogView.swift in Sources */,
 				C6801B0E2366056100A3085C /* IntranceViewController.swift in Sources */,
 				C6B6392D236CA52D00C282FC /* UIViewController.swift in Sources */,
 				C67BC1BA22EAD9AD00C7D44E /* Frames.swift in Sources */,
@@ -361,6 +429,14 @@
 				C6792AF622E4D142000A34A6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C68513FB2375963A00D55020 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C68513FA2375963A00D55020 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

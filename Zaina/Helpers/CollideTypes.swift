@@ -9,9 +9,13 @@
 import UIKit
 
 enum CollideTypes {
+  static let zain = 1
+  static let omar = 2
   static let tree = 3
   static let house = 4
-  static let zain = 1
+  static let exit = 5
+  static let darkSoul = 6
+  static let spider = 7
   static let food = 8
-  static let houseExitToIntrance = 5
+  static let light = 9
 }

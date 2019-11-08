@@ -8,18 +8,48 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: BaseGameViewController {
 
-  @IBOutlet weak var startButton: UIButton!
+  // MARK: - IBOutlets
+
+  @IBOutlet private weak var startButton: UIButton!
+  @IBOutlet private weak var logoImageView: UIImageView!
+
+  // MARK: - Properties
+
+  private var zainaSpriteView: ZainaSpriteView!
+  private var zainaMovingTimer: Timer?
+
+  // MARK: - ViewController lifecycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    hideButton()
+    hideViews()
+    addZaina()
+    playBackgroundSong()
+
+    setupViews()
   }
 
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     showButton()
+    showLogo()
+    startZainaMovingTimer()
+  }
+
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(true)
+    stopZainaMovingTimer()
+  }
+
+  private func setupViews() {
+    let title = Status.currentLevel == 0 ? "Start" : "Continue"
+    startButton.setTitle(title, for: .normal)
+  }
+
+  private func playBackgroundSong() {
+    MusicPlayer.shared.playBackgroundMusicWith(music: .mainScreen)
   }
 
   private func showButton() {
@@ -33,12 +63,45 @@ class MainViewController: UIViewController {
     }
   }
 
-  private func hideButton() {
-    startButton.alpha = 0
+  private func showLogo() {
+    UIView.animate(withDuration: 1.5) {
+      self.logoImageView.alpha = 1
+    }
   }
 
+  private func hideViews() {
+    startButton.alpha = 0
+    logoImageView.alpha = 0
+  }
+
+  private func addZaina() {
+    zainaSpriteView = ZainaSpriteView()
+    zainaSpriteView.frame.origin = CGPoint(x: 30, y: 30)
+    sceneView.addSubview(zainaSpriteView)
+  }
+
+  private func startZainaMovingTimer() {
+    zainaMovingTimer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(moveZaina), userInfo: nil, repeats: true)
+    moveZaina()
+  }
+
+  private func stopZainaMovingTimer() {
+    zainaMovingTimer?.invalidate()
+    zainaMovingTimer = nil
+  }
+
+  @objc
+  private func moveZaina() {
+    let x = CGFloat(Int.random(in: (0...Int(view.frame.width))))
+    let y = CGFloat(Int.random(in: (0...Int(view.frame.height))))
+
+    zainaSpriteView.moveTo(x: x, y: y)
+  }
+
+  // MARK: - IBActions
+
   @IBAction func start(_ sender: Any) {
-    changeViewController(UIStoryboard.create(storyboard: .main, controller: IntranceViewController.self))
+    changeViewController(Status.currentLevelViewController())
   }
 
 }

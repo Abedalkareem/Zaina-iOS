@@ -10,15 +10,18 @@ import UIKit
 
 class SplashViewController: UIViewController {
 
-  @IBOutlet weak var logoImageView: UIImageView!
+  // MARK: - IBOutlets
+
+  @IBOutlet private weak var logoImageView: UIImageView!
+
+  // MARK: - ViewController lifecycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    hideLogo()
     startTimer()
 
-    MusicPlayer.shared.play()
+    hideLogo()
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -31,13 +34,13 @@ class SplashViewController: UIViewController {
   }
 
   private func showLogo() {
-    UIView.animate(withDuration: 0.5) {
+    UIView.animate(withDuration: 1.5) {
       self.logoImageView.alpha = 1
     }
   }
 
   private func startTimer() {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
       self.changeViewController(UIStoryboard.create(storyboard: .main, controller: MainViewController.self))
     }
   }

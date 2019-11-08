@@ -13,30 +13,30 @@ class MusicPlayer {
 
   static let shared = MusicPlayer()
 
-  var audioPlayer: AVAudioPlayer?
+  var backgroundAudioPlayer: AVAudioPlayer?
   var subAudioPlayer: AVAudioPlayer?
   var isPlaying = false
 
   init() {
-    let path = Bundle.main.path(forResource: Music.background.rawValue, ofType: Type.wav.rawValue)!
-    let url = URL(fileURLWithPath: path)
 
+  }
+
+  func playBackgroundMusicWith(music: Music) {
+    let path = Bundle.main.path(forResource: music.rawValue, ofType: music.type.rawValue)!
+    let url = URL(fileURLWithPath: path)
     do {
-      audioPlayer = try AVAudioPlayer(contentsOf: url)
-      audioPlayer?.numberOfLoops = 10
-      audioPlayer?.volume = 0.4
+      backgroundAudioPlayer = try AVAudioPlayer(contentsOf: url)
+      backgroundAudioPlayer?.numberOfLoops = 10
+      backgroundAudioPlayer?.volume = 0.4
     } catch {
       print(error.localizedDescription)
     }
-  }
-
-  func play() {
-    audioPlayer?.play()
+    backgroundAudioPlayer?.play()
     isPlaying = true
   }
 
-  func pause() {
-    audioPlayer?.pause()
+  func pauseBackgroundMusic() {
+    backgroundAudioPlayer?.pause()
     isPlaying = false
   }
 
@@ -55,7 +55,27 @@ class MusicPlayer {
 }
 
 enum Music: String {
+
+  var type: Type {
+    switch self {
+    case .background:
+      return .wav
+    case .mainScreen:
+      return .mp3
+    case .darkForest:
+      return .mp3
+    case .gameOver:
+      return .wav
+    case .piano90e:
+      return .mp3
+    }
+  }
+
   case background
+  case mainScreen = "main_screen"
+  case darkForest = "darkforest"
+  case gameOver = "game_over"
+  case piano90e
 }
 
 enum Type: String {

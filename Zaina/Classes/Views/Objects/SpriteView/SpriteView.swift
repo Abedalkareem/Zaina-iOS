@@ -34,7 +34,7 @@ class SpriteView: ObjectView {
   private var desireX: CGFloat?
   private var desireY: CGFloat?
 
-  private var analog: Analog? {
+  var analog: Analog? {
     didSet {
       if oldValue != analog {
         changeMovment()
@@ -55,6 +55,7 @@ class SpriteView: ObjectView {
   }
 
   func setup() {
+    imageView.contentMode = .scaleAspectFit
     addSubview(imageView)
   }
 

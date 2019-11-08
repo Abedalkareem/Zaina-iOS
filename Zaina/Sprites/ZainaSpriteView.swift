@@ -20,6 +20,13 @@ class ZainaSpriteView: SpriteView {
 
     type = CollideTypes.zain
 
+    stopWhenCollideTypes = [CollideTypes.house,
+                            CollideTypes.exit,
+                            CollideTypes.food,
+                            CollideTypes.tree,
+                            CollideTypes.darkSoul,
+                            CollideTypes.light]
+
     frames.top = [#imageLiteral(resourceName: "top2"), #imageLiteral(resourceName: "top1")]
     frames.left = [#imageLiteral(resourceName: "left2"), #imageLiteral(resourceName: "left1")]
     frames.right = [#imageLiteral(resourceName: "right2"), #imageLiteral(resourceName: "right1")]

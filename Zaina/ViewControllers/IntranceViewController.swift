@@ -24,6 +24,31 @@ class IntranceViewController: BaseGameViewController {
     setupSpider()
 
     startSpiderTimer()
+    playBackgroundSong()
+  }
+
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    showIntranceDialog()
+  }
+
+  private func showIntranceDialog() {
+    DialogView.showIn(view: view,
+                      message: "intrance_first_message".localize,
+                      firstButtonTitle: "intrance_first_message_action".localize)
+    { _ in
+      self.showSecondDialog()
+    }
+  }
+
+  private func showSecondDialog() {
+    DialogView.showIn(view: view,
+                      message: "intrance_second_message".localize,
+                      firstButtonTitle: "intrance_second_message_action".localize)
+  }
+
+  private func playBackgroundSong() {
+    MusicPlayer.shared.playBackgroundMusicWith(music: .darkForest)
   }
 
   private func startSpiderTimer() {
@@ -52,7 +77,6 @@ class IntranceViewController: BaseGameViewController {
 
   private func setupPlayer() {
     playerView = ZainaSpriteView()
-    playerView.stopWhenCollideTypes = [CollideTypes.house, CollideTypes.tree]
     playerView.attachTo(analogView)
     playerView.frame.origin = CGPoint(x: 30, y: 30)
     sceneView.addSubview(playerView)

@@ -18,7 +18,7 @@ class NodeView: ObjectView {
     }
   }
 
-  private var imageView: UIImageView!
+  var imageView: UIImageView!
 
   override init(frame: CGRect) {
     super.init(frame: frame)

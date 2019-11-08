@@ -16,6 +16,7 @@
         <!--Intrance View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="IntranceViewController" id="BYZ-38-t0r" customClass="IntranceViewController" customModule="Zaina" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
@@ -133,13 +134,13 @@
                         <outlet property="sceneView" destination="hZ3-6a-arg" id="Kfx-Rt-IVI"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102.99850074962519" y="965.60000000000002"/>
+            <point key="canvasLocation" x="103" y="882"/>
         </scene>
         <!--House View Controller-->
         <scene sceneID="cO6-Ox-BGW">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gzb-kM-Cg1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="HouseViewController" id="WKw-gL-JDL" customClass="HouseViewController" customModule="Zaina" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0x3-8D-HNo">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
@@ -256,36 +257,29 @@
                         <outlet property="sceneView" destination="viG-TI-OEN" id="HWI-fO-Sa0"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gzb-kM-Cg1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102.99850074962519" y="1804"/>
+            <point key="canvasLocation" x="103" y="1652"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="zu2-Vj-usN">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8js-s4-bZD" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SplashViewController" id="VDs-9u-6Ab" customClass="SplashViewController" customModule="Zaina" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h38-vq-6b0">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="HBA-K1-3Xe">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zainalogo" translatesAutoresizingMaskIntoConstraints="NO" id="wFp-1g-l26">
-                                <rect key="frame" x="120.5" y="74.5" width="426" height="226"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jostudio_logo" translatesAutoresizingMaskIntoConstraints="NO" id="wFp-1g-l26">
+                                <rect key="frame" x="208.5" y="74.5" width="250" height="226"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="426" id="7d9-kJ-S1J"/>
+                                    <constraint firstAttribute="width" constant="250" id="7d9-kJ-S1J"/>
                                     <constraint firstAttribute="height" constant="226" id="KQf-ED-58E"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="HBA-K1-3Xe" firstAttribute="leading" secondItem="h38-vq-6b0" secondAttribute="leading" id="2Dr-rV-GD7"/>
-                            <constraint firstAttribute="bottom" secondItem="HBA-K1-3Xe" secondAttribute="bottom" id="8yT-w1-Qvd"/>
-                            <constraint firstItem="HBA-K1-3Xe" firstAttribute="top" secondItem="uS2-7y-ECI" secondAttribute="top" id="TtP-3o-bJq"/>
                             <constraint firstItem="wFp-1g-l26" firstAttribute="centerY" secondItem="h38-vq-6b0" secondAttribute="centerY" id="paa-eh-Owj"/>
-                            <constraint firstAttribute="trailing" secondItem="HBA-K1-3Xe" secondAttribute="trailing" id="sSV-OV-0Hc"/>
                             <constraint firstItem="wFp-1g-l26" firstAttribute="centerX" secondItem="h38-vq-6b0" secondAttribute="centerX" id="wht-cs-XXn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uS2-7y-ECI"/>
@@ -294,13 +288,13 @@
                         <outlet property="logoImageView" destination="wFp-1g-l26" id="jd4-yS-Zy9"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8js-s4-bZD" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-591.45427286356824" y="120.8"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="vSr-jL-FZu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jmj-uS-fa3" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MainViewController" id="HVo-eu-rUl" customClass="MainViewController" customModule="Zaina" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p45-XJ-qDI">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
@@ -309,6 +303,94 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Bpd-dB-3tU">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vux-2V-Gms" customClass="SceneView" customModule="Zaina" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1XG-gm-gL8" customClass="NodeView" customModule="Zaina" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="38" width="115" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="115" id="F79-nH-nvd"/>
+                                            <constraint firstAttribute="height" constant="128" id="JgG-9b-STm"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="tree2"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPu-V0-Bzz" customClass="NodeView" customModule="Zaina" customModuleProvider="target">
+                                        <rect key="frame" x="308.5" y="48" width="40" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="WbG-Ig-gnY"/>
+                                            <constraint firstAttribute="width" constant="40" id="w6T-ll-2vM"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="flower1"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tM2-KF-DFs" customClass="NodeView" customModule="Zaina" customModuleProvider="target">
+                                        <rect key="frame" x="637" y="20" width="40" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="KaV-HR-W30"/>
+                                            <constraint firstAttribute="width" constant="40" id="RMN-8D-T2V"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="flower1"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vl9-6q-pCC" customClass="NodeView" customModule="Zaina" customModuleProvider="target">
+                                        <rect key="frame" x="552" y="247" width="115" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="14X-Ci-x5N"/>
+                                            <constraint firstAttribute="width" constant="115" id="Un3-kd-d8V"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="tree2"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghg-KV-wA3" customClass="NodeView" customModule="Zaina" customModuleProvider="target">
+                                        <rect key="frame" x="105" y="353" width="30" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="WiA-oS-0eh"/>
+                                            <constraint firstAttribute="height" constant="30" id="gQt-st-d7A"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="flower3"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tM2-KF-DFs" secondAttribute="trailing" constant="-10" id="4Y4-B1-bdo"/>
+                                    <constraint firstItem="jPu-V0-Bzz" firstAttribute="top" secondItem="vux-2V-Gms" secondAttribute="top" constant="48" id="Bah-tq-EIF"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vl9-6q-pCC" secondAttribute="bottom" id="CHi-j5-KpL"/>
+                                    <constraint firstItem="1XG-gm-gL8" firstAttribute="leading" secondItem="vux-2V-Gms" secondAttribute="leading" constant="20" id="Hcv-rZ-Dea"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vl9-6q-pCC" secondAttribute="trailing" id="JOW-ry-bb8"/>
+                                    <constraint firstItem="Ghg-KV-wA3" firstAttribute="leading" secondItem="vux-2V-Gms" secondAttribute="leading" constant="105" id="JgO-6U-MxZ"/>
+                                    <constraint firstItem="jPu-V0-Bzz" firstAttribute="centerX" secondItem="vux-2V-Gms" secondAttribute="centerX" constant="-5" id="XQr-g1-2Ss"/>
+                                    <constraint firstItem="tM2-KF-DFs" firstAttribute="top" secondItem="vux-2V-Gms" secondAttribute="top" constant="20" id="Z9I-tw-w2D"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ghg-KV-wA3" secondAttribute="bottom" constant="-8" id="oQL-8Q-9co"/>
+                                    <constraint firstItem="1XG-gm-gL8" firstAttribute="top" secondItem="vux-2V-Gms" secondAttribute="top" constant="38" id="pZ1-rx-gUC"/>
+                                </constraints>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zainalogo" translatesAutoresizingMaskIntoConstraints="NO" id="nwW-9u-Gw3">
                                 <rect key="frame" x="120.5" y="74.5" width="426" height="226"/>
                                 <constraints>
@@ -331,35 +413,276 @@
                         <constraints>
                             <constraint firstItem="nwW-9u-Gw3" firstAttribute="centerX" secondItem="p45-XJ-qDI" secondAttribute="centerX" id="21r-Ra-6ff"/>
                             <constraint firstItem="khe-hm-T5G" firstAttribute="top" secondItem="nwW-9u-Gw3" secondAttribute="bottom" id="6LG-Xf-Ay1"/>
+                            <constraint firstItem="vux-2V-Gms" firstAttribute="top" secondItem="p45-XJ-qDI" secondAttribute="top" id="8iy-kk-F0m"/>
                             <constraint firstItem="khe-hm-T5G" firstAttribute="centerX" secondItem="p45-XJ-qDI" secondAttribute="centerX" id="DuG-g8-9Y7"/>
+                            <constraint firstAttribute="bottom" secondItem="vux-2V-Gms" secondAttribute="bottom" id="EnP-Xt-Jhf"/>
                             <constraint firstAttribute="bottom" secondItem="Bpd-dB-3tU" secondAttribute="bottom" id="FID-fg-U3a"/>
                             <constraint firstItem="Bpd-dB-3tU" firstAttribute="leading" secondItem="p45-XJ-qDI" secondAttribute="leading" id="J5E-UP-sRf"/>
+                            <constraint firstAttribute="trailing" secondItem="vux-2V-Gms" secondAttribute="trailing" id="egA-9m-fVz"/>
                             <constraint firstItem="nwW-9u-Gw3" firstAttribute="centerY" secondItem="p45-XJ-qDI" secondAttribute="centerY" id="jvJ-XK-p7H"/>
                             <constraint firstItem="Bpd-dB-3tU" firstAttribute="top" secondItem="VIY-6D-Lnp" secondAttribute="top" id="qQ7-CX-ZKG"/>
                             <constraint firstAttribute="trailing" secondItem="Bpd-dB-3tU" secondAttribute="trailing" id="s49-IF-9Ot"/>
+                            <constraint firstItem="vux-2V-Gms" firstAttribute="leading" secondItem="p45-XJ-qDI" secondAttribute="leading" id="wgo-63-A27"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VIY-6D-Lnp"/>
                     </view>
                     <connections>
+                        <outlet property="logoImageView" destination="nwW-9u-Gw3" id="sWX-7k-x1v"/>
+                        <outlet property="sceneView" destination="vux-2V-Gms" id="3ZY-mz-ayl"/>
                         <outlet property="startButton" destination="khe-hm-T5G" id="McT-sX-eCP"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jmj-uS-fa3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="103" y="121"/>
+            <point key="canvasLocation" x="102.99850074962519" y="120.8"/>
+        </scene>
+        <!--Game Over View Controller-->
+        <scene sceneID="5mK-PL-ryE">
+            <objects>
+                <viewController storyboardIdentifier="GameOverViewController" id="ynV-2y-YYL" customClass="GameOverViewController" customModule="Zaina" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oWC-3F-FRd">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3s-Jh-oWl">
+                                <rect key="frame" x="156" y="155" width="355" height="65"/>
+                                <fontDescription key="fontDescription" name="RetroComputer" family="Retro Computer" pointSize="50"/>
+                                <color key="textColor" red="0.89501284246575341" green="0.17783551989041099" blue="0.14237698930547946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqa-pC-LXF">
+                                <rect key="frame" x="244.5" y="260.5" width="178" height="45"/>
+                                <fontDescription key="fontDescription" name="RetroComputer" family="Retro Computer" pointSize="25"/>
+                                <state key="normal" title="Try again">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="HVo-eu-rUl" eventType="touchUpInside" id="Lcx-Bn-yyq"/>
+                                    <action selector="tryAgain:" destination="ynV-2y-YYL" eventType="touchUpInside" id="z8l-B6-IKI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T3s-Jh-oWl" firstAttribute="centerY" secondItem="oWC-3F-FRd" secondAttribute="centerY" id="0ey-g2-7tc"/>
+                            <constraint firstItem="gqa-pC-LXF" firstAttribute="top" secondItem="T3s-Jh-oWl" secondAttribute="bottom" constant="40.5" id="Tyv-P0-i3B"/>
+                            <constraint firstItem="gqa-pC-LXF" firstAttribute="centerX" secondItem="oWC-3F-FRd" secondAttribute="centerX" id="acz-zc-jWP"/>
+                            <constraint firstItem="T3s-Jh-oWl" firstAttribute="centerX" secondItem="oWC-3F-FRd" secondAttribute="centerX" id="y2I-FG-AGd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eL5-DP-g0Z"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PLS-Vu-WQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807" y="121"/>
+        </scene>
+        <!--Dining Room View Controller-->
+        <scene sceneID="gt1-ly-xkY">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nNp-1W-AfU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="DiningRoomViewController" id="Gvj-NU-PH6" customClass="DiningRoomViewController" customModule="Zaina" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sks-Ps-JUf">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6f-NQ-MKp" customClass="BackgroundView" customModule="Zaina" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="house_ground"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5l5-7t-rRe" customClass="SceneView" customModule="Zaina" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMJ-ZT-m6c" customClass="NodeView" customModule="Zaina" customModuleProvider="target">
+                                        <rect key="frame" x="308.5" y="325" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Ocu-Od-OQI"/>
+                                            <constraint firstAttribute="width" constant="50" id="tLt-57-Exf"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0MU-1o-3z5" customClass="NodeView" customModule="Zaina" customModuleProvider="target">
+                                        <rect key="frame" x="288.5" y="112.5" width="90" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="7f4-dQ-TpF"/>
+                                            <constraint firstAttribute="width" constant="90" id="Ber-rG-H2B"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="table"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7E-BW-Ufd" customClass="NodeView" customModule="Zaina" customModuleProvider="target">
+                                        <rect key="frame" x="220" y="152.5" width="45" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="42D-ho-6bh"/>
+                                            <constraint firstAttribute="width" constant="45" id="Ag0-2u-hsk"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="first_chair"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQo-p8-U8h" customClass="NodeView" customModule="Zaina" customModuleProvider="target">
+                                        <rect key="frame" x="397" y="152.5" width="45" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="jxf-PT-gHw"/>
+                                            <constraint firstAttribute="width" constant="45" id="wYl-E3-gE0"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="second_chair"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eyj-3v-LWJ" customClass="LightNodeView" customModule="Zaina" customModuleProvider="target">
+                                        <rect key="frame" x="313.5" y="8" width="40" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Vgh-uh-OXZ"/>
+                                            <constraint firstAttribute="width" constant="40" id="uRH-ai-4f1"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="light_off"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CqW-vH-CbS" customClass="LightNodeView" customModule="Zaina" customModuleProvider="target">
+                                        <rect key="frame" x="517" y="317" width="40" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="41f-Xf-U5p"/>
+                                            <constraint firstAttribute="width" constant="40" id="Mo1-Nf-acx"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="light_off"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Z2-H4-cLk" customClass="LightNodeView" customModule="Zaina" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="100" width="40" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="FUE-Fq-KYX"/>
+                                            <constraint firstAttribute="width" constant="40" id="e3s-vO-Ybf"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="light_off"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnL-VQ-pQR" customClass="LightNodeView" customModule="Zaina" customModuleProvider="target">
+                                        <rect key="frame" x="619" y="40" width="40" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="B6g-ei-vR2"/>
+                                            <constraint firstAttribute="height" constant="50" id="R1C-aV-ve6"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="light_off"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="VMJ-ZT-m6c" firstAttribute="centerX" secondItem="5l5-7t-rRe" secondAttribute="centerX" id="Fc8-Cc-mId"/>
+                                    <constraint firstItem="jnL-VQ-pQR" firstAttribute="top" secondItem="5l5-7t-rRe" secondAttribute="top" constant="40" id="GP8-Gu-za6"/>
+                                    <constraint firstItem="0MU-1o-3z5" firstAttribute="centerX" secondItem="5l5-7t-rRe" secondAttribute="centerX" id="HX3-i9-JYG"/>
+                                    <constraint firstAttribute="bottom" secondItem="VMJ-ZT-m6c" secondAttribute="bottom" id="Mqu-hf-j9d"/>
+                                    <constraint firstItem="pQo-p8-U8h" firstAttribute="centerY" secondItem="0MU-1o-3z5" secondAttribute="centerY" id="N6R-b8-6ed"/>
+                                    <constraint firstItem="Eyj-3v-LWJ" firstAttribute="top" secondItem="5l5-7t-rRe" secondAttribute="top" constant="8" id="Z7S-Hu-KLH"/>
+                                    <constraint firstAttribute="bottom" secondItem="CqW-vH-CbS" secondAttribute="bottom" constant="8" id="cgS-xw-0T6"/>
+                                    <constraint firstItem="6Z2-H4-cLk" firstAttribute="leading" secondItem="5l5-7t-rRe" secondAttribute="leading" constant="8" id="fwf-gV-Pq5"/>
+                                    <constraint firstItem="pQo-p8-U8h" firstAttribute="leading" secondItem="0MU-1o-3z5" secondAttribute="trailing" constant="18.5" id="gtM-Qh-Tfv"/>
+                                    <constraint firstAttribute="trailing" secondItem="jnL-VQ-pQR" secondAttribute="trailing" constant="8" id="idz-DF-R5P"/>
+                                    <constraint firstItem="z7E-BW-Ufd" firstAttribute="centerY" secondItem="0MU-1o-3z5" secondAttribute="centerY" id="kqO-P3-kpW"/>
+                                    <constraint firstItem="6Z2-H4-cLk" firstAttribute="top" secondItem="5l5-7t-rRe" secondAttribute="top" constant="100" id="lvO-zu-UgZ"/>
+                                    <constraint firstItem="0MU-1o-3z5" firstAttribute="leading" secondItem="z7E-BW-Ufd" secondAttribute="trailing" constant="23.5" id="ois-Af-Rot"/>
+                                    <constraint firstItem="Eyj-3v-LWJ" firstAttribute="centerX" secondItem="5l5-7t-rRe" secondAttribute="centerX" id="u6r-xA-IH1"/>
+                                    <constraint firstAttribute="trailing" secondItem="CqW-vH-CbS" secondAttribute="trailing" constant="110" id="wGQ-rv-aNs"/>
+                                    <constraint firstItem="0MU-1o-3z5" firstAttribute="centerY" secondItem="5l5-7t-rRe" secondAttribute="centerY" id="y6E-lS-QpS"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfz-if-Dcx" customClass="AnalogView" customModule="Zaina" customModuleProvider="target">
+                                <rect key="frame" x="24" y="231" width="120" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="P6b-EK-n9g"/>
+                                    <constraint firstAttribute="width" constant="120" id="Rq4-zN-sxv"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="analogImage" value="controller_analog"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="controller_background"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="t6f-NQ-MKp" firstAttribute="trailing" secondItem="sks-Ps-JUf" secondAttribute="trailing" id="1GP-OF-Jx6"/>
+                            <constraint firstItem="5l5-7t-rRe" firstAttribute="bottom" secondItem="sks-Ps-JUf" secondAttribute="bottom" id="9WV-0k-F44"/>
+                            <constraint firstItem="xfz-if-Dcx" firstAttribute="leading" secondItem="sks-Ps-JUf" secondAttribute="leading" constant="24" id="HyD-FM-g3A"/>
+                            <constraint firstAttribute="bottom" secondItem="xfz-if-Dcx" secondAttribute="bottom" constant="24" id="UpH-21-QFd"/>
+                            <constraint firstItem="t6f-NQ-MKp" firstAttribute="bottom" secondItem="sks-Ps-JUf" secondAttribute="bottom" id="UrP-AU-12g"/>
+                            <constraint firstItem="5l5-7t-rRe" firstAttribute="top" secondItem="sks-Ps-JUf" secondAttribute="top" id="WoI-AQ-V0t"/>
+                            <constraint firstItem="5l5-7t-rRe" firstAttribute="leading" secondItem="sks-Ps-JUf" secondAttribute="leading" id="fB0-Fv-6uv"/>
+                            <constraint firstItem="t6f-NQ-MKp" firstAttribute="leading" secondItem="sks-Ps-JUf" secondAttribute="leading" id="kuh-90-i22"/>
+                            <constraint firstItem="5l5-7t-rRe" firstAttribute="trailing" secondItem="sks-Ps-JUf" secondAttribute="trailing" id="nO6-a8-x43"/>
+                            <constraint firstItem="t6f-NQ-MKp" firstAttribute="top" secondItem="sks-Ps-JUf" secondAttribute="top" id="uqb-c1-HWH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uOw-Or-mec"/>
+                    </view>
+                    <connections>
+                        <outlet property="analogView" destination="xfz-if-Dcx" id="6Iy-Ld-W8a"/>
+                        <outlet property="light1SpriteView" destination="6Z2-H4-cLk" id="5eZ-GN-Grc"/>
+                        <outlet property="light2SpriteView" destination="Eyj-3v-LWJ" id="pVg-Sa-fMU"/>
+                        <outlet property="light3SpriteView" destination="jnL-VQ-pQR" id="TP9-eV-uUa"/>
+                        <outlet property="light4SpriteView" destination="CqW-vH-CbS" id="Krj-R3-CTz"/>
+                        <outlet property="sceneView" destination="5l5-7t-rRe" id="g4t-kJ-7de"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="103" y="2434"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="1280" height="711"/>
-        <image name="bed" width="127" height="252"/>
+        <image name="bed" width="127" height="217"/>
         <image name="berll" width="200" height="147"/>
         <image name="closet" width="400" height="200"/>
         <image name="controller_analog" width="189" height="189"/>
         <image name="controller_background" width="400" height="400"/>
+        <image name="first_chair" width="90" height="131"/>
         <image name="flower1" width="53" height="48"/>
         <image name="flower3" width="47" height="45"/>
         <image name="hose" width="200" height="165"/>
         <image name="house_ground" width="1280" height="720"/>
+        <image name="jostudio_logo" width="814" height="128"/>
+        <image name="light_off" width="70" height="86"/>
+        <image name="second_chair" width="90" height="131"/>
+        <image name="table" width="150" height="250"/>
         <image name="tree2" width="142" height="165"/>
         <image name="zainalogo" width="823" height="292"/>
     </resources>

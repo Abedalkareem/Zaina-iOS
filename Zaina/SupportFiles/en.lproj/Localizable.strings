@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  Zaina
+
+  Created by abedalkareem omreyh on 08/11/2019.
+  Copyright © 2019 abedalkareem. All rights reserved.
+*/
+
+"intrance_first_message" = "Hi legend, welcome to Arto the old forgotten city.... \nAll people in this city forgotten and converted to dark souls… \nPLEASE! Save them and get this city back to our Kingdom!";
+"intrance_first_message_action" = "Sure!";
+"intrance_second_message" = "One last thing before you go....\nyour brother Omar went before you to save the city and he didn't came back.... :(";
+"intrance_second_message_action" = "OMG!! I'll find him";
+
+"house_message" = "Your first mission is easy, you need to collect as much as you can food from the house then go to the exit. be careful and don't touch the dark soul, if you touch it. That's the end, you are done!";
+"house_message_action" = "That's easy";
+
+"dining_room_first_message" = "Is... Is this... Is this Omar...\n...";
+"dining_room_first_message_action" = "O..Omar!";
+
+"dining_room_second_message" = "He went a way... I think that the dark souls are controlling him...\nI have a mission for you, we need to light the room, but not all the lights, you need to light 3 out of 4 then try to exit the room...";
+"dining_room_second_message_action" = "I'll try to guess";
