@@ -160,20 +160,19 @@
         <!--Game Over View Controller-->
         <scene sceneID="5mK-PL-ryE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PLS-Vu-WQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="GameOverViewController" id="ynV-2y-YYL" customClass="GameOverViewController" customModule="Zaina" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oWC-3F-FRd">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3s-Jh-oWl">
-                                <rect key="frame" x="206" y="158.5" width="255" height="58.5"/>
+                                <rect key="frame" x="156" y="155" width="355" height="65"/>
                                 <fontDescription key="fontDescription" name="RetroComputer" family="Retro Computer" pointSize="50"/>
                                 <color key="textColor" red="0.89501284246575341" green="0.17783551989041099" blue="0.14237698930547946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqa-pC-LXF">
-                                <rect key="frame" x="283" y="257.5" width="101" height="42"/>
+                                <rect key="frame" x="244.5" y="260.5" width="178" height="45"/>
                                 <fontDescription key="fontDescription" name="RetroComputer" family="Retro Computer" pointSize="25"/>
                                 <state key="normal" title="Try again">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -194,13 +193,13 @@
                         <viewLayoutGuide key="safeArea" id="eL5-DP-g0Z"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PLS-Vu-WQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="807" y="121"/>
         </scene>
         <!--Finished View Controller-->
         <scene sceneID="elm-XV-4mg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D6B-cK-es4" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="FinishedViewController" id="ZnB-FU-2r5" customClass="FinishedViewController" customModule="Zaina" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VGy-o9-LLE">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
@@ -329,7 +328,7 @@ Thank you again!</string>
                             <constraint firstAttribute="trailing" secondItem="t9q-EE-XcN" secondAttribute="trailing" id="93j-gd-Jnd"/>
                             <constraint firstItem="t9q-EE-XcN" firstAttribute="leading" secondItem="VGy-o9-LLE" secondAttribute="leading" id="A0l-iF-exF"/>
                             <constraint firstItem="Dne-Zr-ldd" firstAttribute="leading" secondItem="gHU-Gl-lkR" secondAttribute="leading" constant="20" id="Ao8-Of-wsy"/>
-                            <constraint firstItem="hLG-4V-SGn" firstAttribute="trailing" secondItem="gHU-Gl-lkR" secondAttribute="trailing" id="EcV-le-O9n"/>
+                            <constraint firstItem="hLG-4V-SGn" firstAttribute="trailing" secondItem="VGy-o9-LLE" secondAttribute="trailing" id="EcV-le-O9n"/>
                             <constraint firstItem="CHT-rr-L36" firstAttribute="top" secondItem="gHU-Gl-lkR" secondAttribute="top" constant="10" id="FGz-oN-PnC"/>
                             <constraint firstItem="TYJ-P8-4aA" firstAttribute="centerX" secondItem="VGy-o9-LLE" secondAttribute="centerX" id="MUt-fz-ggN"/>
                             <constraint firstItem="L7C-4z-RX4" firstAttribute="top" secondItem="Dne-Zr-ldd" secondAttribute="bottom" constant="8" id="N7m-Wq-Iyw"/>
@@ -338,15 +337,15 @@ Thank you again!</string>
                             <constraint firstAttribute="trailing" secondItem="mp9-Gd-9a2" secondAttribute="trailing" id="Rf3-4c-xK2"/>
                             <constraint firstItem="CHT-rr-L36" firstAttribute="centerX" secondItem="VGy-o9-LLE" secondAttribute="centerX" id="S5H-x8-hlK"/>
                             <constraint firstItem="L7C-4z-RX4" firstAttribute="leading" secondItem="gHU-Gl-lkR" secondAttribute="leading" constant="20" id="Tp4-9x-tt5"/>
-                            <constraint firstItem="hLG-4V-SGn" firstAttribute="top" secondItem="gHU-Gl-lkR" secondAttribute="top" id="YIQ-Y0-Qxi"/>
+                            <constraint firstItem="hLG-4V-SGn" firstAttribute="top" secondItem="VGy-o9-LLE" secondAttribute="top" id="YIQ-Y0-Qxi"/>
                             <constraint firstItem="mp9-Gd-9a2" firstAttribute="leading" secondItem="VGy-o9-LLE" secondAttribute="leading" id="abu-e5-ny3"/>
                             <constraint firstAttribute="trailing" secondItem="Dne-Zr-ldd" secondAttribute="trailing" constant="20" id="esI-VJ-KN4"/>
-                            <constraint firstItem="hLG-4V-SGn" firstAttribute="bottom" secondItem="gHU-Gl-lkR" secondAttribute="bottom" id="gC9-sA-zsG"/>
+                            <constraint firstItem="hLG-4V-SGn" firstAttribute="bottom" secondItem="VGy-o9-LLE" secondAttribute="bottom" id="gC9-sA-zsG"/>
                             <constraint firstAttribute="bottom" secondItem="t9q-EE-XcN" secondAttribute="bottom" id="hVj-u9-6wN"/>
                             <constraint firstItem="t9q-EE-XcN" firstAttribute="top" secondItem="gHU-Gl-lkR" secondAttribute="top" id="kTN-fl-9DI"/>
                             <constraint firstItem="Dne-Zr-ldd" firstAttribute="top" secondItem="CHT-rr-L36" secondAttribute="bottom" constant="8" id="kj1-gz-vP0"/>
                             <constraint firstItem="TYJ-P8-4aA" firstAttribute="top" secondItem="Dne-Zr-ldd" secondAttribute="bottom" constant="9" id="x7h-MK-42U"/>
-                            <constraint firstItem="hLG-4V-SGn" firstAttribute="leading" secondItem="gHU-Gl-lkR" secondAttribute="leading" id="xZF-WS-M96"/>
+                            <constraint firstItem="hLG-4V-SGn" firstAttribute="leading" secondItem="VGy-o9-LLE" secondAttribute="leading" id="xZF-WS-M96"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gHU-Gl-lkR"/>
                     </view>
@@ -354,6 +353,7 @@ Thank you again!</string>
                         <outlet property="sceneView" destination="mp9-Gd-9a2" id="xOE-OZ-G3E"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6B-cK-es4" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="805.54722638680664" y="909.60000000000002"/>
         </scene>

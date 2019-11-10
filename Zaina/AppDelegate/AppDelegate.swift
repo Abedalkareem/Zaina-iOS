@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     DialogView.fontName = "RetroComputer"
 
-    Status.currentLevel = 7
     return true
   }
 
