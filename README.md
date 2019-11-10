@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/header.png"/>
+<img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/header_new.png"/>
 
 A game done using UIKit. 
 
