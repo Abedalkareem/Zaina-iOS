@@ -94,18 +94,6 @@
                                     <constraint firstItem="nMA-qb-y6O" firstAttribute="top" secondItem="kY8-B9-EcM" secondAttribute="top" id="z4d-Pq-VBZ"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBx-dD-4Rn" customClass="AnalogView" customModule="Zaina" customModuleProvider="target">
-                                <rect key="frame" x="24" y="231" width="120" height="120"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="Zno-Nd-n1Z"/>
-                                    <constraint firstAttribute="width" constant="120" id="pCV-fV-R4J"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="analogImage" value="controller_analog"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="controller_background"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -113,17 +101,14 @@
                             <constraint firstItem="kY8-B9-EcM" firstAttribute="bottom" secondItem="xfA-cr-ifY" secondAttribute="bottom" id="Dvg-Px-r3I"/>
                             <constraint firstItem="o9U-VP-8mH" firstAttribute="top" secondItem="xfA-cr-ifY" secondAttribute="top" id="LH7-42-Gam"/>
                             <constraint firstItem="o9U-VP-8mH" firstAttribute="leading" secondItem="xfA-cr-ifY" secondAttribute="leading" id="Ml6-TB-7Zu"/>
-                            <constraint firstItem="cBx-dD-4Rn" firstAttribute="leading" secondItem="xfA-cr-ifY" secondAttribute="leading" constant="24" id="OFh-Ol-E2U"/>
                             <constraint firstItem="o9U-VP-8mH" firstAttribute="bottom" secondItem="xfA-cr-ifY" secondAttribute="bottom" id="Ot6-iY-btg"/>
                             <constraint firstItem="kY8-B9-EcM" firstAttribute="top" secondItem="xfA-cr-ifY" secondAttribute="top" id="gCi-q2-hT0"/>
-                            <constraint firstAttribute="bottom" secondItem="cBx-dD-4Rn" secondAttribute="bottom" constant="24" id="iIB-P6-B3t"/>
                             <constraint firstItem="kY8-B9-EcM" firstAttribute="trailing" secondItem="xfA-cr-ifY" secondAttribute="trailing" id="iq2-e1-OdR"/>
                             <constraint firstItem="kY8-B9-EcM" firstAttribute="leading" secondItem="xfA-cr-ifY" secondAttribute="leading" id="mzN-7P-Q3U"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3ep-DO-5D3"/>
                     </view>
                     <connections>
-                        <outlet property="analogView" destination="cBx-dD-4Rn" id="7fd-ni-T3f"/>
                         <outlet property="sceneView" destination="kY8-B9-EcM" id="MhL-Pd-cY4"/>
                     </connections>
                 </viewController>
@@ -281,36 +266,21 @@
                                     <constraint firstItem="IjM-1C-9yV" firstAttribute="centerY" secondItem="OJf-dj-txT" secondAttribute="centerY" id="xaZ-d2-udd"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oD8-vE-AX3" customClass="AnalogView" customModule="Zaina" customModuleProvider="target">
-                                <rect key="frame" x="24" y="231" width="120" height="120"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="bTg-aW-0h2"/>
-                                    <constraint firstAttribute="width" constant="120" id="u8T-zv-4mA"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="analogImage" value="controller_analog"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="controller_background"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ur2-vV-3HX" firstAttribute="trailing" secondItem="8JZ-ax-cmr" secondAttribute="trailing" id="5TL-LK-6S2"/>
                             <constraint firstItem="hlW-Ng-caX" firstAttribute="leading" secondItem="8JZ-ax-cmr" secondAttribute="leading" id="8WK-FZ-1d2"/>
                             <constraint firstItem="hlW-Ng-caX" firstAttribute="trailing" secondItem="8JZ-ax-cmr" secondAttribute="trailing" id="8bn-2J-Reh"/>
-                            <constraint firstAttribute="bottom" secondItem="oD8-vE-AX3" secondAttribute="bottom" constant="24" id="Ilv-Ed-04d"/>
                             <constraint firstItem="ur2-vV-3HX" firstAttribute="bottom" secondItem="8JZ-ax-cmr" secondAttribute="bottom" id="ORw-VQ-vRr"/>
                             <constraint firstItem="hlW-Ng-caX" firstAttribute="bottom" secondItem="8JZ-ax-cmr" secondAttribute="bottom" id="eLH-ox-xcM"/>
                             <constraint firstItem="ur2-vV-3HX" firstAttribute="top" secondItem="8JZ-ax-cmr" secondAttribute="top" id="hxj-hf-tc1"/>
                             <constraint firstItem="ur2-vV-3HX" firstAttribute="leading" secondItem="8JZ-ax-cmr" secondAttribute="leading" id="i7k-3s-6cP"/>
-                            <constraint firstItem="oD8-vE-AX3" firstAttribute="leading" secondItem="8JZ-ax-cmr" secondAttribute="leading" constant="24" id="k4w-B1-2K3"/>
                             <constraint firstItem="hlW-Ng-caX" firstAttribute="top" secondItem="8JZ-ax-cmr" secondAttribute="top" id="zyh-bn-yDg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1f4-az-evf"/>
                     </view>
                     <connections>
-                        <outlet property="analogView" destination="oD8-vE-AX3" id="GVE-Pg-JAC"/>
                         <outlet property="light1SpriteView" destination="Bzf-RN-LiC" id="VYB-Lg-KyF"/>
                         <outlet property="light2SpriteView" destination="X9J-MV-Q3l" id="IBl-VR-zBZ"/>
                         <outlet property="light3SpriteView" destination="4xL-or-iFR" id="hYf-6m-Jyc"/>
@@ -408,26 +378,12 @@
                                     <constraint firstItem="KxG-nK-hsg" firstAttribute="top" secondItem="8IC-2I-GPr" secondAttribute="top" id="yyF-Qf-yb5"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mx-eF-BJi" customClass="AnalogView" customModule="Zaina" customModuleProvider="target">
-                                <rect key="frame" x="24" y="231" width="120" height="120"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="Azp-Ha-Twn"/>
-                                    <constraint firstAttribute="width" constant="120" id="GdQ-52-ssr"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="analogImage" value="controller_analog"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="controller_background"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="8IC-2I-GPr" firstAttribute="bottom" secondItem="jq0-xF-XRB" secondAttribute="bottom" id="0uB-OA-cjl"/>
                             <constraint firstItem="TNN-uF-EeX" firstAttribute="trailing" secondItem="jq0-xF-XRB" secondAttribute="trailing" id="7aj-lh-5cn"/>
-                            <constraint firstItem="5mx-eF-BJi" firstAttribute="leading" secondItem="jq0-xF-XRB" secondAttribute="leading" constant="24" id="DJH-sv-iDY"/>
                             <constraint firstItem="8IC-2I-GPr" firstAttribute="trailing" secondItem="jq0-xF-XRB" secondAttribute="trailing" id="XEM-RU-RYd"/>
-                            <constraint firstAttribute="bottom" secondItem="5mx-eF-BJi" secondAttribute="bottom" constant="24" id="buQ-cA-HVf"/>
                             <constraint firstItem="8IC-2I-GPr" firstAttribute="top" secondItem="jq0-xF-XRB" secondAttribute="top" id="kXf-wt-SWZ"/>
                             <constraint firstItem="TNN-uF-EeX" firstAttribute="leading" secondItem="jq0-xF-XRB" secondAttribute="leading" id="mDL-AU-eJG"/>
                             <constraint firstItem="TNN-uF-EeX" firstAttribute="bottom" secondItem="jq0-xF-XRB" secondAttribute="bottom" id="pm7-IP-VCW"/>
@@ -437,7 +393,6 @@
                         <viewLayoutGuide key="safeArea" id="By9-CX-YZy"/>
                     </view>
                     <connections>
-                        <outlet property="analogView" destination="5mx-eF-BJi" id="vhw-GI-fou"/>
                         <outlet property="sceneView" destination="8IC-2I-GPr" id="IC8-Bt-AYg"/>
                     </connections>
                 </viewController>
@@ -483,27 +438,13 @@
                                     <constraint firstItem="dLQ-Mh-dxP" firstAttribute="top" secondItem="IxS-li-UVS" secondAttribute="top" id="Xg3-aj-4y6"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYd-BK-FP2" customClass="AnalogView" customModule="Zaina" customModuleProvider="target">
-                                <rect key="frame" x="24" y="231" width="120" height="120"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="0Y3-pI-jaY"/>
-                                    <constraint firstAttribute="width" constant="120" id="Icf-ch-86i"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="analogImage" value="controller_analog"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="controller_background"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="BRP-du-Jk5" firstAttribute="bottom" secondItem="zA1-3x-NU0" secondAttribute="bottom" id="Dl9-Qf-rEG"/>
                             <constraint firstItem="IxS-li-UVS" firstAttribute="trailing" secondItem="zA1-3x-NU0" secondAttribute="trailing" id="Fe4-Fa-tCb"/>
                             <constraint firstItem="IxS-li-UVS" firstAttribute="bottom" secondItem="zA1-3x-NU0" secondAttribute="bottom" id="O0Y-Lu-9Rb"/>
-                            <constraint firstItem="fYd-BK-FP2" firstAttribute="leading" secondItem="zA1-3x-NU0" secondAttribute="leading" constant="24" id="Oft-Kb-LN3"/>
                             <constraint firstItem="BRP-du-Jk5" firstAttribute="leading" secondItem="zA1-3x-NU0" secondAttribute="leading" id="SiP-Rb-lHl"/>
-                            <constraint firstAttribute="bottom" secondItem="fYd-BK-FP2" secondAttribute="bottom" constant="24" id="htj-GV-4or"/>
                             <constraint firstItem="BRP-du-Jk5" firstAttribute="top" secondItem="zA1-3x-NU0" secondAttribute="top" id="pFG-4x-Ei5"/>
                             <constraint firstItem="BRP-du-Jk5" firstAttribute="trailing" secondItem="zA1-3x-NU0" secondAttribute="trailing" id="qhe-n1-nsy"/>
                             <constraint firstItem="IxS-li-UVS" firstAttribute="top" secondItem="zA1-3x-NU0" secondAttribute="top" id="rOu-oZ-BXi"/>
@@ -512,7 +453,6 @@
                         <viewLayoutGuide key="safeArea" id="Mkq-Kr-Fx0"/>
                     </view>
                     <connections>
-                        <outlet property="analogView" destination="fYd-BK-FP2" id="bF7-qy-dX0"/>
                         <outlet property="sceneView" destination="IxS-li-UVS" id="H0l-vy-qms"/>
                     </connections>
                 </viewController>
@@ -523,7 +463,6 @@
         <!--House Exit View Controller-->
         <scene sceneID="8l2-m7-zR8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JDY-sL-zaM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="HouseExitViewController" id="GHH-Nn-aLm" customClass="HouseExitViewController" customModule="Zaina" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wwq-CS-6l6">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
@@ -585,39 +524,25 @@
                                     <constraint firstAttribute="trailing" secondItem="J1C-Mk-mrq" secondAttribute="trailing" id="aLf-Nc-tbB"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iga-0y-zLh" customClass="AnalogView" customModule="Zaina" customModuleProvider="target">
-                                <rect key="frame" x="24" y="231" width="120" height="120"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="0M2-nq-iBj"/>
-                                    <constraint firstAttribute="height" constant="120" id="Cz5-cG-sYI"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="analogImage" value="controller_analog"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="controller_background"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="iga-0y-zLh" secondAttribute="bottom" constant="24" id="9dJ-Wa-M9P"/>
                             <constraint firstItem="Q3D-Ld-75m" firstAttribute="bottom" secondItem="wwq-CS-6l6" secondAttribute="bottom" id="DTa-AC-LyM"/>
                             <constraint firstItem="NB3-id-90c" firstAttribute="top" secondItem="wwq-CS-6l6" secondAttribute="top" id="Efv-g6-h1r"/>
                             <constraint firstItem="Q3D-Ld-75m" firstAttribute="leading" secondItem="wwq-CS-6l6" secondAttribute="leading" id="G8x-ac-hUD"/>
                             <constraint firstItem="Q3D-Ld-75m" firstAttribute="top" secondItem="wwq-CS-6l6" secondAttribute="top" id="ImG-Yc-B9D"/>
                             <constraint firstItem="NB3-id-90c" firstAttribute="leading" secondItem="wwq-CS-6l6" secondAttribute="leading" id="Kny-A8-aEw"/>
                             <constraint firstItem="Q3D-Ld-75m" firstAttribute="trailing" secondItem="wwq-CS-6l6" secondAttribute="trailing" id="RQl-ud-g4A"/>
-                            <constraint firstItem="iga-0y-zLh" firstAttribute="leading" secondItem="wwq-CS-6l6" secondAttribute="leading" constant="24" id="Zr4-aU-Pi6"/>
                             <constraint firstItem="NB3-id-90c" firstAttribute="trailing" secondItem="wwq-CS-6l6" secondAttribute="trailing" id="edp-VP-Fdm"/>
                             <constraint firstItem="NB3-id-90c" firstAttribute="bottom" secondItem="wwq-CS-6l6" secondAttribute="bottom" id="yTH-Ri-zhe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tS4-W4-qta"/>
                     </view>
                     <connections>
-                        <outlet property="analogView" destination="iga-0y-zLh" id="RjU-tF-pEr"/>
                         <outlet property="sceneView" destination="NB3-id-90c" id="tXt-6b-ARE"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JDY-sL-zaM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="102.99850074962519" y="4736.8000000000002"/>
         </scene>
@@ -627,8 +552,6 @@
         <image name="berll" width="200" height="147"/>
         <image name="chair_bottom" width="70" height="65"/>
         <image name="closet" width="400" height="200"/>
-        <image name="controller_analog" width="189" height="189"/>
-        <image name="controller_background" width="400" height="400"/>
         <image name="first_chair" width="90" height="131"/>
         <image name="house_ground" width="1280" height="720"/>
         <image name="light_off" width="70" height="86"/>

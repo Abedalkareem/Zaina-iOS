@@ -12,7 +12,6 @@ class KitchenViewController: BaseGameViewController {
 
   // MARK: - IBOutlets
 
-  @IBOutlet private weak var analogView: AnalogView!
 
   // MARK: - Private properties
 

@@ -10,8 +10,12 @@ import UIKit
 
 class SpiderSpriteView: SpriteView {
 
+  // MARK: - Properties
+  
   let width = 40
   let height = 27
+
+  // MARK: - Setup
 
   override func setup() {
     super.setup()
@@ -19,6 +23,8 @@ class SpiderSpriteView: SpriteView {
     frame = CGRect(x: 0, y: 0, width: width, height: height)
 
     type = CollideTypes.spider
+
+    speed = 15
 
     let arrayLeft = [ #imageLiteral(resourceName: "spider_left_1"), #imageLiteral(resourceName: "spider_left_2"), #imageLiteral(resourceName: "spider_left_3"), #imageLiteral(resourceName: "spider_left_4"), #imageLiteral(resourceName: "spider_left_5"), #imageLiteral(resourceName: "spider_left_6")]
     let arrayRight = [#imageLiteral(resourceName: "spider_right_1"), #imageLiteral(resourceName: "spider_right_2"), #imageLiteral(resourceName: "spider_right_3"), #imageLiteral(resourceName: "spider_right_4"), #imageLiteral(resourceName: "spider_right_5"), #imageLiteral(resourceName: "spider_right_6")]

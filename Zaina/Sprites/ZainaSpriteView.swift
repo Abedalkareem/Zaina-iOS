@@ -10,9 +10,13 @@ import UIKit
 
 class ZainaSpriteView: SpriteView {
 
+  // MARK: - Properties
+
   let width = 40
   let height = 40
 
+  // MARK: - Setup
+  
   override func setup() {
     super.setup()
 

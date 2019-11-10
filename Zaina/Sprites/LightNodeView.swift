@@ -10,6 +10,8 @@ import UIKit
 
 class LightNodeView: NodeView {
 
+  // MARK: - Properties
+  
   var isOn = false {
     didSet {
       imageView.image = isOn ? #imageLiteral(resourceName: "light_on") :  #imageLiteral(resourceName: "light_off")

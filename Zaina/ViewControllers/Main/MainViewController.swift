@@ -46,6 +46,7 @@ class MainViewController: BaseGameViewController {
   private func setupViews() {
     let title = Status.currentLevel == 0 ? "Start" : "Continue"
     startButton.setTitle(title, for: .normal)
+    analogView.isHidden = true
   }
 
   private func playBackgroundSong() {
@@ -102,6 +103,10 @@ class MainViewController: BaseGameViewController {
 
   @IBAction func start(_ sender: Any) {
     changeViewController(Status.currentLevelViewController())
+  }
+
+  @IBAction func help(_ sender: Any) {
+    
   }
 
 }

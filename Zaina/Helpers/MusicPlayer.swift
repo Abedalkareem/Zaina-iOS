@@ -70,6 +70,12 @@ enum Music: String {
       return .mp3
     case .cooking:
       return .wav
+    case .about:
+      return .wav
+    case .youWin:
+      return .wav
+    case .finalFight:
+      return .mp3
     }
   }
 
@@ -79,6 +85,9 @@ enum Music: String {
   case gameOver = "game_over"
   case cooking = "fire"
   case piano90e
+  case about
+  case youWin = "you_win"
+  case finalFight = "final_fight"
 }
 
 enum Type: String {

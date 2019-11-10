@@ -12,7 +12,6 @@ class DiningRoomViewController: BaseGameViewController {
 
   // MARK: - IBOutlets
 
-  @IBOutlet private weak var analogView: AnalogView!
   @IBOutlet private weak var light1SpriteView: LightNodeView!
   @IBOutlet private weak var light2SpriteView: LightNodeView!
   @IBOutlet private weak var light3SpriteView: LightNodeView!

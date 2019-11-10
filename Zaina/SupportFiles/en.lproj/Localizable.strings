@@ -25,3 +25,12 @@
 
 "kitchen_room_second_message" = "Nice! I like that! thank you for this meal.";
 "kitchen_room_second_message_action" = "Welcome";
+
+"house_exit_message" = "Thank you!, you saved Omar...\nPlease take him out of this house";
+"house_exit_message_action" = "Let's go!";
+
+"forest_message" = "Good job!\nNow omar will go back home because his mother is waiting him!";
+"forest_message_action" = "Go Omar!, Mama is waiting";
+
+"forest_second_message" = "Now to save the city and the people of this city, you need to catch the black spider, the one who attacked this peaceful city! if you catch him all our problems will be solved";
+"forest_second_message_action" = "I'll catch him.";

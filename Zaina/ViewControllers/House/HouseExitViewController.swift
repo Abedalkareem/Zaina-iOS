@@ -12,8 +12,6 @@ class HouseExitViewController: BaseGameViewController {
 
   // MARK: - IBOutlets
 
-  @IBOutlet private weak var analogView: AnalogView!
-
   // MARK: - ViewController lifecycle
 
   private var playerView: ZainaSpriteView!
@@ -32,6 +30,13 @@ class HouseExitViewController: BaseGameViewController {
     super.viewDidAppear(animated)
 
     startOmarTimer()
+    showDialog()
+  }
+
+  private func showDialog() {
+    DialogView.showIn(view: view,
+                      message: "house_exit_message".localize,
+                      firstButtonTitle: "house_exit_message_action".localize)
   }
 
   private func setup() {
@@ -77,7 +82,7 @@ class HouseExitViewController: BaseGameViewController {
   }
 
   private func collideBetween(zaina: ObjectView, andExit: ObjectView) -> Bool {
-    changeViewController(UIStoryboard.create(storyboard: .house, controller: HallViewController.self))
+    changeViewController(UIStoryboard.create(storyboard: .forest, controller: ForestViewController.self))
     return false
   }
 }

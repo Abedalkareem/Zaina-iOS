@@ -18,8 +18,14 @@ class BaseGameViewController: UIViewController {
 
   private var timer: Timer?
   private var shouldKeepUpdatingTheScene = true
+  var analogView: AnalogView!
 
   // MARK: - ViewController lifecycle
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    addAnalogView()
+  }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -35,6 +41,16 @@ class BaseGameViewController: UIViewController {
     shouldKeepUpdatingTheScene = false
 
     stopTimer()
+  }
+
+  private func addAnalogView() {
+    let analogSize: CGFloat = 150
+    let margen: CGFloat = 10
+    let y = view.bounds.height - (analogSize + margen)
+    analogView = AnalogView(frame: CGRect(x: margen, y: y, width: analogSize, height: analogSize))
+    analogView.analogImage = #imageLiteral(resourceName: "controller_analog")
+    analogView.backgroundImage = #imageLiteral(resourceName: "controller_background")
+    view.addSubview(analogView)
   }
 
   private func startTimer() {

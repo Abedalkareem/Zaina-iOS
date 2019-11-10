@@ -9,7 +9,7 @@
 import UIKit
 
 class Status {
-
+  
   static var currentLevel: Int {
     get {
       return UserDefaults.standard.integer(forKey: "currentLevel")
@@ -18,15 +18,15 @@ class Status {
       UserDefaults.standard.set(newValue, forKey: "currentLevel")
     }
   }
-
+  
   static func currentLevelViewController() -> UIViewController {
     let type: UIViewController.Type?
     let storyboard: Storyboard!
-
+    
     switch currentLevel {
     case 0:
       type = IntranceViewController.self
-      storyboard = .main
+      storyboard = .forest
     case 1:
       type = HouseViewController.self
       storyboard = .house
@@ -42,12 +42,18 @@ class Status {
     case 5:
       type = HouseExitViewController.self
       storyboard = .house
+    case 6:
+      type = ForestViewController.self
+      storyboard = .forest
+    case 7:
+      type = SpidersForestViewController.self
+      storyboard = .forest
     default:
       type = IntranceViewController.self
-      storyboard = .main
+      storyboard = .forest
     }
-
+    
     return UIStoryboard.create(storyboard: storyboard, controller: type!)
   }
-
+  
 }

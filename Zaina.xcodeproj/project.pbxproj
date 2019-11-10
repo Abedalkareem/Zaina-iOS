@@ -26,19 +26,25 @@
 		C67BC1BA22EAD9AD00C7D44E /* Frames.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1B922EAD9AD00C7D44E /* Frames.swift */; };
 		C67BC1BC22EAE91E00C7D44E /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1BB22EAE91E00C7D44E /* NodeView.swift */; };
 		C67BC1BE22EAECA500C7D44E /* pixel_font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C67BC1BD22EAECA200C7D44E /* pixel_font.ttf */; };
-		C6801B0C2366028700A3085C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6801B0B2366028700A3085C /* SplashViewController.swift */; };
 		C6801B0E2366056100A3085C /* IntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6801B0D2366056100A3085C /* IntranceViewController.swift */; };
 		C6801B10236606F800A3085C /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6801B0F236606F800A3085C /* SceneView.swift */; };
 		C68513EF23756A0300D55020 /* OmarSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68513EE23756A0300D55020 /* OmarSpriteView.swift */; };
 		C68513F223756C2500D55020 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68513F123756C2500D55020 /* DialogView.swift */; };
 		C68513F6237595CB00D55020 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68513F5237595CB00D55020 /* Status.swift */; };
 		C68513F92375963A00D55020 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C68513FB2375963A00D55020 /* Localizable.strings */; };
-		C68513FD237596FB00D55020 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68513FC237596FB00D55020 /* String+Helpers.swift */; };
+		C68513FD237596FB00D55020 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68513FC237596FB00D55020 /* String.swift */; };
 		C687C4A6236CAC1900E83B61 /* ZainaSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687C4A5236CAC1900E83B61 /* ZainaSpriteView.swift */; };
 		C687C4A8236CB10400E83B61 /* CollideTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687C4A7236CB10400E83B61 /* CollideTypes.swift */; };
 		C687C4AA236CB81300E83B61 /* SpiderSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687C4A9236CB81300E83B61 /* SpiderSpriteView.swift */; };
 		C687C4AE236CBEEC00E83B61 /* background.wav in Resources */ = {isa = PBXBuildFile; fileRef = C687C4AD236CBEEC00E83B61 /* background.wav */; };
 		C687C4B0236CC7D500E83B61 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687C4AF236CC7D500E83B61 /* MusicPlayer.swift */; };
+		C6B3BE70237887BB00791FC6 /* Forest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B3BE6F237887BB00791FC6 /* Forest.storyboard */; };
+		C6B3BE73237889AD00791FC6 /* ForestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3BE72237889AD00791FC6 /* ForestViewController.swift */; };
+		C6B3BE7623788E7400791FC6 /* about.wav in Resources */ = {isa = PBXBuildFile; fileRef = C6B3BE7423788E7400791FC6 /* about.wav */; };
+		C6B3BE7723788E7400791FC6 /* you_win.wav in Resources */ = {isa = PBXBuildFile; fileRef = C6B3BE7523788E7400791FC6 /* you_win.wav */; };
+		C6B3BE792378913000791FC6 /* SpidersForestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3BE782378913000791FC6 /* SpidersForestViewController.swift */; };
+		C6B3BE7B2378949D00791FC6 /* final_fight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C6B3BE7A2378949D00791FC6 /* final_fight.mp3 */; };
+		C6B3BE7D237895E200791FC6 /* FinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3BE7C237895E200791FC6 /* FinishedViewController.swift */; };
 		C6B6392D236CA52D00C282FC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B6392C236CA52D00C282FC /* UIViewController.swift */; };
 		C6B63930236CA5B000C282FC /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B6392F236CA5B000C282FC /* UIStoryboard.swift */; };
 		C6EF56202375E5EC00711E0F /* DiningRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EF561F2375E5EC00711E0F /* DiningRoomViewController.swift */; };
@@ -75,19 +81,25 @@
 		C67BC1B922EAD9AD00C7D44E /* Frames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frames.swift; sourceTree = "<group>"; };
 		C67BC1BB22EAE91E00C7D44E /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
 		C67BC1BD22EAECA200C7D44E /* pixel_font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pixel_font.ttf; sourceTree = "<group>"; };
-		C6801B0B2366028700A3085C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		C6801B0D2366056100A3085C /* IntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntranceViewController.swift; sourceTree = "<group>"; };
 		C6801B0F236606F800A3085C /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
 		C68513EE23756A0300D55020 /* OmarSpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmarSpriteView.swift; sourceTree = "<group>"; };
 		C68513F123756C2500D55020 /* DialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
 		C68513F5237595CB00D55020 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		C68513FA2375963A00D55020 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C68513FC237596FB00D55020 /* String+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
+		C68513FC237596FB00D55020 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		C687C4A5236CAC1900E83B61 /* ZainaSpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZainaSpriteView.swift; sourceTree = "<group>"; };
 		C687C4A7236CB10400E83B61 /* CollideTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollideTypes.swift; sourceTree = "<group>"; };
 		C687C4A9236CB81300E83B61 /* SpiderSpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderSpriteView.swift; sourceTree = "<group>"; };
 		C687C4AD236CBEEC00E83B61 /* background.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = background.wav; sourceTree = "<group>"; };
 		C687C4AF236CC7D500E83B61 /* MusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		C6B3BE6F237887BB00791FC6 /* Forest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Forest.storyboard; sourceTree = "<group>"; };
+		C6B3BE72237889AD00791FC6 /* ForestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestViewController.swift; sourceTree = "<group>"; };
+		C6B3BE7423788E7400791FC6 /* about.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = about.wav; sourceTree = "<group>"; };
+		C6B3BE7523788E7400791FC6 /* you_win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = you_win.wav; sourceTree = "<group>"; };
+		C6B3BE782378913000791FC6 /* SpidersForestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpidersForestViewController.swift; sourceTree = "<group>"; };
+		C6B3BE7A2378949D00791FC6 /* final_fight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = final_fight.mp3; sourceTree = "<group>"; };
+		C6B3BE7C237895E200791FC6 /* FinishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedViewController.swift; sourceTree = "<group>"; };
 		C6B6392C236CA52D00C282FC /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		C6B6392F236CA5B000C282FC /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		C6EF561F2375E5EC00711E0F /* DiningRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningRoomViewController.swift; sourceTree = "<group>"; };
@@ -148,8 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				C6EF562F23760AB700711E0F /* Main */,
+				C6B3BE712378898D00791FC6 /* Forest */,
 				C6EF563023760AC400711E0F /* House */,
-				C6801B0D2366056100A3085C /* IntranceViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -177,6 +189,7 @@
 			children = (
 				C6792AF022E4D140000A34A6 /* Main.storyboard */,
 				C6EF562D2376052E00711E0F /* House.storyboard */,
+				C6B3BE6F237887BB00791FC6 /* Forest.storyboard */,
 				C6792AF522E4D142000A34A6 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -253,7 +266,8 @@
 		C68513FE2375AB5C00D55020 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C68513FC237596FB00D55020 /* String+Helpers.swift */,
+				C6B6392F236CA5B000C282FC /* UIStoryboard.swift */,
+				C68513FC237596FB00D55020 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -282,7 +296,10 @@
 			isa = PBXGroup;
 			children = (
 				C607126D2375DD7F00039AE6 /* darkforest.mp3 */,
+				C6B3BE7A2378949D00791FC6 /* final_fight.mp3 */,
 				C607126B2375DC0200039AE6 /* main_screen.mp3 */,
+				C6B3BE7423788E7400791FC6 /* about.wav */,
+				C6B3BE7523788E7400791FC6 /* you_win.wav */,
 				C6EF56292375FA7000711E0F /* piano90e.mp3 */,
 				C6EF563523761E5300711E0F /* fire.wav */,
 				C6EF56272375F14D00711E0F /* game_over.wav */,
@@ -302,11 +319,20 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		C6B3BE712378898D00791FC6 /* Forest */ = {
+			isa = PBXGroup;
+			children = (
+				C6801B0D2366056100A3085C /* IntranceViewController.swift */,
+				C6B3BE72237889AD00791FC6 /* ForestViewController.swift */,
+				C6B3BE782378913000791FC6 /* SpidersForestViewController.swift */,
+			);
+			path = Forest;
+			sourceTree = "<group>";
+		};
 		C6B6392E236CA56C00C282FC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				C6B6392C236CA52D00C282FC /* UIViewController.swift */,
-				C6B6392F236CA5B000C282FC /* UIStoryboard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -314,9 +340,9 @@
 		C6EF562F23760AB700711E0F /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				C6801B0B2366028700A3085C /* SplashViewController.swift */,
 				C61B0B2B2366113100CB376F /* MainViewController.swift */,
 				C6EF56252375F02100711E0F /* GameOverViewController.swift */,
+				C6B3BE7C237895E200791FC6 /* FinishedViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -394,8 +420,12 @@
 				C6792AF722E4D142000A34A6 /* LaunchScreen.storyboard in Resources */,
 				C6EF562E2376052E00711E0F /* House.storyboard in Resources */,
 				C607126E2375DD7F00039AE6 /* darkforest.mp3 in Resources */,
+				C6B3BE7723788E7400791FC6 /* you_win.wav in Resources */,
 				C6EF56282375F14D00711E0F /* game_over.wav in Resources */,
+				C6B3BE7623788E7400791FC6 /* about.wav in Resources */,
+				C6B3BE70237887BB00791FC6 /* Forest.storyboard in Resources */,
 				C68513F92375963A00D55020 /* Localizable.strings in Resources */,
+				C6B3BE7B2378949D00791FC6 /* final_fight.mp3 in Resources */,
 				C687C4AE236CBEEC00E83B61 /* background.wav in Resources */,
 				C607126C2375DC0200039AE6 /* main_screen.mp3 in Resources */,
 				C6792AF422E4D142000A34A6 /* Assets.xcassets in Resources */,
@@ -424,11 +454,12 @@
 				C68513EF23756A0300D55020 /* OmarSpriteView.swift in Sources */,
 				C687C4A6236CAC1900E83B61 /* ZainaSpriteView.swift in Sources */,
 				C687C4A8236CB10400E83B61 /* CollideTypes.swift in Sources */,
-				C6801B0C2366028700A3085C /* SplashViewController.swift in Sources */,
 				C67BC1BC22EAE91E00C7D44E /* NodeView.swift in Sources */,
 				C67BC1B322EAC86E00C7D44E /* BackgroundView.swift in Sources */,
-				C68513FD237596FB00D55020 /* String+Helpers.swift in Sources */,
+				C6B3BE7D237895E200791FC6 /* FinishedViewController.swift in Sources */,
+				C68513FD237596FB00D55020 /* String.swift in Sources */,
 				C6792AEF22E4D140000A34A6 /* HouseViewController.swift in Sources */,
+				C6B3BE792378913000791FC6 /* SpidersForestViewController.swift in Sources */,
 				C6EF5632237612E500711E0F /* KitchenViewController.swift in Sources */,
 				C6EF56202375E5EC00711E0F /* DiningRoomViewController.swift in Sources */,
 				C68513F6237595CB00D55020 /* Status.swift in Sources */,
@@ -437,6 +468,7 @@
 				C61B383E237681070004B2B1 /* HouseExitViewController.swift in Sources */,
 				C61B0B2C2366113100CB376F /* MainViewController.swift in Sources */,
 				C67BC1B722EAD79C00C7D44E /* Analog.swift in Sources */,
+				C6B3BE73237889AD00791FC6 /* ForestViewController.swift in Sources */,
 				C6792B0522E4D1F5000A34A6 /* BaseGameViewController.swift in Sources */,
 				C687C4AA236CB81300E83B61 /* SpiderSpriteView.swift in Sources */,
 				C6B63930236CA5B000C282FC /* UIStoryboard.swift in Sources */,
