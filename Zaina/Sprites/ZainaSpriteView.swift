@@ -27,7 +27,8 @@ class ZainaSpriteView: SpriteView {
                             CollideTypes.darkSoul,
                             CollideTypes.light,
                             CollideTypes.dish,
-                            CollideTypes.oven]
+                            CollideTypes.oven,
+                            CollideTypes.wall]
 
     frames.top = [#imageLiteral(resourceName: "top2"), #imageLiteral(resourceName: "top1")]
     frames.left = [#imageLiteral(resourceName: "left2"), #imageLiteral(resourceName: "left1")]

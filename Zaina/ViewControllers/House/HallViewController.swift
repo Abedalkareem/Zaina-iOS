@@ -72,7 +72,7 @@ class HallViewController: BaseGameViewController {
   }
 
   private func addDarkSouls() {
-    (0...1).forEach { _ in
+    (0...5).forEach { _ in
       let darkSoulSpriteView = DarkSoulSpriteView()
       darkSoulSpriteView.frame.origin = CGPoint(x: 100, y: 100)
       sceneView.addSubview(darkSoulSpriteView)
@@ -152,7 +152,7 @@ class HallViewController: BaseGameViewController {
     guard isOmarFound else {
       return true
     }
-    changeViewController(UIStoryboard.create(storyboard: .house, controller: HallViewController.self))
+    changeViewController(UIStoryboard.create(storyboard: .house, controller: HouseExitViewController.self))
     return false
   }
 
