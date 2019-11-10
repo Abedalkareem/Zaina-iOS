@@ -4,12 +4,18 @@ A game done using UIKit.
 
 ## Game Link on the store  
 
+Will be available soon
+
 ## Screenshot  
 <img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/screenshots/screen1.png" width="200"/> <img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/screenshots/screen2.png" width="200"/> <img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/screenshots/screen3.png" width="200"/>
 
+## Storyboard
+You can make the game and add the game nodes using storyboard:  
+<img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/screenshots/storyboard.png" width="400"/>
+
 ## What to do?
 
-You can take the moving and controlling part and make you own game, you can also contribute and make this code better, fix issues or give me your feedback!! 
+You can take the moving and controlling part and make your own game, you can also contribute and make this code better, fix issues or give me your feedback!! 
 
 ## License
 
