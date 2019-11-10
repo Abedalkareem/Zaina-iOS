@@ -1,11 +1,11 @@
-<img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/Zaina/Resources/Assets.xcassets/zainalogo.imageset/zainalogo.png?token=ADM5CJCWSZJMT265U62JBUC52GWN6" width="400"/>
+<img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/header.png"/>
 
 A game done using UIKit. 
 
 ## Game Link on the store  
 
 ## Screenshot  
-<img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/screenshots/screen1.png?token=ADM5CJCH6LTGXTLLPQSCTGK52GW2U" width="200"/> <img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/screenshots/screen2.png?token=ADM5CJCH6LTGXTLLPQSCTGK52GW2U" width="200"/> <img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/screenshots/screen3.png?token=ADM5CJCH6LTGXTLLPQSCTGK52GW2U" width="200"/>
+<img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/screenshots/screen1.png" width="200"/> <img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/screenshots/screen2.png" width="200"/> <img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/screenshots/screen3.png" width="200"/>
 
 ## What to do?
 
