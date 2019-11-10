@@ -93,7 +93,7 @@ class IntranceViewController: BaseGameViewController {
 
     if (object1.type == CollideTypes.house && object2.type == CollideTypes.zain)
       || (object2.type == CollideTypes.house && object1.type == CollideTypes.zain) {
-      changeViewController(UIStoryboard.create(storyboard: .main, controller: HouseViewController.self))
+      changeViewController(UIStoryboard.create(storyboard: .house, controller: HouseViewController.self))
       return false
     }
     return true

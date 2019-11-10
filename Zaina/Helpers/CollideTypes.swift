@@ -18,4 +18,7 @@ enum CollideTypes {
   static let spider = 7
   static let food = 8
   static let light = 9
+  static let dish = 10
+  static let oven = 11
+  static let wall = 12
 }

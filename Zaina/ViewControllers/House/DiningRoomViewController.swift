@@ -111,7 +111,7 @@ class DiningRoomViewController: BaseGameViewController {
           !light3SpriteView.isOn, light4SpriteView.isOn else {
       return true
     }
-    changeViewController(UIStoryboard.create(storyboard: .main, controller: DiningRoomViewController.self))
+    changeViewController(UIStoryboard.create(storyboard: .house, controller: KitchenViewController.self))
     return false
   }
 

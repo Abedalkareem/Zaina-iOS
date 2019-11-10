@@ -40,8 +40,8 @@ class MusicPlayer {
     isPlaying = false
   }
 
-  func playMusic(music: Music, type: Type) {
-    guard let path = Bundle.main.path(forResource: music.rawValue, ofType: type.rawValue) else {
+  func playMusic(music: Music) {
+    guard let path = Bundle.main.path(forResource: music.rawValue, ofType: music.type.rawValue) else {
       return
     }
     let url = URL(fileURLWithPath: path)
@@ -68,6 +68,8 @@ enum Music: String {
       return .wav
     case .piano90e:
       return .mp3
+    case .cooking:
+      return .wav
     }
   }
 
@@ -75,6 +77,7 @@ enum Music: String {
   case mainScreen = "main_screen"
   case darkForest = "darkforest"
   case gameOver = "game_over"
+  case cooking = "fire"
   case piano90e
 }
 

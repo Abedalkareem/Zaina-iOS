@@ -25,7 +25,7 @@ class GameOverViewController: UIViewController {
   // MARK: - IBActions
 
   @IBAction func tryAgain(_ sender: Any) {
-    MusicPlayer.shared.playBackgroundMusicWith(music: .gameOver)
+    MusicPlayer.shared.playBackgroundMusicWith(music: .piano90e)
     changeViewController(Status.currentLevelViewController())
   }
 

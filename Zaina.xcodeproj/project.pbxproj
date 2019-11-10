@@ -10,6 +10,7 @@
 		C607126C2375DC0200039AE6 /* main_screen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C607126B2375DC0200039AE6 /* main_screen.mp3 */; };
 		C607126E2375DD7F00039AE6 /* darkforest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C607126D2375DD7F00039AE6 /* darkforest.mp3 */; };
 		C61B0B2C2366113100CB376F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B0B2B2366113100CB376F /* MainViewController.swift */; };
+		C61B383E237681070004B2B1 /* HouseExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B383D237681070004B2B1 /* HouseExitViewController.swift */; };
 		C6792AED22E4D140000A34A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792AEC22E4D140000A34A6 /* AppDelegate.swift */; };
 		C6792AEF22E4D140000A34A6 /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792AEE22E4D140000A34A6 /* HouseViewController.swift */; };
 		C6792AF222E4D140000A34A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6792AF022E4D140000A34A6 /* Main.storyboard */; };
@@ -46,12 +47,17 @@
 		C6EF56282375F14D00711E0F /* game_over.wav in Resources */ = {isa = PBXBuildFile; fileRef = C6EF56272375F14D00711E0F /* game_over.wav */; };
 		C6EF562A2375FA7000711E0F /* piano90e.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C6EF56292375FA7000711E0F /* piano90e.mp3 */; };
 		C6EF562C2376008E00711E0F /* LightNodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EF562B2376008E00711E0F /* LightNodeView.swift */; };
+		C6EF562E2376052E00711E0F /* House.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6EF562D2376052E00711E0F /* House.storyboard */; };
+		C6EF5632237612E500711E0F /* KitchenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EF5631237612E500711E0F /* KitchenViewController.swift */; };
+		C6EF563623761E5300711E0F /* fire.wav in Resources */ = {isa = PBXBuildFile; fileRef = C6EF563523761E5300711E0F /* fire.wav */; };
+		C6EF563823761FE500711E0F /* HallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EF563723761FE500711E0F /* HallViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C607126B2375DC0200039AE6 /* main_screen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = main_screen.mp3; sourceTree = "<group>"; };
 		C607126D2375DD7F00039AE6 /* darkforest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = darkforest.mp3; sourceTree = "<group>"; };
 		C61B0B2B2366113100CB376F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C61B383D237681070004B2B1 /* HouseExitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseExitViewController.swift; sourceTree = "<group>"; };
 		C6792AE922E4D140000A34A6 /* Zaina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zaina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6792AEC22E4D140000A34A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6792AEE22E4D140000A34A6 /* HouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +96,10 @@
 		C6EF56272375F14D00711E0F /* game_over.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = game_over.wav; sourceTree = "<group>"; };
 		C6EF56292375FA7000711E0F /* piano90e.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano90e.mp3; sourceTree = "<group>"; };
 		C6EF562B2376008E00711E0F /* LightNodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightNodeView.swift; sourceTree = "<group>"; };
+		C6EF562D2376052E00711E0F /* House.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = House.storyboard; sourceTree = "<group>"; };
+		C6EF5631237612E500711E0F /* KitchenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenViewController.swift; sourceTree = "<group>"; };
+		C6EF563523761E5300711E0F /* fire.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fire.wav; sourceTree = "<group>"; };
+		C6EF563723761FE500711E0F /* HallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HallViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,12 +147,9 @@
 		C6792AFE22E4D149000A34A6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C6801B0B2366028700A3085C /* SplashViewController.swift */,
-				C61B0B2B2366113100CB376F /* MainViewController.swift */,
+				C6EF562F23760AB700711E0F /* Main */,
+				C6EF563023760AC400711E0F /* House */,
 				C6801B0D2366056100A3085C /* IntranceViewController.swift */,
-				C6792AEE22E4D140000A34A6 /* HouseViewController.swift */,
-				C6EF561F2375E5EC00711E0F /* DiningRoomViewController.swift */,
-				C6EF56252375F02100711E0F /* GameOverViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -169,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				C6792AF022E4D140000A34A6 /* Main.storyboard */,
+				C6EF562D2376052E00711E0F /* House.storyboard */,
 				C6792AF522E4D142000A34A6 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -276,6 +284,7 @@
 				C607126D2375DD7F00039AE6 /* darkforest.mp3 */,
 				C607126B2375DC0200039AE6 /* main_screen.mp3 */,
 				C6EF56292375FA7000711E0F /* piano90e.mp3 */,
+				C6EF563523761E5300711E0F /* fire.wav */,
 				C6EF56272375F14D00711E0F /* game_over.wav */,
 				C687C4AD236CBEEC00E83B61 /* background.wav */,
 			);
@@ -300,6 +309,28 @@
 				C6B6392F236CA5B000C282FC /* UIStoryboard.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C6EF562F23760AB700711E0F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C6801B0B2366028700A3085C /* SplashViewController.swift */,
+				C61B0B2B2366113100CB376F /* MainViewController.swift */,
+				C6EF56252375F02100711E0F /* GameOverViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C6EF563023760AC400711E0F /* House */ = {
+			isa = PBXGroup;
+			children = (
+				C6792AEE22E4D140000A34A6 /* HouseViewController.swift */,
+				C6EF561F2375E5EC00711E0F /* DiningRoomViewController.swift */,
+				C6EF5631237612E500711E0F /* KitchenViewController.swift */,
+				C6EF563723761FE500711E0F /* HallViewController.swift */,
+				C61B383D237681070004B2B1 /* HouseExitViewController.swift */,
+			);
+			path = House;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6792AF722E4D142000A34A6 /* LaunchScreen.storyboard in Resources */,
+				C6EF562E2376052E00711E0F /* House.storyboard in Resources */,
 				C607126E2375DD7F00039AE6 /* darkforest.mp3 in Resources */,
 				C6EF56282375F14D00711E0F /* game_over.wav in Resources */,
 				C68513F92375963A00D55020 /* Localizable.strings in Resources */,
@@ -368,6 +400,7 @@
 				C607126C2375DC0200039AE6 /* main_screen.mp3 in Resources */,
 				C6792AF422E4D142000A34A6 /* Assets.xcassets in Resources */,
 				C6EF562A2375FA7000711E0F /* piano90e.mp3 in Resources */,
+				C6EF563623761E5300711E0F /* fire.wav in Resources */,
 				C67BC1BE22EAECA500C7D44E /* pixel_font.ttf in Resources */,
 				C6792AF222E4D140000A34A6 /* Main.storyboard in Resources */,
 			);
@@ -384,6 +417,7 @@
 				C6792B0A22E4D3FB000A34A6 /* ObjectView.swift in Sources */,
 				C6EF56222375EA6600711E0F /* DarkSoulSpriteView.swift in Sources */,
 				C6792B0822E4D385000A34A6 /* SpriteView.swift in Sources */,
+				C6EF563823761FE500711E0F /* HallViewController.swift in Sources */,
 				C6EF562C2376008E00711E0F /* LightNodeView.swift in Sources */,
 				C6EF56262375F02100711E0F /* GameOverViewController.swift in Sources */,
 				C6801B10236606F800A3085C /* SceneView.swift in Sources */,
@@ -395,10 +429,12 @@
 				C67BC1B322EAC86E00C7D44E /* BackgroundView.swift in Sources */,
 				C68513FD237596FB00D55020 /* String+Helpers.swift in Sources */,
 				C6792AEF22E4D140000A34A6 /* HouseViewController.swift in Sources */,
+				C6EF5632237612E500711E0F /* KitchenViewController.swift in Sources */,
 				C6EF56202375E5EC00711E0F /* DiningRoomViewController.swift in Sources */,
 				C68513F6237595CB00D55020 /* Status.swift in Sources */,
 				C6792AED22E4D140000A34A6 /* AppDelegate.swift in Sources */,
 				C687C4B0236CC7D500E83B61 /* MusicPlayer.swift in Sources */,
+				C61B383E237681070004B2B1 /* HouseExitViewController.swift in Sources */,
 				C61B0B2C2366113100CB376F /* MainViewController.swift in Sources */,
 				C67BC1B722EAD79C00C7D44E /* Analog.swift in Sources */,
 				C6792B0522E4D1F5000A34A6 /* BaseGameViewController.swift in Sources */,

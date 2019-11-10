@@ -131,7 +131,7 @@ class HouseViewController: BaseGameViewController {
     guard points > 5 else {
       return true
     }
-    changeViewController(UIStoryboard.create(storyboard: .main, controller: DiningRoomViewController.self))
+    changeViewController(UIStoryboard.create(storyboard: .house, controller: DiningRoomViewController.self))
     return false
   }
 

@@ -33,4 +33,5 @@ extension UIStoryboard {
 ///
 enum Storyboard: String {
   case main = "Main"
+  case house = "House"
 }

@@ -19,3 +19,9 @@
 
 "dining_room_second_message" = "He went a way... I think that the dark souls are controlling him...\nI have a mission for you, we need to light the room, but not all the lights, you need to light 3 out of 4 then try to exit the room...";
 "dining_room_second_message_action" = "I'll try to guess";
+
+"kitchen_room_message" = "Good job!\nYour next mission you need to collect all the dishes from the room and then put them inside the oven, after doing that you can go to the next level.";
+"kitchen_room_message_action" = "I don't Like that, BUT OK!";
+
+"kitchen_room_second_message" = "Nice! I like that! thank you for this meal.";
+"kitchen_room_second_message_action" = "Welcome";
