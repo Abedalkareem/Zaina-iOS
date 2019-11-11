@@ -4,7 +4,7 @@ A UIKit Game.
 
 ## Game Link on the store  
 
-Will be available soon
+https://apps.apple.com/us/app/id1487385815
 
 ## Screenshot  
 <img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/screenshots/screen1.png" width="200"/> <img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/screenshots/screen2.png" width="200"/> <img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/screenshots/screen3.png" width="200"/>
