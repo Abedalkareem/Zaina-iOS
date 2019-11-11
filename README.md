@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/Abedalkareem/Zaina-iOS/master/header_new.png"/>
 
-A game done using UIKit. 
+A UIKit Game.
 
 ## Game Link on the store  
 
