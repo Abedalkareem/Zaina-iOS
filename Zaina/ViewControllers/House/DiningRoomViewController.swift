@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SimpleEngine
 
 class DiningRoomViewController: BaseGameViewController {
 
@@ -99,7 +100,7 @@ class DiningRoomViewController: BaseGameViewController {
 
   private func collideBetween(zaina: ObjectView, andLight light: ObjectView) -> Bool {
     if let light = (light as? LightNodeView) {
-      light.isOn = !light.isOn
+      light.changeValue()
     }
     return true
   }

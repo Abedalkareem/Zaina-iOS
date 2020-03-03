@@ -7,14 +7,23 @@
 //
 
 import UIKit
+import SimpleEngine
 
 class LightNodeView: NodeView {
 
   // MARK: - Properties
-  
-  var isOn = false {
+
+  var debouncer = Debouncer(interval: 0.2)
+
+  private(set) var isOn = false {
     didSet {
-      imageView.image = isOn ? #imageLiteral(resourceName: "light_on") :  #imageLiteral(resourceName: "light_off")
+      image = isOn ? #imageLiteral(resourceName: "light_on") :  #imageLiteral(resourceName: "light_off")
+    }
+  }
+
+  func changeValue() {
+    debouncer.debounce { [weak self] in
+      self?.isOn = !(self?.isOn ?? false)
     }
   }
 

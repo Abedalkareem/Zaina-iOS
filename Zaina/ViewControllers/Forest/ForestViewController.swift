@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SimpleEngine
 
 class ForestViewController: BaseGameViewController {
 

@@ -11,22 +11,39 @@ import AVFoundation
 
 class MusicPlayer {
 
+  ///
+  /// A singleton object to use the music player.
+  ///
   static let shared = MusicPlayer()
 
-  var backgroundAudioPlayer: AVAudioPlayer?
-  var subAudioPlayer: AVAudioPlayer?
+  // MARK: - Properties
+
+  ///
+  /// To check if the background audio is playing or not.
+  ///
   var isPlaying = false
 
-  init() {
+  // MARK: - Private properties
 
-  }
+  ///
+  /// An ongoing audio playing in the background.
+  ///
+  private var backgroundAudioPlayer: AVAudioPlayer?
 
+  ///
+  /// A audio to play one time.
+  ///
+  private var subAudioPlayer: AVAudioPlayer?
+
+  ///
+  /// Start playing the background music for ever.
+  ///
   func playBackgroundMusicWith(music: Music) {
     let path = Bundle.main.path(forResource: music.rawValue, ofType: music.type.rawValue)!
     let url = URL(fileURLWithPath: path)
     do {
       backgroundAudioPlayer = try AVAudioPlayer(contentsOf: url)
-      backgroundAudioPlayer?.numberOfLoops = 10
+      backgroundAudioPlayer?.numberOfLoops = .max
       backgroundAudioPlayer?.volume = 0.4
     } catch {
       print(error.localizedDescription)
@@ -35,11 +52,17 @@ class MusicPlayer {
     isPlaying = true
   }
 
+  ///
+  /// Pause background music.
+  ///
   func pauseBackgroundMusic() {
     backgroundAudioPlayer?.pause()
     isPlaying = false
   }
 
+  ///
+  /// Play a music one time.
+  ///
   func playMusic(music: Music) {
     guard let path = Bundle.main.path(forResource: music.rawValue, ofType: music.type.rawValue) else {
       return
@@ -55,7 +78,6 @@ class MusicPlayer {
 }
 
 enum Music: String {
-
   var type: Type {
     switch self {
     case .background:

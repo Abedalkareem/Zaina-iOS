@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SimpleEngine",
+        "repositoryURL": "https://github.com/Abedalkareem/SimpleEngine",
+        "state": {
+          "branch": null,
+          "revision": "b4f38330fd8f63f011013704caa836f109d81565",
+          "version": "0.0.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

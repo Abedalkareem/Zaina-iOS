@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,20 +16,9 @@
 		C6792AF222E4D140000A34A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6792AF022E4D140000A34A6 /* Main.storyboard */; };
 		C6792AF422E4D142000A34A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6792AF322E4D142000A34A6 /* Assets.xcassets */; };
 		C6792AF722E4D142000A34A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6792AF522E4D142000A34A6 /* LaunchScreen.storyboard */; };
-		C6792B0522E4D1F5000A34A6 /* BaseGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792B0422E4D1F5000A34A6 /* BaseGameViewController.swift */; };
-		C6792B0822E4D385000A34A6 /* SpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792B0722E4D385000A34A6 /* SpriteView.swift */; };
-		C6792B0A22E4D3FB000A34A6 /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792B0922E4D3FB000A34A6 /* ObjectView.swift */; };
-		C6792B1422E5EF43000A34A6 /* AnalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792B1322E5EF43000A34A6 /* AnalogView.swift */; };
-		C67BC1B322EAC86E00C7D44E /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1B222EAC86E00C7D44E /* BackgroundView.swift */; };
-		C67BC1B522EAD78500C7D44E /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1B422EAD78500C7D44E /* Direction.swift */; };
-		C67BC1B722EAD79C00C7D44E /* Analog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1B622EAD79C00C7D44E /* Analog.swift */; };
-		C67BC1BA22EAD9AD00C7D44E /* Frames.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1B922EAD9AD00C7D44E /* Frames.swift */; };
-		C67BC1BC22EAE91E00C7D44E /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BC1BB22EAE91E00C7D44E /* NodeView.swift */; };
 		C67BC1BE22EAECA500C7D44E /* pixel_font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C67BC1BD22EAECA200C7D44E /* pixel_font.ttf */; };
 		C6801B0E2366056100A3085C /* IntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6801B0D2366056100A3085C /* IntranceViewController.swift */; };
-		C6801B10236606F800A3085C /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6801B0F236606F800A3085C /* SceneView.swift */; };
 		C68513EF23756A0300D55020 /* OmarSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68513EE23756A0300D55020 /* OmarSpriteView.swift */; };
-		C68513F223756C2500D55020 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68513F123756C2500D55020 /* DialogView.swift */; };
 		C68513F6237595CB00D55020 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68513F5237595CB00D55020 /* Status.swift */; };
 		C68513F92375963A00D55020 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C68513FB2375963A00D55020 /* Localizable.strings */; };
 		C68513FD237596FB00D55020 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68513FC237596FB00D55020 /* String.swift */; };
@@ -45,7 +34,7 @@
 		C6B3BE792378913000791FC6 /* SpidersForestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3BE782378913000791FC6 /* SpidersForestViewController.swift */; };
 		C6B3BE7B2378949D00791FC6 /* final_fight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C6B3BE7A2378949D00791FC6 /* final_fight.mp3 */; };
 		C6B3BE7D237895E200791FC6 /* FinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3BE7C237895E200791FC6 /* FinishedViewController.swift */; };
-		C6B6392D236CA52D00C282FC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B6392C236CA52D00C282FC /* UIViewController.swift */; };
+		C6B40524240E8DDA00C9AFAD /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = C6B40523240E8DDA00C9AFAD /* SwiftPackageProductDependency */; };
 		C6B63930236CA5B000C282FC /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B6392F236CA5B000C282FC /* UIStoryboard.swift */; };
 		C6EF56202375E5EC00711E0F /* DiningRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EF561F2375E5EC00711E0F /* DiningRoomViewController.swift */; };
 		C6EF56222375EA6600711E0F /* DarkSoulSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EF56212375EA6600711E0F /* DarkSoulSpriteView.swift */; };
@@ -57,13 +46,9 @@
 		C6EF5632237612E500711E0F /* KitchenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EF5631237612E500711E0F /* KitchenViewController.swift */; };
 		C6EF563623761E5300711E0F /* fire.wav in Resources */ = {isa = PBXBuildFile; fileRef = C6EF563523761E5300711E0F /* fire.wav */; };
 		C6EF563823761FE500711E0F /* HallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EF563723761FE500711E0F /* HallViewController.swift */; };
-		D5BEC7DC467182EBFD64487B /* Pods_Zaina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295A8190B8428D96993BD883 /* Pods_Zaina.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		295A8190B8428D96993BD883 /* Pods_Zaina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zaina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7913BCBA507E8AD7BEB88B95 /* Pods-Zaina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zaina.release.xcconfig"; path = "Target Support Files/Pods-Zaina/Pods-Zaina.release.xcconfig"; sourceTree = "<group>"; };
-		BE06ECD6644D8C6821EADED1 /* Pods-Zaina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zaina.debug.xcconfig"; path = "Target Support Files/Pods-Zaina/Pods-Zaina.debug.xcconfig"; sourceTree = "<group>"; };
 		C607126B2375DC0200039AE6 /* main_screen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = main_screen.mp3; sourceTree = "<group>"; };
 		C607126D2375DD7F00039AE6 /* darkforest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = darkforest.mp3; sourceTree = "<group>"; };
 		C61B0B2B2366113100CB376F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -75,20 +60,9 @@
 		C6792AF322E4D142000A34A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6792AF622E4D142000A34A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6792AF822E4D142000A34A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6792B0422E4D1F5000A34A6 /* BaseGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameViewController.swift; sourceTree = "<group>"; };
-		C6792B0722E4D385000A34A6 /* SpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteView.swift; sourceTree = "<group>"; };
-		C6792B0922E4D3FB000A34A6 /* ObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectView.swift; sourceTree = "<group>"; };
-		C6792B1322E5EF43000A34A6 /* AnalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogView.swift; sourceTree = "<group>"; };
-		C67BC1B222EAC86E00C7D44E /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
-		C67BC1B422EAD78500C7D44E /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
-		C67BC1B622EAD79C00C7D44E /* Analog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analog.swift; sourceTree = "<group>"; };
-		C67BC1B922EAD9AD00C7D44E /* Frames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frames.swift; sourceTree = "<group>"; };
-		C67BC1BB22EAE91E00C7D44E /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
 		C67BC1BD22EAECA200C7D44E /* pixel_font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pixel_font.ttf; sourceTree = "<group>"; };
 		C6801B0D2366056100A3085C /* IntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntranceViewController.swift; sourceTree = "<group>"; };
-		C6801B0F236606F800A3085C /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
 		C68513EE23756A0300D55020 /* OmarSpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmarSpriteView.swift; sourceTree = "<group>"; };
-		C68513F123756C2500D55020 /* DialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
 		C68513F5237595CB00D55020 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		C68513FA2375963A00D55020 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C68513FC237596FB00D55020 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -104,7 +78,6 @@
 		C6B3BE782378913000791FC6 /* SpidersForestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpidersForestViewController.swift; sourceTree = "<group>"; };
 		C6B3BE7A2378949D00791FC6 /* final_fight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = final_fight.mp3; sourceTree = "<group>"; };
 		C6B3BE7C237895E200791FC6 /* FinishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedViewController.swift; sourceTree = "<group>"; };
-		C6B6392C236CA52D00C282FC /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		C6B6392F236CA5B000C282FC /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		C6EF561F2375E5EC00711E0F /* DiningRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningRoomViewController.swift; sourceTree = "<group>"; };
 		C6EF56212375EA6600711E0F /* DarkSoulSpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSoulSpriteView.swift; sourceTree = "<group>"; };
@@ -123,26 +96,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5BEC7DC467182EBFD64487B /* Pods_Zaina.framework in Frameworks */,
+				C6B40524240E8DDA00C9AFAD /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6E002BFDD1863EF89E96ED6E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				295A8190B8428D96993BD883 /* Pods_Zaina.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		AA7E827100EEB49676969F36 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BE06ECD6644D8C6821EADED1 /* Pods-Zaina.debug.xcconfig */,
-				7913BCBA507E8AD7BEB88B95 /* Pods-Zaina.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -153,7 +116,6 @@
 				C6792AEB22E4D140000A34A6 /* Zaina */,
 				C6792AEA22E4D140000A34A6 /* Products */,
 				AA7E827100EEB49676969F36 /* Pods */,
-				6E002BFDD1863EF89E96ED6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,7 +136,6 @@
 				C6792B0122E4D161000A34A6 /* Storyboards */,
 				C6792B0222E4D1A0000A34A6 /* Resources */,
 				C687C4B1236CCB0900E83B61 /* Helpers */,
-				C6801B0A2366025B00A3085C /* Classes */,
 				C6792B0322E4D1A8000A34A6 /* SupportFiles */,
 			);
 			path = Zaina;
@@ -196,16 +157,6 @@
 				C6792AEC22E4D140000A34A6 /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
-			sourceTree = "<group>";
-		};
-		C6792B0022E4D15A000A34A6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				C68513F023756C1000D55020 /* DialogView */,
-				C6792B1222E5EF23000A34A6 /* AnalogView */,
-				C6792B0622E4D34D000A34A6 /* Objects */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		C6792B0122E4D161000A34A6 /* Storyboards */ = {
@@ -236,55 +187,6 @@
 				C68513FB2375963A00D55020 /* Localizable.strings */,
 			);
 			path = SupportFiles;
-			sourceTree = "<group>";
-		};
-		C6792B0622E4D34D000A34A6 /* Objects */ = {
-			isa = PBXGroup;
-			children = (
-				C6792B0922E4D3FB000A34A6 /* ObjectView.swift */,
-				C67BC1B822EAD9A100C7D44E /* SpriteView */,
-				C67BC1B222EAC86E00C7D44E /* BackgroundView.swift */,
-				C67BC1BB22EAE91E00C7D44E /* NodeView.swift */,
-				C6801B0F236606F800A3085C /* SceneView.swift */,
-			);
-			path = Objects;
-			sourceTree = "<group>";
-		};
-		C6792B1222E5EF23000A34A6 /* AnalogView */ = {
-			isa = PBXGroup;
-			children = (
-				C6792B1322E5EF43000A34A6 /* AnalogView.swift */,
-				C67BC1B422EAD78500C7D44E /* Direction.swift */,
-				C67BC1B622EAD79C00C7D44E /* Analog.swift */,
-			);
-			path = AnalogView;
-			sourceTree = "<group>";
-		};
-		C67BC1B822EAD9A100C7D44E /* SpriteView */ = {
-			isa = PBXGroup;
-			children = (
-				C6792B0722E4D385000A34A6 /* SpriteView.swift */,
-				C67BC1B922EAD9AD00C7D44E /* Frames.swift */,
-			);
-			path = SpriteView;
-			sourceTree = "<group>";
-		};
-		C6801B0A2366025B00A3085C /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				C6792B0422E4D1F5000A34A6 /* BaseGameViewController.swift */,
-				C6792B0022E4D15A000A34A6 /* Views */,
-				C6B6392E236CA56C00C282FC /* Extensions */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		C68513F023756C1000D55020 /* DialogView */ = {
-			isa = PBXGroup;
-			children = (
-				C68513F123756C2500D55020 /* DialogView.swift */,
-			);
-			path = DialogView;
 			sourceTree = "<group>";
 		};
 		C68513FE2375AB5C00D55020 /* Extensions */ = {
@@ -353,14 +255,6 @@
 			path = Forest;
 			sourceTree = "<group>";
 		};
-		C6B6392E236CA56C00C282FC /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				C6B6392C236CA52D00C282FC /* UIViewController.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		C6EF562F23760AB700711E0F /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,17 +284,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6792AFB22E4D142000A34A6 /* Build configuration list for PBXNativeTarget "Zaina" */;
 			buildPhases = (
-				BD9642EEB99491C49D5BA332 /* [CP] Check Pods Manifest.lock */,
 				C6792AE522E4D140000A34A6 /* Sources */,
 				C6792AE622E4D140000A34A6 /* Frameworks */,
 				C6792AE722E4D140000A34A6 /* Resources */,
-				D12A561AA88431E81DCA7EE8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Zaina;
+			packageProductDependencies = (
+				C6B40523240E8DDA00C9AFAD /* SwiftPackageProductDependency */,
+			);
 			productName = Zaina;
 			productReference = C6792AE922E4D140000A34A6 /* Zaina.app */;
 			productType = "com.apple.product-type.application";
@@ -429,6 +324,9 @@
 				Base,
 			);
 			mainGroup = C6792AE022E4D140000A34A6;
+			packageReferences = (
+				C6B40522240E8DDA00C9AFAD /* RemoteSwiftPackageReference */,
+			);
 			productRefGroup = C6792AEA22E4D140000A34A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -464,66 +362,18 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		BD9642EEB99491C49D5BA332 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Zaina-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D12A561AA88431E81DCA7EE8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Zaina/Pods-Zaina-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Zaina/Pods-Zaina-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Zaina/Pods-Zaina-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		C6792AE522E4D140000A34A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6792B1422E5EF43000A34A6 /* AnalogView.swift in Sources */,
-				C6792B0A22E4D3FB000A34A6 /* ObjectView.swift in Sources */,
 				C6EF56222375EA6600711E0F /* DarkSoulSpriteView.swift in Sources */,
-				C6792B0822E4D385000A34A6 /* SpriteView.swift in Sources */,
 				C6EF563823761FE500711E0F /* HallViewController.swift in Sources */,
 				C6EF562C2376008E00711E0F /* LightNodeView.swift in Sources */,
 				C6EF56262375F02100711E0F /* GameOverViewController.swift in Sources */,
-				C6801B10236606F800A3085C /* SceneView.swift in Sources */,
 				C68513EF23756A0300D55020 /* OmarSpriteView.swift in Sources */,
 				C687C4A6236CAC1900E83B61 /* ZainaSpriteView.swift in Sources */,
 				C687C4A8236CB10400E83B61 /* CollideTypes.swift in Sources */,
-				C67BC1BC22EAE91E00C7D44E /* NodeView.swift in Sources */,
-				C67BC1B322EAC86E00C7D44E /* BackgroundView.swift in Sources */,
 				C6B3BE7D237895E200791FC6 /* FinishedViewController.swift in Sources */,
 				C68513FD237596FB00D55020 /* String.swift in Sources */,
 				C6792AEF22E4D140000A34A6 /* HouseViewController.swift in Sources */,
@@ -535,16 +385,10 @@
 				C687C4B0236CC7D500E83B61 /* MusicPlayer.swift in Sources */,
 				C61B383E237681070004B2B1 /* HouseExitViewController.swift in Sources */,
 				C61B0B2C2366113100CB376F /* MainViewController.swift in Sources */,
-				C67BC1B722EAD79C00C7D44E /* Analog.swift in Sources */,
 				C6B3BE73237889AD00791FC6 /* ForestViewController.swift in Sources */,
-				C6792B0522E4D1F5000A34A6 /* BaseGameViewController.swift in Sources */,
 				C687C4AA236CB81300E83B61 /* SpiderSpriteView.swift in Sources */,
 				C6B63930236CA5B000C282FC /* UIStoryboard.swift in Sources */,
-				C67BC1B522EAD78500C7D44E /* Direction.swift in Sources */,
-				C68513F223756C2500D55020 /* DialogView.swift in Sources */,
 				C6801B0E2366056100A3085C /* IntranceViewController.swift in Sources */,
-				C6B6392D236CA52D00C282FC /* UIViewController.swift in Sources */,
-				C67BC1BA22EAD9AD00C7D44E /* Frames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,7 +540,6 @@
 		};
 		C6792AFC22E4D142000A34A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE06ECD6644D8C6821EADED1 /* Pods-Zaina.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Zaina/Zaina.entitlements;
@@ -719,7 +562,6 @@
 		};
 		C6792AFD22E4D142000A34A6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7913BCBA507E8AD7BEB88B95 /* Pods-Zaina.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Zaina/Zaina.entitlements;
@@ -762,6 +604,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C6B40522240E8DDA00C9AFAD /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Abedalkareem/SimpleEngine";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C6B40523240E8DDA00C9AFAD /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6B40522240E8DDA00C9AFAD /* RemoteSwiftPackageReference */;
+			productName = SimpleEngine;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C6792AE122E4D140000A34A6 /* Project object */;
 }

@@ -9,7 +9,10 @@
 import UIKit
 
 class Status {
-  
+
+  ///
+  /// Return the current level.
+  ///
   static var currentLevel: Int {
     get {
       return UserDefaults.standard.integer(forKey: "currentLevel")
@@ -18,7 +21,10 @@ class Status {
       UserDefaults.standard.set(newValue, forKey: "currentLevel")
     }
   }
-  
+
+  ///
+  /// Return current level view controller.
+  ///
   static func currentLevelViewController() -> UIViewController {
     let type: UIViewController.Type?
     let storyboard: Storyboard!
