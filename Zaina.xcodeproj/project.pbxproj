@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98B0A88320C8CA2665433AEC /* Pods_Zaina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 937452DE131F26D018149D77 /* Pods_Zaina.framework */; };
 		C607126C2375DC0200039AE6 /* main_screen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C607126B2375DC0200039AE6 /* main_screen.mp3 */; };
 		C607126E2375DD7F00039AE6 /* darkforest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C607126D2375DD7F00039AE6 /* darkforest.mp3 */; };
 		C61B0B2C2366113100CB376F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B0B2B2366113100CB376F /* MainViewController.swift */; };
@@ -34,7 +35,6 @@
 		C6B3BE792378913000791FC6 /* SpidersForestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3BE782378913000791FC6 /* SpidersForestViewController.swift */; };
 		C6B3BE7B2378949D00791FC6 /* final_fight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C6B3BE7A2378949D00791FC6 /* final_fight.mp3 */; };
 		C6B3BE7D237895E200791FC6 /* FinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3BE7C237895E200791FC6 /* FinishedViewController.swift */; };
-		C6B40524240E8DDA00C9AFAD /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = C6B40523240E8DDA00C9AFAD /* SwiftPackageProductDependency */; };
 		C6B63930236CA5B000C282FC /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B6392F236CA5B000C282FC /* UIStoryboard.swift */; };
 		C6EF56202375E5EC00711E0F /* DiningRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EF561F2375E5EC00711E0F /* DiningRoomViewController.swift */; };
 		C6EF56222375EA6600711E0F /* DarkSoulSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EF56212375EA6600711E0F /* DarkSoulSpriteView.swift */; };
@@ -49,6 +49,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E668673C78DCD9B5DA99B34 /* Pods-Zaina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zaina.debug.xcconfig"; path = "Target Support Files/Pods-Zaina/Pods-Zaina.debug.xcconfig"; sourceTree = "<group>"; };
+		937452DE131F26D018149D77 /* Pods_Zaina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zaina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC08901EDB0FB4EC433D9E01 /* Pods-Zaina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zaina.release.xcconfig"; path = "Target Support Files/Pods-Zaina/Pods-Zaina.release.xcconfig"; sourceTree = "<group>"; };
 		C607126B2375DC0200039AE6 /* main_screen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = main_screen.mp3; sourceTree = "<group>"; };
 		C607126D2375DD7F00039AE6 /* darkforest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = darkforest.mp3; sourceTree = "<group>"; };
 		C61B0B2B2366113100CB376F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -96,18 +99,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6B40524240E8DDA00C9AFAD /* BuildFile in Frameworks */,
+				98B0A88320C8CA2665433AEC /* Pods_Zaina.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AA7E827100EEB49676969F36 /* Pods */ = {
+		0BC9F2A6AAE6589B0079783C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				937452DE131F26D018149D77 /* Pods_Zaina.framework */,
 			);
-			path = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C6792AE022E4D140000A34A6 = {
@@ -115,7 +119,8 @@
 			children = (
 				C6792AEB22E4D140000A34A6 /* Zaina */,
 				C6792AEA22E4D140000A34A6 /* Products */,
-				AA7E827100EEB49676969F36 /* Pods */,
+				F9111D9702A6BDEBE92DECF1 /* Pods */,
+				0BC9F2A6AAE6589B0079783C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -277,6 +282,15 @@
 			path = House;
 			sourceTree = "<group>";
 		};
+		F9111D9702A6BDEBE92DECF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E668673C78DCD9B5DA99B34 /* Pods-Zaina.debug.xcconfig */,
+				BC08901EDB0FB4EC433D9E01 /* Pods-Zaina.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,9 +298,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6792AFB22E4D142000A34A6 /* Build configuration list for PBXNativeTarget "Zaina" */;
 			buildPhases = (
+				ABBF7E99FD1269C587D74E10 /* [CP] Check Pods Manifest.lock */,
 				C6792AE522E4D140000A34A6 /* Sources */,
 				C6792AE622E4D140000A34A6 /* Frameworks */,
 				C6792AE722E4D140000A34A6 /* Resources */,
+				AF2FB25EA60ADD4622AF0E1F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,7 +310,6 @@
 			);
 			name = Zaina;
 			packageProductDependencies = (
-				C6B40523240E8DDA00C9AFAD /* SwiftPackageProductDependency */,
 			);
 			productName = Zaina;
 			productReference = C6792AE922E4D140000A34A6 /* Zaina.app */;
@@ -325,7 +340,6 @@
 			);
 			mainGroup = C6792AE022E4D140000A34A6;
 			packageReferences = (
-				C6B40522240E8DDA00C9AFAD /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = C6792AEA22E4D140000A34A6 /* Products */;
 			projectDirPath = "";
@@ -361,6 +375,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ABBF7E99FD1269C587D74E10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Zaina-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF2FB25EA60ADD4622AF0E1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zaina/Pods-Zaina-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zaina/Pods-Zaina-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Zaina/Pods-Zaina-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C6792AE522E4D140000A34A6 /* Sources */ = {
@@ -540,6 +596,7 @@
 		};
 		C6792AFC22E4D142000A34A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E668673C78DCD9B5DA99B34 /* Pods-Zaina.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Zaina/Zaina.entitlements;
@@ -562,6 +619,7 @@
 		};
 		C6792AFD22E4D142000A34A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC08901EDB0FB4EC433D9E01 /* Pods-Zaina.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Zaina/Zaina.entitlements;
@@ -604,25 +662,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C6B40522240E8DDA00C9AFAD /* RemoteSwiftPackageReference */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Abedalkareem/SimpleEngine";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.2;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C6B40523240E8DDA00C9AFAD /* SwiftPackageProductDependency */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C6B40522240E8DDA00C9AFAD /* RemoteSwiftPackageReference */;
-			productName = SimpleEngine;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C6792AE122E4D140000A34A6 /* Project object */;
 }

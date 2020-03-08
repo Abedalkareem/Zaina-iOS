@@ -1,0 +1,6 @@
+framework module SimpleEngine {
+  umbrella header "SimpleEngine-umbrella.h"
+
+  export *
+  module * { export * }
+}

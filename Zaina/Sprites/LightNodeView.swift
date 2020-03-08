@@ -9,6 +9,7 @@
 import UIKit
 import SimpleEngine
 
+@IBDesignable
 class LightNodeView: NodeView {
 
   // MARK: - Properties

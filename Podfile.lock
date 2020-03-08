@@ -1,0 +1,16 @@
+PODS:
+  - SimpleEngine (0.5.2)
+
+DEPENDENCIES:
+  - SimpleEngine (= 0.5.2)
+
+SPEC REPOS:
+  trunk:
+    - SimpleEngine
+
+SPEC CHECKSUMS:
+  SimpleEngine: ec0dc2b627a3a4b765f74252160d9337482ccac0
+
+PODFILE CHECKSUM: b2b30fffc7cfce5ace19d533685f0618699d1332
+
+COCOAPODS: 1.9.0
