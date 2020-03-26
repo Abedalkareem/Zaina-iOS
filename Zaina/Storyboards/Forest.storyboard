@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROq-jr-zbk" customClass="NodeView" customModule="SimpleEngine">
-                                        <rect key="frame" x="390.5" y="143" width="115" height="128"/>
+                                        <rect key="frame" x="-10" y="296" width="115" height="128"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="115" id="BSM-eF-rXL"/>
@@ -37,20 +37,6 @@
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="tree2"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="type">
                                                 <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qrh-VO-JiK" customClass="NodeView" customModule="SimpleEngine">
-                                        <rect key="frame" x="706" y="-60" width="200" height="200"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="Z0k-mO-cyq"/>
-                                            <constraint firstAttribute="height" constant="200" id="czY-QT-GEk"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="hose"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
-                                                <integer key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -82,16 +68,30 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qrh-VO-JiK" customClass="NodeView" customModule="SimpleEngine">
+                                        <rect key="frame" x="348" y="-60" width="200" height="200"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Z0k-mO-cyq"/>
+                                            <constraint firstAttribute="height" constant="200" id="czY-QT-GEk"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="hose"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Qrh-VO-JiK" secondAttribute="trailing" constant="-10" id="2er-L1-CnA"/>
                                     <constraint firstAttribute="bottom" secondItem="SF8-Pj-54h" secondAttribute="bottom" constant="8" id="4Ky-u0-U38"/>
                                     <constraint firstItem="VKj-J6-fTv" firstAttribute="top" secondItem="Ynb-TN-R33" secondAttribute="top" constant="72" id="9G7-r6-Bcz"/>
                                     <constraint firstItem="Qrh-VO-JiK" firstAttribute="top" secondItem="Ynb-TN-R33" secondAttribute="top" constant="-60" id="VfJ-vb-Ecn"/>
+                                    <constraint firstItem="ROq-jr-zbk" firstAttribute="leading" secondItem="Ynb-TN-R33" secondAttribute="leading" constant="-10" id="dYa-EY-4Gb"/>
                                     <constraint firstAttribute="trailing" secondItem="SF8-Pj-54h" secondAttribute="trailing" constant="150" id="hBF-PB-38Y"/>
-                                    <constraint firstItem="ROq-jr-zbk" firstAttribute="centerX" secondItem="Ynb-TN-R33" secondAttribute="centerX" id="iJu-x0-8iS"/>
-                                    <constraint firstItem="ROq-jr-zbk" firstAttribute="centerY" secondItem="Ynb-TN-R33" secondAttribute="centerY" id="sdx-2E-tiH"/>
+                                    <constraint firstItem="Qrh-VO-JiK" firstAttribute="centerX" secondItem="Ynb-TN-R33" secondAttribute="centerX" id="iBh-bE-ATv"/>
+                                    <constraint firstAttribute="bottom" secondItem="ROq-jr-zbk" secondAttribute="bottom" constant="-10" id="qmP-rf-KSy"/>
                                     <constraint firstItem="VKj-J6-fTv" firstAttribute="leading" secondItem="Ynb-TN-R33" secondAttribute="leading" constant="17" id="uYd-Gu-hA4"/>
                                 </constraints>
                             </view>

@@ -8,6 +8,7 @@
 
 import UIKit
 import SimpleEngine
+import GoogleMobileAds
 
 class MainViewController: BaseGameViewController {
   
@@ -20,7 +21,8 @@ class MainViewController: BaseGameViewController {
   
   private var zainaSpriteView: ZainaSpriteView!
   private var zainaMovingTimer: Timer?
-  
+  private var interstitial: GADInterstitial!
+
   // MARK: - ViewController lifecycle
   
   override func viewDidLoad() {
@@ -30,6 +32,8 @@ class MainViewController: BaseGameViewController {
     playBackgroundSong()
     
     setupViews()
+
+    interstitial = createAndLoadInterstitial()
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -49,7 +53,14 @@ class MainViewController: BaseGameViewController {
     startButton.setTitle(title, for: .normal)
     analogView.isHidden = true
   }
-  
+
+  func createAndLoadInterstitial() -> GADInterstitial {
+    let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+    interstitial.delegate = self
+    interstitial.load(GADRequest())
+    return interstitial
+  }
+
   private func playBackgroundSong() {
     MusicPlayer.shared.playBackgroundMusicWith(music: .mainScreen)
   }
@@ -103,7 +114,19 @@ class MainViewController: BaseGameViewController {
   // MARK: - IBActions
   
   @IBAction func start(_ sender: Any) {
-    changeViewController(Status.currentLevelViewController())
+    if interstitial.isReady {
+      interstitial.present(fromRootViewController: self)
+    } else {
+      changeViewController(Status.currentLevelViewController())
+    }
   }
   
+}
+
+extension MainViewController: GADInterstitialDelegate {
+
+  func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+    changeViewController(Status.currentLevelViewController())
+  }
+
 }

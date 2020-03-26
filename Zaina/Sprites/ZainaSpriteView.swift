@@ -13,8 +13,8 @@ class ZainaSpriteView: SpriteView {
 
   // MARK: - Properties
 
-  let width = 40
-  let height = 40
+  let width: CGFloat = 40
+  let height: CGFloat = 40
 
   // MARK: - Setup
   
