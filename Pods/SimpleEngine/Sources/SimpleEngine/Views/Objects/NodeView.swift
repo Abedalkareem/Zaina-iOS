@@ -1,6 +1,6 @@
 //
 //  NodeView.swift
-//  Zaina
+//  SimpleEngine
 //
 //  Created by abedalkareem omreyh on 7/26/19.
 //  Copyright © 2019 abedalkareem. All rights reserved.
@@ -39,7 +39,10 @@ open class NodeView: ObjectView {
     setup()
   }
 
-  private func setup() {
+  ///
+  /// It can be overrided to do extra setups in the subview side.
+  ///
+  open func setup() {
     imageView = UIImageView()
     addSubview(imageView)
 

@@ -17,9 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+    setupAnalogViewSettings()
+    
     DialogView.fontName = "RetroComputer"
 
     return true
+  }
+
+  private func setupAnalogViewSettings() {
+    AnalogView.Settings.analogImage = #imageLiteral(resourceName: "controller_analog")
+    AnalogView.Settings.backgroundImage = #imageLiteral(resourceName: "controller_background")
+    AnalogView.Settings.alpha = 0.7
   }
 
   func applicationWillResignActive(_ application: UIApplication) { }

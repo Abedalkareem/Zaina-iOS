@@ -25,10 +25,10 @@ class OmarSpriteView: SpriteView {
 
     type = CollideTypes.omar
 
-    frames.top = [#imageLiteral(resourceName: "omar_up_1"), #imageLiteral(resourceName: "omar_up_2")]
-    frames.left = [#imageLiteral(resourceName: "omar_left_1"), #imageLiteral(resourceName: "omar_left_2")]
-    frames.right = [#imageLiteral(resourceName: "omar_right_1"), #imageLiteral(resourceName: "omar_right_2")]
-    frames.bottom = [#imageLiteral(resourceName: "omar_bottom_1"), #imageLiteral(resourceName: "omar_bottom_2")]
-    frames.idel = [#imageLiteral(resourceName: "omar_idel_1"), #imageLiteral(resourceName: "omar_idel_2")]
+    frames.top = Frames(images: [#imageLiteral(resourceName: "omar_up_1"), #imageLiteral(resourceName: "omar_up_2")], duration: 0.3)
+    frames.left = Frames(images: [#imageLiteral(resourceName: "omar_left_1"), #imageLiteral(resourceName: "omar_left_2")], duration: 0.3)
+    frames.right = Frames(images: [#imageLiteral(resourceName: "omar_right_1"), #imageLiteral(resourceName: "omar_right_2")], duration: 0.3)
+    frames.bottom = Frames(images: [#imageLiteral(resourceName: "omar_bottom_1"), #imageLiteral(resourceName: "omar_bottom_2")], duration: 0.3)
+    frames.idel = Frames(images: [#imageLiteral(resourceName: "omar_idel_1"), #imageLiteral(resourceName: "omar_idel_2")], duration: 0.3)
   }
 }

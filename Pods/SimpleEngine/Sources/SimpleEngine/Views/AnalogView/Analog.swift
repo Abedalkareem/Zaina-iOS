@@ -1,6 +1,6 @@
 //
 //  Analog.swift
-//  Zaina
+//  SimpleEngine
 //
 //  Created by abedalkareem omreyh on 7/26/19.
 //  Copyright © 2019 abedalkareem. All rights reserved.

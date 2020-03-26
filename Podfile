@@ -6,6 +6,6 @@ target 'Zaina' do
   use_frameworks!
 
   # Pods for Zaina
-  pod "SimpleEngine" => "0.5.2"
+  pod "SimpleEngine"
 
 end

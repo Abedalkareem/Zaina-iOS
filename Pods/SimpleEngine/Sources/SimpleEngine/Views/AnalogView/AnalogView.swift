@@ -1,6 +1,6 @@
 //
 //  AnalogView.swift
-//  Zaina
+//  SimpleEngine
 //
 //  Created by abedalkareem omreyh on 7/22/19.
 //  Copyright © 2019 abedalkareem. All rights reserved.
@@ -58,8 +58,17 @@ open class AnalogView: UIView {
 
     backgroundColor = .clear
 
-    analogImageView.image = analogImage
-    backgroundImageView.image = backgroundImage
+    if let analogImage = Settings.analogImage {
+      analogImageView.image = analogImage
+    } else {
+      analogImageView.image = analogImage
+    }
+    if let backgroundImage = Settings.backgroundImage {
+      backgroundImageView.image = backgroundImage
+    } else {
+      backgroundImageView.image = backgroundImage
+    }
+    alpha = Settings.alpha
 
     addSubview(backgroundImageView)
     addSubview(analogImageView)
@@ -154,5 +163,28 @@ open class AnalogView: UIView {
 
   open func analogDidMove(analogMoved: @escaping AnalogMoved) {
     self.analogMoved = analogMoved
+  }
+
+  public enum Settings {
+    ///
+    /// A shared analog image for all analogs in the porject.
+    ///
+    public static var analogImage: UIImage?
+    ///
+    /// A shared analog background image for all analogs in the porject.
+    ///
+    public static var backgroundImage: UIImage?
+    ///
+    /// Analog alpha. The default is `0.5`.
+    ///
+    public static var alpha: CGFloat = 0.5
+    ///
+    /// Analog size. The default is `150`.
+    ///
+    public static var analogSize: CGFloat = 140
+    ///
+    /// Analog margen. The default is `0.5`.
+    ///
+    public static var margen: CGFloat = 15
   }
 }

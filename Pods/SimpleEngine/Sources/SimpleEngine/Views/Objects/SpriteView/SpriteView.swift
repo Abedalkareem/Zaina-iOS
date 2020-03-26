@@ -1,6 +1,6 @@
 //
 //  SpriteView.swift
-//  Zaina
+//  SimpleEngine
 //
 //  Created by abedalkareem omreyh on 7/21/19.
 //  Copyright © 2019 abedalkareem. All rights reserved.
@@ -16,12 +16,7 @@ open class SpriteView: ObjectView {
   ///
   /// The speed of the sprite is how many pixels it will move per frame. The defualt value is `5`.
   ///
-  @IBInspectable open var speed: CGFloat = 5 {
-    didSet {
-      xSpeed = speed
-      ySpeed = speed
-    }
-  }
+  @IBInspectable open var speed: CGFloat = 5
 
   ///
   /// The first image it will show when you add the sprite to the storyboard. after that it will show the `Freams`.
@@ -39,7 +34,7 @@ open class SpriteView: ObjectView {
   /// You can set the images (frames) that will show when the user move to right, left,
   /// top, bottom, topLeft, bottomLeft, topRight, bottomRight or idel.
   ///
-  open var frames = Frames()
+  open var frames = FramesHolder()
 
   ///
   /// The ` SpriteView` will stop when it collide with one of this types.
@@ -47,6 +42,11 @@ open class SpriteView: ObjectView {
   /// collide with this tree it will not move through it.
   ///
   open var stopWhenCollideTypes = [Int]()
+
+  ///
+  /// If the value is true, the object will not pass through out the screen edges.
+  ///
+  open var shouldHitTheEdges = false
 
   // MARK: - Private properties
 
@@ -58,14 +58,13 @@ open class SpriteView: ObjectView {
     }
   }
 
-  private var xSpeed: CGFloat = 5
-  private var ySpeed: CGFloat = 5
-
   // The `x` and `y` that you can set to reach to some x and y in the `SceneView`.
   private var desireX: CGFloat?
   private var desireY: CGFloat?
 
   private var imageView: UIImageView!
+
+  private var stopOtherAnimations = false
 
   // MARK: - init
 
@@ -101,9 +100,15 @@ open class SpriteView: ObjectView {
   ///
   /// Make the sprite move to specific `x` and `y`.
   ///
+  /// - Parameters:
+  ///   - x: X to move to.
+  ///   - y: Y to move to.
+  ///   - shouldBeRemovedAtTheEnd: Should it be removed at the end.
+  ///   default is `false`.
+  ///
   open func moveTo(x: CGFloat, y: CGFloat) {
-    desireX = x
-    desireY = y
+    self.desireX = x
+    self.desireY = y
 
     // get the defrence between the x and y,
     // so if the x equal to 100, and the y equal to 50,
@@ -153,11 +158,20 @@ open class SpriteView: ObjectView {
     }
   }
 
-  override open func onCollisionEnter(with object: ObjectView?) {
+  ///
+  /// A method will be called when any object collided with this object.
+  /// `super.onCollisionEnter(with object:)` must always be called when
+  /// you override this method.
+  ///
+  /// - Parameter object: The object the collided.
+  ///
+  /// - Returns: Return true if the object should report the collide to the view controller.
+  /// The defualt is `true`.
+  ///
+  @discardableResult
+  override open func onCollisionEnter(with object: ObjectView?) -> Bool {
     guard let object = object, stopWhenCollideTypes.contains(object.type) else {
-      xSpeed = speed
-      ySpeed = speed
-      return
+      return true
     }
 
     let x = frame.origin.x
@@ -165,8 +179,13 @@ open class SpriteView: ObjectView {
     let objectX = object.frame.origin.x
     let objectY = object.frame.origin.y
 
-    frame.origin.x += (x > objectX ? (speed/2 * 0.5) : (speed/2 * -0.5))
-    frame.origin.y += (y > objectY ? (speed/2 * 0.5) : (speed/2 * -0.5))
+    frame.origin.x += (x > objectX ? (speed * 0.5) : (speed * -0.5))
+    frame.origin.y += (y > objectY ? (speed * 0.5) : (speed * -0.5))
+
+    if let desireX = desireX, let desireY = desireY {
+      moveTo(x: desireX, y: desireY)
+    }
+    return true
   }
   
   override open func update() {
@@ -177,29 +196,108 @@ open class SpriteView: ObjectView {
       if xRange.contains(frame.origin.x) && yRange.contains(frame.origin.y) {
         self.desireX = nil
         self.desireY = nil
-        // reset the analog to idel status.
+        // reset the analog to idel status (if there is an analog attached).
         self.analog = Analog(direction: .center, x: 0, y: 0)
+        self.didRechedDesiredPoint()
         return
       }
     }
     moveXandYBy(x: analog?.x, y: analog?.y)
   }
 
+  ///
+  /// override to be notifide when the `SpriteView` reaches the
+  /// desired point.
+  ///
+  open func didRechedDesiredPoint() { }
+
+  ///
+  /// Use it to update the `SpriteView` in case you changed any of the `Frames`.
+  ///
+  open func updateFrames() {
+    changeMovment()
+  }
+
+  /// Animate frames for the sprite.
+  /// - Parameters:
+  ///   - frames: The frames to animate.
+  ///   - repeatCount: How many time should the frames repeated.
+  ///   The default is `0`.
+  ///   - stopOtherAnimations: Should stop all the other animations
+  ///   like the animation for moving or idel. The default is `false`.
+  ///   - didFinish: a closure to be called when the animation finishs.
+  ///
+  open func startAnimationWith(frames: Frames,
+                               repeatCount: Int = 0,
+                               stopOtherAnimations: Bool = false,
+                               didFinish: (() -> Void)? = nil) {
+    self.stopOtherAnimations = stopOtherAnimations
+
+    imageView.animationImages = frames.images
+    imageView.animationDuration = frames.duration
+    imageView.startAnimating()
+
+    let totalAnimationTime = Double(repeatCount) * frames.duration
+    guard totalAnimationTime != 0 else {
+      return
+    }
+    let oneFrameDuration = frames.duration / Double(frames.images?.count ?? 0)
+    DispatchQueue.main.asyncAfter(deadline: .now() + totalAnimationTime - oneFrameDuration) {
+      didFinish?()
+      self.imageView.stopAnimating()
+      self.imageView.image = frames.images?.last
+      self.stopOtherAnimations = false
+      self.changeMovment()
+    }
+  }
+
   // MARK: - Private
 
   private func changeMovment() {
-    guard let direction = analog?.direction else {
+    guard let direction = analog?.direction,
+      !stopOtherAnimations else {
       return // in case the the direction did not change go back.
     }
-    imageView.animationImages = frames.framesFor(direction)
-    imageView.animationDuration = frames.duration
-    imageView.startAnimating()
+    let frames = self.frames.for(direction)
+    startAnimationWith(frames: frames)
   }
 
   private func moveXandYBy(x: CGFloat?, y: CGFloat?) {
     if let x = x, let y = y {
-      frame.origin.x += (xSpeed * x)
-      frame.origin.y += (ySpeed * y)
+      guard let superview = superview else {
+        return
+      }
+      
+      let newX = frame.origin.x + (speed * x)
+      let newY = frame.origin.y + (speed * y)
+
+      guard shouldHitTheEdges else {
+        frame.origin.x = newX
+        frame.origin.y = newY
+        return
+      }
+
+      let rightEdge = superview.frame.width - frame.width
+      let leftEdge = CGFloat(0)
+
+      if newX < leftEdge {
+        frame.origin.x = leftEdge
+      } else if newX > rightEdge {
+        frame.origin.x = rightEdge
+      } else {
+        frame.origin.x = newX
+      }
+
+      let bottomEdge = superview.frame.height - frame.height
+      let topEdge = CGFloat(0)
+
+      if newY < topEdge {
+        frame.origin.y = topEdge
+      } else if newY > bottomEdge {
+        frame.origin.y = bottomEdge
+      } else {
+        frame.origin.y = newY
+      }
     }
   }
 

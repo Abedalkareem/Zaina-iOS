@@ -3,29 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F38A2C9EBBF591856B4D92293133531 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		2391D67B11462A9A9A31437F44A60398 /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E3CDF4B0251E71D3255C1D7885992D /* NodeView.swift */; };
-		2422D29EB995B324A2B8E8E1886C5BD5 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE849263ECACFC80140D528782011D75 /* DialogView.swift */; };
-		35FE246538AA0C4D637AFE6A7A9A1E61 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE8EE6D0F96424AB6E139C5DC23934F /* Direction.swift */; };
-		3B3CC6AB3AF9EA0E35EDEFCBE2A4A2EA /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D70E8B921B18CAC92E713A06D129A /* UIViewController.swift */; };
+		1379166160D9DC3C5CD317448BADF8F6 /* Analog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D697BE98168B2F68DB6C40D48416519A /* Analog.swift */; };
+		1FC33C5444FDB5590062C245319BCA43 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C73203C2466AF5690FEBFBDBB9C287B /* Debouncer.swift */; };
+		220367332F43A4CE1893AFD1BC36EE69 /* Frames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A23507CC2E701755EE129942506435E /* Frames.swift */; };
+		25B79B6CC69D517703B6BB4F67BA791A /* BaseGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E80033CBE30E00F12BA06C9F5F6F0 /* BaseGameViewController.swift */; };
 		3D6FDEDB5194751761793D3AE111152B /* Pods-Zaina-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B25892140096C4897E77B36B4BA3E4 /* Pods-Zaina-dummy.m */; };
-		443222FC5310E6F18DD82587C9A836F0 /* AnalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D06DC580B61E623B43E1FF505A3AE1 /* AnalogView.swift */; };
-		50B49167262322F442BAA8CBDF576BB3 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049254B6ED2FA3D5F0FDBD5B95035A6 /* Debouncer.swift */; };
+		43F833ED1C273D82E7F18BD17CA86683 /* AnalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4775921878A419FD9B6A2591202E04AF /* AnalogView.swift */; };
+		473E2E38BEF9B59BAC0F1DD56CB75CCC /* SimpleEngine-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 857B88A9E62602945E8A0ED7BD61705C /* SimpleEngine-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		560A39237489233B2548A98538BE67DF /* SimpleMusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462BA0802682E7453077CB93399CA907 /* SimpleMusicPlayer.swift */; };
+		5EDA140666D2DA59EA60C23A3B09D110 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		68FC21472B51EF95D892622E127A0CDE /* Pods-Zaina-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 623FC45D0F12D17B15E6BB57323A4A7B /* Pods-Zaina-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6C1BAFEA876DD389CA9B58078B9A114F /* Frames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2545AC2BBA1DDE0A8F4E5E0C4E6780 /* Frames.swift */; };
 		6DCA0594D6A86CD202C2FA888B72794B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		792EDD2A5F56C3C96703600186C7BF72 /* BaseGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DEA703DC82289EEEE22D3266327519 /* BaseGameViewController.swift */; };
-		7E75EE70B55F40979A5EF82A5A14C16D /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB43F723B5C76D14DEF5D10AC4C126F /* SceneView.swift */; };
-		849CA28BD00DA773261FD1E8DCEC5050 /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31790FFC2777E4D9825D3C37D0A33F59 /* ObjectView.swift */; };
-		A3E9DA88360CEE5DF61CC0D065FA4C0D /* SpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49936C761AF1464FA352D26DA4CC0B5F /* SpriteView.swift */; };
-		BE421AAB71D5AC5C717CC7442711B854 /* SimpleEngine-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B167ADFE5AB6FC0F19B154C0497054 /* SimpleEngine-dummy.m */; };
-		C980F6287149383C3EBA24FA381704A7 /* Analog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630F3DCCE29A7226E1A9859FAF189A0A /* Analog.swift */; };
-		D903119E33AB73D196F32DBAD57003D1 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA13735A55CE1C85C5BD24232B3F20E /* BackgroundView.swift */; };
-		F05762674A49256D94713E741228F4C3 /* SimpleEngine-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE5453AE7B34B013CDCAF9244288CCB /* SimpleEngine-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70285A53F7531BF882B8C0174E4A5786 /* SpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3C9929C744B23D4A945931CF5063A /* SpriteView.swift */; };
+		7DF9AD79211A69228872CDFA15835AA0 /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2CAFB623DC0139CFEAAD33D85BC718 /* NodeView.swift */; };
+		8069A81EE5CE91AC4B5229ACCCA388CE /* UIViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B765ABCB048DBE536A8B85E1CF79BC /* UIViewController+Helpers.swift */; };
+		954B2C4E2A75ECC11D3DA6BEF4E93076 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77D88B22932DDCA6AA400A17E5CD913 /* Direction.swift */; };
+		9B0E3D4DA194A66A3D3014FA4FDE9767 /* LivesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A5B3A6B2E06EC76E596CA6323FE60 /* LivesView.swift */; };
+		C2C9FDADA1F9938B8B8DA2B826B46A55 /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D3765D4E962B48CB2FF001C98339A4 /* SceneView.swift */; };
+		E0CC0714CB6DA5CCC39BB3A1478F1A14 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E76272EDE3A333F4B2D6AED23813EC /* DialogView.swift */; };
+		E44CFA295CC6E8A0EE02A57E32C76AE6 /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B728F904B96318B5035751568527C78 /* ObjectView.swift */; };
+		E74E0A6F3AF8D23D5E049398BD262A88 /* MovingBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229460D9EE6557CCF349DF614403B53F /* MovingBackgroundView.swift */; };
+		FECC3E9FE1D1D3C45942A5C83F629EF0 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DCF611C0A7F65795426EC0480C6835 /* BackgroundView.swift */; };
+		FFA433D112CF1FEFBCD12F610AC3C6C1 /* SimpleEngine-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E71F7A51508D7E14F08163C4ECAF9B /* SimpleEngine-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,46 +43,49 @@
 
 /* Begin PBXFileReference section */
 		02ADEC4EC9FE0F9D9BF034ACA5E8A1A7 /* Pods_Zaina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Zaina.framework; path = "Pods-Zaina.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		10E3CDF4B0251E71D3255C1D7885992D /* NodeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodeView.swift; path = Sources/SimpleEngine/Views/Objects/NodeView.swift; sourceTree = "<group>"; };
+		0B728F904B96318B5035751568527C78 /* ObjectView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjectView.swift; path = Sources/SimpleEngine/Views/Objects/ObjectView.swift; sourceTree = "<group>"; };
+		229460D9EE6557CCF349DF614403B53F /* MovingBackgroundView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MovingBackgroundView.swift; path = Sources/SimpleEngine/Views/Objects/MovingBackgroundView.swift; sourceTree = "<group>"; };
+		25B765ABCB048DBE536A8B85E1CF79BC /* UIViewController+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Helpers.swift"; path = "Sources/SimpleEngine/Extensions/UIViewController+Helpers.swift"; sourceTree = "<group>"; };
 		27AAC464D8CCEDF19FAC9D33434E66C6 /* SimpleEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SimpleEngine.framework; path = SimpleEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31790FFC2777E4D9825D3C37D0A33F59 /* ObjectView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjectView.swift; path = Sources/SimpleEngine/Views/Objects/ObjectView.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3DE5453AE7B34B013CDCAF9244288CCB /* SimpleEngine-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleEngine-umbrella.h"; sourceTree = "<group>"; };
-		49936C761AF1464FA352D26DA4CC0B5F /* SpriteView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpriteView.swift; path = Sources/SimpleEngine/Views/Objects/SpriteView/SpriteView.swift; sourceTree = "<group>"; };
+		462BA0802682E7453077CB93399CA907 /* SimpleMusicPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimpleMusicPlayer.swift; path = Sources/SimpleEngine/Helpers/SimpleMusicPlayer.swift; sourceTree = "<group>"; };
+		4775921878A419FD9B6A2591202E04AF /* AnalogView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnalogView.swift; path = Sources/SimpleEngine/Views/AnalogView/AnalogView.swift; sourceTree = "<group>"; };
+		4C2CAFB623DC0139CFEAAD33D85BC718 /* NodeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodeView.swift; path = Sources/SimpleEngine/Views/Objects/NodeView.swift; sourceTree = "<group>"; };
 		5447D7B921F024A971BB020E62897BDD /* Pods-Zaina-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Zaina-frameworks.sh"; sourceTree = "<group>"; };
-		61D06DC580B61E623B43E1FF505A3AE1 /* AnalogView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnalogView.swift; path = Sources/SimpleEngine/Views/AnalogView/AnalogView.swift; sourceTree = "<group>"; };
+		5E0A0573E4D2AF3E5629DB6AF26DA0B5 /* SimpleEngine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleEngine.debug.xcconfig; sourceTree = "<group>"; };
 		623FC45D0F12D17B15E6BB57323A4A7B /* Pods-Zaina-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Zaina-umbrella.h"; sourceTree = "<group>"; };
-		630F3DCCE29A7226E1A9859FAF189A0A /* Analog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Analog.swift; path = Sources/SimpleEngine/Views/AnalogView/Analog.swift; sourceTree = "<group>"; };
-		72376EBB8C1B51AA6EDDA44B1119ECA7 /* SimpleEngine.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SimpleEngine.modulemap; sourceTree = "<group>"; };
+		68DCF611C0A7F65795426EC0480C6835 /* BackgroundView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackgroundView.swift; path = Sources/SimpleEngine/Views/Objects/BackgroundView.swift; sourceTree = "<group>"; };
+		6A23507CC2E701755EE129942506435E /* Frames.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Frames.swift; path = Sources/SimpleEngine/Views/Objects/SpriteView/Frames.swift; sourceTree = "<group>"; };
+		6C73203C2466AF5690FEBFBDBB9C287B /* Debouncer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debouncer.swift; path = Sources/SimpleEngine/Helpers/Debouncer.swift; sourceTree = "<group>"; };
 		75C8D4DF1F7F60C1C3F07D4F44C077A5 /* Pods-Zaina.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Zaina.modulemap"; sourceTree = "<group>"; };
-		76A26182F420EDC5C86C31492595413C /* SimpleEngine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleEngine.release.xcconfig; sourceTree = "<group>"; };
-		7C2545AC2BBA1DDE0A8F4E5E0C4E6780 /* Frames.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Frames.swift; path = Sources/SimpleEngine/Views/Objects/SpriteView/Frames.swift; sourceTree = "<group>"; };
+		857B88A9E62602945E8A0ED7BD61705C /* SimpleEngine-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleEngine-umbrella.h"; sourceTree = "<group>"; };
 		86872B6C329841776966E487B4631E98 /* Pods-Zaina-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Zaina-acknowledgements.plist"; sourceTree = "<group>"; };
-		8B73FF2851A8B3C82826584FFC320AEC /* SimpleEngine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleEngine.debug.xcconfig; sourceTree = "<group>"; };
-		9049254B6ED2FA3D5F0FDBD5B95035A6 /* Debouncer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debouncer.swift; path = Sources/SimpleEngine/Helpers/Debouncer.swift; sourceTree = "<group>"; };
 		98DA1D83A221113235886A153D0F18F9 /* Pods-Zaina-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Zaina-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A0B167ADFE5AB6FC0F19B154C0497054 /* SimpleEngine-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimpleEngine-dummy.m"; sourceTree = "<group>"; };
-		AEE8EE6D0F96424AB6E139C5DC23934F /* Direction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Direction.swift; path = Sources/SimpleEngine/Views/AnalogView/Direction.swift; sourceTree = "<group>"; };
+		A0B0E03B993A2F3D1E76EBEE6BE754C3 /* SimpleEngine.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SimpleEngine.modulemap; sourceTree = "<group>"; };
+		A4529D42C0FFA8415F32106400D761A9 /* SimpleEngine-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleEngine-prefix.pch"; sourceTree = "<group>"; };
+		A97E80033CBE30E00F12BA06C9F5F6F0 /* BaseGameViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseGameViewController.swift; path = Sources/SimpleEngine/BaseGameViewController.swift; sourceTree = "<group>"; };
 		B1031ECA78DF44BE622DD26C7A0321DA /* Pods-Zaina-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Zaina-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BCB43F723B5C76D14DEF5D10AC4C126F /* SceneView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SceneView.swift; path = Sources/SimpleEngine/Views/Objects/SceneView.swift; sourceTree = "<group>"; };
+		B6B6B43FA14CC85A6C0991A0FF77DF8A /* SimpleEngine-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SimpleEngine-Info.plist"; sourceTree = "<group>"; };
+		BD0A5B3A6B2E06EC76E596CA6323FE60 /* LivesView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LivesView.swift; path = Sources/SimpleEngine/Views/Others/LivesView.swift; sourceTree = "<group>"; };
 		C0B25892140096C4897E77B36B4BA3E4 /* Pods-Zaina-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Zaina-dummy.m"; sourceTree = "<group>"; };
-		C907243142497D7C9317B0B75E206C05 /* SimpleEngine-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleEngine-prefix.pch"; sourceTree = "<group>"; };
-		CE849263ECACFC80140D528782011D75 /* DialogView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DialogView.swift; path = Sources/SimpleEngine/Views/DialogView/DialogView.swift; sourceTree = "<group>"; };
-		D0DEA703DC82289EEEE22D3266327519 /* BaseGameViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseGameViewController.swift; path = Sources/SimpleEngine/BaseGameViewController.swift; sourceTree = "<group>"; };
+		C9F8BA9E267EF6D0D62D54BD623EFA9A /* SimpleEngine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleEngine.release.xcconfig; sourceTree = "<group>"; };
+		D2E71F7A51508D7E14F08163C4ECAF9B /* SimpleEngine-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimpleEngine-dummy.m"; sourceTree = "<group>"; };
+		D697BE98168B2F68DB6C40D48416519A /* Analog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Analog.swift; path = Sources/SimpleEngine/Views/AnalogView/Analog.swift; sourceTree = "<group>"; };
 		DC33D8A781F08D7F5A95940AC55F84FE /* Pods-Zaina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Zaina.debug.xcconfig"; sourceTree = "<group>"; };
-		DDA13735A55CE1C85C5BD24232B3F20E /* BackgroundView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackgroundView.swift; path = Sources/SimpleEngine/Views/Objects/BackgroundView.swift; sourceTree = "<group>"; };
 		E2DF4A8CD893CAB3B18C1DB5A4BDD459 /* Pods-Zaina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Zaina.release.xcconfig"; sourceTree = "<group>"; };
-		E6A01E29F1EAB11DDE42C2219E6504B2 /* SimpleEngine-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SimpleEngine-Info.plist"; sourceTree = "<group>"; };
-		EF7D70E8B921B18CAC92E713A06D129A /* UIViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = Sources/SimpleEngine/Extensions/UIViewController.swift; sourceTree = "<group>"; };
+		EBA3C9929C744B23D4A945931CF5063A /* SpriteView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpriteView.swift; path = Sources/SimpleEngine/Views/Objects/SpriteView/SpriteView.swift; sourceTree = "<group>"; };
+		F5E76272EDE3A333F4B2D6AED23813EC /* DialogView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DialogView.swift; path = Sources/SimpleEngine/Views/DialogView/DialogView.swift; sourceTree = "<group>"; };
+		F77D88B22932DDCA6AA400A17E5CD913 /* Direction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Direction.swift; path = Sources/SimpleEngine/Views/AnalogView/Direction.swift; sourceTree = "<group>"; };
+		F9D3765D4E962B48CB2FF001C98339A4 /* SceneView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SceneView.swift; path = Sources/SimpleEngine/Views/Objects/SceneView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4041AF8DCB4671FABD9E0F15AB0BDF57 /* Frameworks */ = {
+		7CD6E13D9BBFF53574C000D5D2289346 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F38A2C9EBBF591856B4D92293133531 /* Foundation.framework in Frameworks */,
+				5EDA140666D2DA59EA60C23A3B09D110 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,21 +100,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		057BCFAEB02125F02A2BA7F6BB1847AB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				72376EBB8C1B51AA6EDDA44B1119ECA7 /* SimpleEngine.modulemap */,
-				A0B167ADFE5AB6FC0F19B154C0497054 /* SimpleEngine-dummy.m */,
-				E6A01E29F1EAB11DDE42C2219E6504B2 /* SimpleEngine-Info.plist */,
-				C907243142497D7C9317B0B75E206C05 /* SimpleEngine-prefix.pch */,
-				3DE5453AE7B34B013CDCAF9244288CCB /* SimpleEngine-umbrella.h */,
-				8B73FF2851A8B3C82826584FFC320AEC /* SimpleEngine.debug.xcconfig */,
-				76A26182F420EDC5C86C31492595413C /* SimpleEngine.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SimpleEngine";
-			sourceTree = "<group>";
-		};
 		27D408D03981B42891FAA16A4208D8A7 /* Pods-Zaina */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,34 +117,19 @@
 			path = "Target Support Files/Pods-Zaina";
 			sourceTree = "<group>";
 		};
-		80352DFC713241F601D4EC182E0DA844 /* Pods */ = {
+		AF52B158579BA727DA674C9DE135CCCB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A673E6D22F1E644E138C9D357384FF54 /* SimpleEngine */,
+				A0B0E03B993A2F3D1E76EBEE6BE754C3 /* SimpleEngine.modulemap */,
+				D2E71F7A51508D7E14F08163C4ECAF9B /* SimpleEngine-dummy.m */,
+				B6B6B43FA14CC85A6C0991A0FF77DF8A /* SimpleEngine-Info.plist */,
+				A4529D42C0FFA8415F32106400D761A9 /* SimpleEngine-prefix.pch */,
+				857B88A9E62602945E8A0ED7BD61705C /* SimpleEngine-umbrella.h */,
+				5E0A0573E4D2AF3E5629DB6AF26DA0B5 /* SimpleEngine.debug.xcconfig */,
+				C9F8BA9E267EF6D0D62D54BD623EFA9A /* SimpleEngine.release.xcconfig */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		A673E6D22F1E644E138C9D357384FF54 /* SimpleEngine */ = {
-			isa = PBXGroup;
-			children = (
-				630F3DCCE29A7226E1A9859FAF189A0A /* Analog.swift */,
-				61D06DC580B61E623B43E1FF505A3AE1 /* AnalogView.swift */,
-				DDA13735A55CE1C85C5BD24232B3F20E /* BackgroundView.swift */,
-				D0DEA703DC82289EEEE22D3266327519 /* BaseGameViewController.swift */,
-				9049254B6ED2FA3D5F0FDBD5B95035A6 /* Debouncer.swift */,
-				CE849263ECACFC80140D528782011D75 /* DialogView.swift */,
-				AEE8EE6D0F96424AB6E139C5DC23934F /* Direction.swift */,
-				7C2545AC2BBA1DDE0A8F4E5E0C4E6780 /* Frames.swift */,
-				10E3CDF4B0251E71D3255C1D7885992D /* NodeView.swift */,
-				31790FFC2777E4D9825D3C37D0A33F59 /* ObjectView.swift */,
-				BCB43F723B5C76D14DEF5D10AC4C126F /* SceneView.swift */,
-				49936C761AF1464FA352D26DA4CC0B5F /* SpriteView.swift */,
-				EF7D70E8B921B18CAC92E713A06D129A /* UIViewController.swift */,
-				057BCFAEB02125F02A2BA7F6BB1847AB /* Support Files */,
-			);
-			name = SimpleEngine;
-			path = SimpleEngine;
+			name = "Support Files";
+			path = "../Target Support Files/SimpleEngine";
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -178,7 +154,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				80352DFC713241F601D4EC182E0DA844 /* Pods */,
+				E1B0A223A1B430145B516C8DE1C034E9 /* Pods */,
 				CC2B75A63F49EFAC0C0AEEA204DD3D77 /* Products */,
 				D373116FA98C475A134A26301B1C69C7 /* Targets Support Files */,
 			);
@@ -200,6 +176,39 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		E02BD6E1ABB5173DF4D6B710177BF51E /* SimpleEngine */ = {
+			isa = PBXGroup;
+			children = (
+				D697BE98168B2F68DB6C40D48416519A /* Analog.swift */,
+				4775921878A419FD9B6A2591202E04AF /* AnalogView.swift */,
+				68DCF611C0A7F65795426EC0480C6835 /* BackgroundView.swift */,
+				A97E80033CBE30E00F12BA06C9F5F6F0 /* BaseGameViewController.swift */,
+				6C73203C2466AF5690FEBFBDBB9C287B /* Debouncer.swift */,
+				F5E76272EDE3A333F4B2D6AED23813EC /* DialogView.swift */,
+				F77D88B22932DDCA6AA400A17E5CD913 /* Direction.swift */,
+				6A23507CC2E701755EE129942506435E /* Frames.swift */,
+				BD0A5B3A6B2E06EC76E596CA6323FE60 /* LivesView.swift */,
+				229460D9EE6557CCF349DF614403B53F /* MovingBackgroundView.swift */,
+				4C2CAFB623DC0139CFEAAD33D85BC718 /* NodeView.swift */,
+				0B728F904B96318B5035751568527C78 /* ObjectView.swift */,
+				F9D3765D4E962B48CB2FF001C98339A4 /* SceneView.swift */,
+				462BA0802682E7453077CB93399CA907 /* SimpleMusicPlayer.swift */,
+				EBA3C9929C744B23D4A945931CF5063A /* SpriteView.swift */,
+				25B765ABCB048DBE536A8B85E1CF79BC /* UIViewController+Helpers.swift */,
+				AF52B158579BA727DA674C9DE135CCCB /* Support Files */,
+			);
+			name = SimpleEngine;
+			path = SimpleEngine;
+			sourceTree = "<group>";
+		};
+		E1B0A223A1B430145B516C8DE1C034E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E02BD6E1ABB5173DF4D6B710177BF51E /* SimpleEngine */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -211,11 +220,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1694F3850776703B521DE4436196C85 /* Headers */ = {
+		CBEDA6A5DDEACEB630BFFC520C668AA5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F05762674A49256D94713E741228F4C3 /* SimpleEngine-umbrella.h in Headers */,
+				473E2E38BEF9B59BAC0F1DD56CB75CCC /* SimpleEngine-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,12 +233,12 @@
 /* Begin PBXNativeTarget section */
 		B8D77DD3BB318583DBDD8A8EA964E7D3 /* SimpleEngine */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F338A76C95F76F1C324624BF2596442 /* Build configuration list for PBXNativeTarget "SimpleEngine" */;
+			buildConfigurationList = 86CE057A658392508ECF1AF3420BFB84 /* Build configuration list for PBXNativeTarget "SimpleEngine" */;
 			buildPhases = (
-				D1694F3850776703B521DE4436196C85 /* Headers */,
-				F563D1062FE6598F2CA3F80A8057D496 /* Sources */,
-				4041AF8DCB4671FABD9E0F15AB0BDF57 /* Frameworks */,
-				6C75CB83230F383E6BBF6F1D64318100 /* Resources */,
+				CBEDA6A5DDEACEB630BFFC520C668AA5 /* Headers */,
+				1A86B2476FF59191DCAD55FFBA09FDAB /* Sources */,
+				7CD6E13D9BBFF53574C000D5D2289346 /* Frameworks */,
+				AB4B1C90EC251A0261B74DA1CD6AA1A1 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -269,7 +278,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 11.0";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -295,7 +304,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C75CB83230F383E6BBF6F1D64318100 /* Resources */ = {
+		AB4B1C90EC251A0261B74DA1CD6AA1A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -305,32 +314,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1A86B2476FF59191DCAD55FFBA09FDAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1379166160D9DC3C5CD317448BADF8F6 /* Analog.swift in Sources */,
+				43F833ED1C273D82E7F18BD17CA86683 /* AnalogView.swift in Sources */,
+				FECC3E9FE1D1D3C45942A5C83F629EF0 /* BackgroundView.swift in Sources */,
+				25B79B6CC69D517703B6BB4F67BA791A /* BaseGameViewController.swift in Sources */,
+				1FC33C5444FDB5590062C245319BCA43 /* Debouncer.swift in Sources */,
+				E0CC0714CB6DA5CCC39BB3A1478F1A14 /* DialogView.swift in Sources */,
+				954B2C4E2A75ECC11D3DA6BEF4E93076 /* Direction.swift in Sources */,
+				220367332F43A4CE1893AFD1BC36EE69 /* Frames.swift in Sources */,
+				9B0E3D4DA194A66A3D3014FA4FDE9767 /* LivesView.swift in Sources */,
+				E74E0A6F3AF8D23D5E049398BD262A88 /* MovingBackgroundView.swift in Sources */,
+				7DF9AD79211A69228872CDFA15835AA0 /* NodeView.swift in Sources */,
+				E44CFA295CC6E8A0EE02A57E32C76AE6 /* ObjectView.swift in Sources */,
+				C2C9FDADA1F9938B8B8DA2B826B46A55 /* SceneView.swift in Sources */,
+				FFA433D112CF1FEFBCD12F610AC3C6C1 /* SimpleEngine-dummy.m in Sources */,
+				560A39237489233B2548A98538BE67DF /* SimpleMusicPlayer.swift in Sources */,
+				70285A53F7531BF882B8C0174E4A5786 /* SpriteView.swift in Sources */,
+				8069A81EE5CE91AC4B5229ACCCA388CE /* UIViewController+Helpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B6F5EF52191FBBAD1CA0EE5044E09B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3D6FDEDB5194751761793D3AE111152B /* Pods-Zaina-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F563D1062FE6598F2CA3F80A8057D496 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C980F6287149383C3EBA24FA381704A7 /* Analog.swift in Sources */,
-				443222FC5310E6F18DD82587C9A836F0 /* AnalogView.swift in Sources */,
-				D903119E33AB73D196F32DBAD57003D1 /* BackgroundView.swift in Sources */,
-				792EDD2A5F56C3C96703600186C7BF72 /* BaseGameViewController.swift in Sources */,
-				50B49167262322F442BAA8CBDF576BB3 /* Debouncer.swift in Sources */,
-				2422D29EB995B324A2B8E8E1886C5BD5 /* DialogView.swift in Sources */,
-				35FE246538AA0C4D637AFE6A7A9A1E61 /* Direction.swift in Sources */,
-				6C1BAFEA876DD389CA9B58078B9A114F /* Frames.swift in Sources */,
-				2391D67B11462A9A9A31437F44A60398 /* NodeView.swift in Sources */,
-				849CA28BD00DA773261FD1E8DCEC5050 /* ObjectView.swift in Sources */,
-				7E75EE70B55F40979A5EF82A5A14C16D /* SceneView.swift in Sources */,
-				BE421AAB71D5AC5C717CC7442711B854 /* SimpleEngine-dummy.m in Sources */,
-				A3E9DA88360CEE5DF61CC0D065FA4C0D /* SpriteView.swift in Sources */,
-				3B3CC6AB3AF9EA0E35EDEFCBE2A4A2EA /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,42 +461,6 @@
 			};
 			name = Debug;
 		};
-		224DD4857BBD45CBD2710DF1D694900D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76A26182F420EDC5C86C31492595413C /* SimpleEngine.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SimpleEngine/SimpleEngine-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SimpleEngine/SimpleEngine-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SimpleEngine/SimpleEngine.modulemap";
-				PRODUCT_MODULE_NAME = SimpleEngine;
-				PRODUCT_NAME = SimpleEngine;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		3CCC6195EDBEE5DA2A49DF962113BE16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -583,9 +559,9 @@
 			};
 			name = Debug;
 		};
-		ACCDBE3C24BEA53848D3E56680CDCD2A /* Debug */ = {
+		DF71FCDE9D1D3148143124BA81DCA9CC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B73FF2851A8B3C82826584FFC320AEC /* SimpleEngine.debug.xcconfig */;
+			baseConfigurationReference = 5E0A0573E4D2AF3E5629DB6AF26DA0B5 /* SimpleEngine.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -618,6 +594,42 @@
 			};
 			name = Debug;
 		};
+		E46EEE553345A946A4BD904384EF771B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9F8BA9E267EF6D0D62D54BD623EFA9A /* SimpleEngine.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SimpleEngine/SimpleEngine-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimpleEngine/SimpleEngine-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SimpleEngine/SimpleEngine.modulemap";
+				PRODUCT_MODULE_NAME = SimpleEngine;
+				PRODUCT_NAME = SimpleEngine;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -639,11 +651,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8F338A76C95F76F1C324624BF2596442 /* Build configuration list for PBXNativeTarget "SimpleEngine" */ = {
+		86CE057A658392508ECF1AF3420BFB84 /* Build configuration list for PBXNativeTarget "SimpleEngine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ACCDBE3C24BEA53848D3E56680CDCD2A /* Debug */,
-				224DD4857BBD45CBD2710DF1D694900D /* Release */,
+				DF71FCDE9D1D3148143124BA81DCA9CC /* Debug */,
+				E46EEE553345A946A4BD904384EF771B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
