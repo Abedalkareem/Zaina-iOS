@@ -56,6 +56,8 @@ class HallViewController: BaseGameViewController {
     Status.currentLevel = 4
   }
 
+  // MARK: - Add sprites
+
   private func setupPlayer() {
     playerView = ZainaSpriteView()
     playerView.attachTo(analogView)
@@ -79,15 +81,7 @@ class HallViewController: BaseGameViewController {
     }
   }
 
-  private func startDarkSoulTimer() {
-    darkSoulsTimer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(moveDarkSouls), userInfo: nil, repeats: true)
-    moveDarkSouls()
-  }
-
-  private func startOmarTimer() {
-    omarTimer = Timer.scheduledTimer(timeInterval: isOmarFound ? 0.5 : 2, target: self, selector: #selector(moveOmar), userInfo: nil, repeats: true)
-    moveOmar()
-  }
+  // MARK: - Moving
 
   @objc
   private func moveDarkSouls() {
@@ -108,6 +102,18 @@ class HallViewController: BaseGameViewController {
     omarView.moveTo(x: x, y: y)
   }
 
+  // MARK: - Timers
+
+  private func startDarkSoulTimer() {
+    darkSoulsTimer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(moveDarkSouls), userInfo: nil, repeats: true)
+    moveDarkSouls()
+  }
+
+  private func startOmarTimer() {
+    omarTimer = Timer.scheduledTimer(timeInterval: isOmarFound ? 0.5 : 2, target: self, selector: #selector(moveOmar), userInfo: nil, repeats: true)
+    moveOmar()
+  }
+
   private func stopDarkSoulsTimer() {
     darkSoulsTimer?.invalidate()
     darkSoulsTimer = nil
@@ -117,6 +123,8 @@ class HallViewController: BaseGameViewController {
     omarTimer?.invalidate()
     omarTimer = nil
   }
+
+  // MARK: - Collide
 
   override func objectsDidCollide(object1: ObjectView, object2: ObjectView) -> Bool {
 

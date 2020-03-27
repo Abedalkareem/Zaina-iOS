@@ -20,5 +20,5 @@ enum CollideTypes {
   static let light = 9
   static let dish = 10
   static let oven = 11
-  static let wall = 12
+  static let fire = 12
 }

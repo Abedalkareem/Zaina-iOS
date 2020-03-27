@@ -52,6 +52,8 @@ class KitchenViewController: BaseGameViewController {
     Status.currentLevel = 3
   }
 
+  // MARK: - Add sprites
+
   private func addDishes() {
     (1...8).forEach { _ in
       let randomX = (50..<Int(sceneView.bounds.width - 50)).randomElement() ?? 0
@@ -69,6 +71,8 @@ class KitchenViewController: BaseGameViewController {
     playerView.frame.origin = CGPoint(x: 50, y: 30)
     sceneView.addSubview(playerView)
   }
+
+  // MARK: - Collide
 
   override func objectsDidCollide(object1: ObjectView, object2: ObjectView) -> Bool {
 
@@ -102,7 +106,7 @@ class KitchenViewController: BaseGameViewController {
     }
     isCooked = true
     showCookingDone()
-    MusicPlayer.shared.playMusic(music: .cooking)
+    SimpleMusicPlayer.shared.playMusic(music: Music.cooking)
     return true
   }
 

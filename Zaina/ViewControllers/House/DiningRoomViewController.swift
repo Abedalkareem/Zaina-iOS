@@ -60,12 +60,14 @@ class DiningRoomViewController: BaseGameViewController {
   }
 
   private func playBackgroundSong() {
-    MusicPlayer.shared.playBackgroundMusicWith(music: .piano90e)
+    SimpleMusicPlayer.shared.playBackgroundMusicWith(music: Music.piano90e)
   }
 
   private func setup() {
     Status.currentLevel = 2
   }
+
+  // MARK: - Add sprites
 
   private func setupPlayer() {
     playerView = ZainaSpriteView()
@@ -80,6 +82,8 @@ class DiningRoomViewController: BaseGameViewController {
     omarView.moveTo(x: view.frame.width - 100, y: 30)
     sceneView.addSubview(omarView)
   }
+
+  // MARK: - Collide
 
   override func objectsDidCollide(object1: ObjectView, object2: ObjectView) -> Bool {
 

@@ -48,15 +48,15 @@ open class SpriteView: ObjectView {
   ///
   open var shouldHitTheEdges = false
 
-  // MARK: - Private properties
-
-  private var analog: Analog? {
+  open private(set) var analog: Analog? {
     didSet {
       if oldValue != analog {
         changeMovment()
       }
     }
   }
+
+  // MARK: - Private properties
 
   // The `x` and `y` that you can set to reach to some x and y in the `SceneView`.
   private var desireX: CGFloat?

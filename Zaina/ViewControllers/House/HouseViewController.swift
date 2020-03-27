@@ -51,6 +51,32 @@ class HouseViewController: BaseGameViewController {
                       firstButtonTitle: "house_message_action".localize)
   }
 
+  // MARK: - Moving
+
+  @objc
+  private func moveDarkSouls() {
+
+    darkSoulsSpriteViews.forEach { item in
+      let x = CGFloat(Int.random(in: (0...Int(view.frame.width))))
+      let y = CGFloat(Int.random(in: (0...Int(view.frame.height))))
+      item.moveTo(x: x, y: y)
+    }
+  }
+
+  // MARK: - Timers
+
+  private func stopDarkSoulsTimer() {
+    darkSoulsTimer?.invalidate()
+    darkSoulsTimer = nil
+  }
+
+  private func startDarkSoulTimer() {
+    darkSoulsTimer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(moveDarkSouls), userInfo: nil, repeats: true)
+    moveDarkSouls()
+  }
+  
+  // MARK: - Add sprites
+
   private func addDarkSouls() {
     (0...3).forEach { _ in
       let darkSoulSpriteView = DarkSoulSpriteView()
@@ -59,12 +85,7 @@ class HouseViewController: BaseGameViewController {
       darkSoulsSpriteViews.append(darkSoulSpriteView)
     }
   }
-
-  private func startDarkSoulTimer() {
-    darkSoulsTimer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(moveDarkSouls), userInfo: nil, repeats: true)
-    moveDarkSouls()
-  }
-
+  
   private func setupPlayer() {
     playerView = ZainaSpriteView()
     playerView.attachTo(analogView)
@@ -85,20 +106,7 @@ class HouseViewController: BaseGameViewController {
     }
   }
 
-  @objc
-  private func moveDarkSouls() {
-
-    darkSoulsSpriteViews.forEach { item in
-      let x = CGFloat(Int.random(in: (0...Int(view.frame.width))))
-      let y = CGFloat(Int.random(in: (0...Int(view.frame.height))))
-      item.moveTo(x: x, y: y)
-    }
-  }
-
-  private func stopDarkSoulsTimer() {
-    darkSoulsTimer?.invalidate()
-    darkSoulsTimer = nil
-  }
+  // MARK: - Collide
 
   override func objectsDidCollide(object1: ObjectView, object2: ObjectView) -> Bool {
 

@@ -32,8 +32,10 @@ class FinishedViewController: BaseGameViewController {
   }
 
   private func playBackgroundSong() {
-    MusicPlayer.shared.playBackgroundMusicWith(music: .about)
+    SimpleMusicPlayer.shared.playBackgroundMusicWith(music: Music.about)
   }
+
+  // MARK: - Add sprites
 
   private func addZaina() {
     zainaSpriteView = ZainaSpriteView()

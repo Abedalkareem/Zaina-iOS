@@ -12,6 +12,8 @@
 		C607126E2375DD7F00039AE6 /* darkforest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C607126D2375DD7F00039AE6 /* darkforest.mp3 */; };
 		C61B0B2C2366113100CB376F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B0B2B2366113100CB376F /* MainViewController.swift */; };
 		C61B383E237681070004B2B1 /* HouseExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B383D237681070004B2B1 /* HouseExitViewController.swift */; };
+		C6435247242DAD780025B179 /* FireSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6435246242DAD780025B179 /* FireSpriteView.swift */; };
+		C6435249242DF52B0025B179 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6435248242DF52B0025B179 /* Music.swift */; };
 		C6792AED22E4D140000A34A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792AEC22E4D140000A34A6 /* AppDelegate.swift */; };
 		C6792AEF22E4D140000A34A6 /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6792AEE22E4D140000A34A6 /* HouseViewController.swift */; };
 		C6792AF222E4D140000A34A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6792AF022E4D140000A34A6 /* Main.storyboard */; };
@@ -27,7 +29,6 @@
 		C687C4A8236CB10400E83B61 /* CollideTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687C4A7236CB10400E83B61 /* CollideTypes.swift */; };
 		C687C4AA236CB81300E83B61 /* SpiderSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687C4A9236CB81300E83B61 /* SpiderSpriteView.swift */; };
 		C687C4AE236CBEEC00E83B61 /* background.wav in Resources */ = {isa = PBXBuildFile; fileRef = C687C4AD236CBEEC00E83B61 /* background.wav */; };
-		C687C4B0236CC7D500E83B61 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687C4AF236CC7D500E83B61 /* MusicPlayer.swift */; };
 		C6B3BE70237887BB00791FC6 /* Forest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B3BE6F237887BB00791FC6 /* Forest.storyboard */; };
 		C6B3BE73237889AD00791FC6 /* ForestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3BE72237889AD00791FC6 /* ForestViewController.swift */; };
 		C6B3BE7623788E7400791FC6 /* about.wav in Resources */ = {isa = PBXBuildFile; fileRef = C6B3BE7423788E7400791FC6 /* about.wav */; };
@@ -56,6 +57,8 @@
 		C607126D2375DD7F00039AE6 /* darkforest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = darkforest.mp3; sourceTree = "<group>"; };
 		C61B0B2B2366113100CB376F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C61B383D237681070004B2B1 /* HouseExitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseExitViewController.swift; sourceTree = "<group>"; };
+		C6435246242DAD780025B179 /* FireSpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireSpriteView.swift; sourceTree = "<group>"; };
+		C6435248242DF52B0025B179 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		C6792AE922E4D140000A34A6 /* Zaina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zaina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6792AEC22E4D140000A34A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6792AEE22E4D140000A34A6 /* HouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +76,6 @@
 		C687C4A7236CB10400E83B61 /* CollideTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollideTypes.swift; sourceTree = "<group>"; };
 		C687C4A9236CB81300E83B61 /* SpiderSpriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderSpriteView.swift; sourceTree = "<group>"; };
 		C687C4AD236CBEEC00E83B61 /* background.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = background.wav; sourceTree = "<group>"; };
-		C687C4AF236CC7D500E83B61 /* MusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		C6B3BE6F237887BB00791FC6 /* Forest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Forest.storyboard; sourceTree = "<group>"; };
 		C6B3BE72237889AD00791FC6 /* ForestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestViewController.swift; sourceTree = "<group>"; };
 		C6B3BE7423788E7400791FC6 /* about.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = about.wav; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				C68513EE23756A0300D55020 /* OmarSpriteView.swift */,
 				C6EF56212375EA6600711E0F /* DarkSoulSpriteView.swift */,
 				C6EF562B2376008E00711E0F /* LightNodeView.swift */,
+				C6435246242DAD780025B179 /* FireSpriteView.swift */,
 			);
 			path = Sprites;
 			sourceTree = "<group>";
@@ -244,8 +247,8 @@
 			children = (
 				C68513FE2375AB5C00D55020 /* Extensions */,
 				C687C4A7236CB10400E83B61 /* CollideTypes.swift */,
-				C687C4AF236CC7D500E83B61 /* MusicPlayer.swift */,
 				C68513F5237595CB00D55020 /* Status.swift */,
+				C6435248242DF52B0025B179 /* Music.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -438,13 +441,14 @@
 				C6EF56202375E5EC00711E0F /* DiningRoomViewController.swift in Sources */,
 				C68513F6237595CB00D55020 /* Status.swift in Sources */,
 				C6792AED22E4D140000A34A6 /* AppDelegate.swift in Sources */,
-				C687C4B0236CC7D500E83B61 /* MusicPlayer.swift in Sources */,
 				C61B383E237681070004B2B1 /* HouseExitViewController.swift in Sources */,
 				C61B0B2C2366113100CB376F /* MainViewController.swift in Sources */,
 				C6B3BE73237889AD00791FC6 /* ForestViewController.swift in Sources */,
+				C6435247242DAD780025B179 /* FireSpriteView.swift in Sources */,
 				C687C4AA236CB81300E83B61 /* SpiderSpriteView.swift in Sources */,
 				C6B63930236CA5B000C282FC /* UIStoryboard.swift in Sources */,
 				C6801B0E2366056100A3085C /* IntranceViewController.swift in Sources */,
+				C6435249242DF52B0025B179 /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

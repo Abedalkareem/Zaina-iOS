@@ -46,8 +46,10 @@ class IntranceViewController: BaseGameViewController {
   }
 
   private func playBackgroundSong() {
-    MusicPlayer.shared.playBackgroundMusicWith(music: .darkForest)
+    SimpleMusicPlayer.shared.playBackgroundMusicWith(music: Music.darkForest)
   }
+
+  // MARK: - Add sprites
 
   private func setupPlayer() {
     playerView = ZainaSpriteView()
@@ -56,6 +58,8 @@ class IntranceViewController: BaseGameViewController {
                                       y: view.frame.height - playerView.height)
     sceneView.addSubview(playerView)
   }
+
+  // MARK: - Collide
 
   override func objectsDidCollide(object1: ObjectView, object2: ObjectView) -> Bool {
     switch (object1.type, object2.type) {

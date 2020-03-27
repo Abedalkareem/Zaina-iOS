@@ -36,7 +36,7 @@ class ForestViewController: BaseGameViewController {
   }
 
   private func playBackgroundSong() {
-    MusicPlayer.shared.playBackgroundMusicWith(music: .youWin)
+    SimpleMusicPlayer.shared.playBackgroundMusicWith(music: Music.youWin)
   }
 
   private func showDialog() {
@@ -54,6 +54,8 @@ class ForestViewController: BaseGameViewController {
                       firstButtonTitle: "forest_second_message_action".localize)
   }
 
+  // MARK: - Add sprites
+
   private func setupPlayer() {
     playerView = ZainaSpriteView()
     playerView.attachTo(analogView)
@@ -67,6 +69,8 @@ class ForestViewController: BaseGameViewController {
     omarView.moveTo(x: view.frame.width - 40, y: view.frame.height / 2)
     sceneView.addSubview(omarView)
   }
+
+  // MARK: - Collide
 
   override func objectsDidCollide(object1: ObjectView, object2: ObjectView) -> Bool {
 

@@ -34,6 +34,11 @@ class HouseExitViewController: BaseGameViewController {
     showDialog()
   }
 
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+
+  }
+
   private func showDialog() {
     DialogView.showIn(view: view,
                       message: "house_exit_message".localize,
@@ -43,6 +48,8 @@ class HouseExitViewController: BaseGameViewController {
   private func setup() {
     Status.currentLevel = 5
   }
+
+  // MARK: - Add sprites
 
   private func setupPlayer() {
     playerView = ZainaSpriteView()
@@ -58,10 +65,7 @@ class HouseExitViewController: BaseGameViewController {
     sceneView.addSubview(omarView)
   }
 
-  private func startOmarTimer() {
-    omarTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(moveOmar), userInfo: nil, repeats: true)
-    moveOmar()
-  }
+  // MARK: - Moving
 
   @objc
   private func moveOmar() {
@@ -69,6 +73,20 @@ class HouseExitViewController: BaseGameViewController {
     let y = playerView.frame.origin.y + playerView.frame.size.width
     omarView.moveTo(x: x, y: y)
   }
+
+  // MARK: - Timers
+
+  private func startOmarTimer() {
+    omarTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(moveOmar), userInfo: nil, repeats: true)
+    moveOmar()
+  }
+
+  private func stopOmarTimer() {
+    omarTimer?.invalidate()
+    omarTimer = nil
+  }
+
+  // MARK: - Collide
 
   override func objectsDidCollide(object1: ObjectView, object2: ObjectView) -> Bool {
 

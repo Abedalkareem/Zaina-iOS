@@ -22,13 +22,13 @@ class GameOverViewController: UIViewController {
   }
   
   private func playBackgroundSong() {
-    MusicPlayer.shared.playBackgroundMusicWith(music: .gameOver)
+    SimpleMusicPlayer.shared.playBackgroundMusicWith(music: Music.gameOver)
   }
 
   // MARK: - IBActions
 
   @IBAction func tryAgain(_ sender: Any) {
-    MusicPlayer.shared.playBackgroundMusicWith(music: .piano90e)
+    SimpleMusicPlayer.shared.playBackgroundMusicWith(music: Music.piano90e)
     changeViewController(Status.currentLevelViewController())
   }
 

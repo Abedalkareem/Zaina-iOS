@@ -62,7 +62,7 @@ class MainViewController: BaseGameViewController {
   }
 
   private func playBackgroundSong() {
-    MusicPlayer.shared.playBackgroundMusicWith(music: .mainScreen)
+    SimpleMusicPlayer.shared.playBackgroundMusicWith(music: Music.mainScreen)
   }
   
   private func showButton() {
@@ -86,13 +86,17 @@ class MainViewController: BaseGameViewController {
     startButton.alpha = 0
     logoImageView.alpha = 0
   }
-  
+
+  // MARK: - Add sprites
+
   private func addZaina() {
     zainaSpriteView = ZainaSpriteView()
     zainaSpriteView.frame.origin = CGPoint(x: 30, y: 30)
     sceneView.addSubview(zainaSpriteView)
   }
-  
+
+  // MARK: - Timers
+
   private func startZainaMovingTimer() {
     zainaMovingTimer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(moveZaina), userInfo: nil, repeats: true)
     moveZaina()
