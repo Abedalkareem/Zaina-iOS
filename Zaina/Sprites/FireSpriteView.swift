@@ -28,11 +28,11 @@ class FireSpriteView: SpriteView {
 
     stopWhenCollideTypes = [CollideTypes.spider]
 
-    frames.top = Frames(images: [#imageLiteral(resourceName: "knife_top")], duration: 0.1)
-    frames.left = Frames(images: [#imageLiteral(resourceName: "knife_left")], duration: 0.1)
-    frames.bottom = Frames(images: [#imageLiteral(resourceName: "knife_bottom")], duration: 0.1)
-    frames.right = Frames(images: [#imageLiteral(resourceName: "knife_right")], duration: 0.1)
-    frames.idel = Frames(images: [#imageLiteral(resourceName: "knife_bottom")], duration: 0.1)
+    framesHolder = FramesHolder(idel: Frames(images: [#imageLiteral(resourceName: "knife_bottom")], duration: 0.1))
+    framesHolder?.top = Frames(images: [#imageLiteral(resourceName: "knife_top")], duration: 0.1)
+    framesHolder?.left = Frames(images: [#imageLiteral(resourceName: "knife_left")], duration: 0.1)
+    framesHolder?.bottom = Frames(images: [#imageLiteral(resourceName: "knife_bottom")], duration: 0.1)
+    framesHolder?.right = Frames(images: [#imageLiteral(resourceName: "knife_right")], duration: 0.1)
   }
 
   override func didRechedDesiredPoint() {

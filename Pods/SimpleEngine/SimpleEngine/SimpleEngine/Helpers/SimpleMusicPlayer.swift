@@ -6,8 +6,8 @@
 //  Copyright © 2019 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import AVFoundation
+import UIKit
 
 open class SimpleMusicPlayer: NSObject {
 
@@ -50,10 +50,12 @@ open class SimpleMusicPlayer: NSObject {
   private var cachedMusic = [String: AVAudioPlayer]()
 
   ///
-  /// Start playing the background music for ever.
+  /// Start playing the background music forever.
   ///
   open func playBackgroundMusicWith<M: MusicType>(music: M) {
-    let path = Bundle.main.path(forResource: music.rawValue, ofType: music.format)!
+    guard let path = Bundle.main.path(forResource: music.rawValue, ofType: music.format) else {
+      return
+    }
     let url = URL(fileURLWithPath: path)
     do {
       backgroundAudioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -101,9 +103,9 @@ open class SimpleMusicPlayer: NSObject {
   }
 
   open func stopMusic<M: MusicType>(music: M) {
-    let audio = subAudioPlayers.first(where: {$0.name == music.rawValue})
+    let audio = subAudioPlayers.first { $0.name == music.rawValue }
     audio?.player.stop()
-    subAudioPlayers.removeAll(where: { $0.name == music.rawValue })
+    subAudioPlayers.removeAll { $0.name == music.rawValue }
   }
 }
 

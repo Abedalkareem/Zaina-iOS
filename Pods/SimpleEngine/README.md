@@ -1,8 +1,13 @@
+[![Facebook](https://img.shields.io/badge/follow-facebook-4267B2)](https://www.facebook.com/Abedalkareem.Omreyh)
+<a href="https://www.buymeacoffee.com/abedalkareem" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 20px !important;width: 100px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" > </a>
+[![Youtube](https://img.shields.io/badge/subscribe-youtube-c4302b)](https://www.youtube.com/c/Omreyh)
+[![Twitter](https://img.shields.io/badge/follow-twitter-00acee)](https://twitter.com/abedalkareemomr)
+
 <p align="center">
     <img src="cover.png" alt="Simple Engine" />
 </p>
 
-A simple 2D UIKit game engine to make a simple beautiful iOS Games!
+A simple 2D UIKit game engine to make a simple beautiful iOS/tvOS Games!
 
 ## It's Just a UIKit!
 
@@ -18,7 +23,7 @@ You can check <a href="https://github.com/Abedalkareem/Zaina-iOS">Zaina</a> game
 ## How to use
 
 ### Game view controller
-First step is to inherit the `BaseGameViewController` it will notify you when: 
+First step, inherit the `BaseGameViewController` it will notify you when: 
 <br>
 1-Two objects collide.  
 ```
@@ -56,7 +61,7 @@ paused = false // to resume the game.
   
 ### Scene view
   
-It's where your `SpriteView`s and `NodeView`s  should be added. In the `BaseGameViewController` you will find an `IBOutlet`
+It's where your `SpriteView`s and `NodeView`s should be added. In the `BaseGameViewController` you will find an `IBOutlet`
 with a type of `SceneView` you need to connect this `IBOutlet` to your Storyboard `SceneView`.
   
 ### Sprite view
@@ -213,6 +218,19 @@ SimpleMusicPlayer.shared.playMusic(music: Music.fire) // effect sound.
 ## Tutorials
 
 To be done.
+
+## Support me 🚀  
+
+You can support this project by:  
+
+1- Checking my [apps](https://apps.apple.com/us/developer/id928910207).  
+2- Star the repo.  
+3- Share the repo with your friends.  
+4- [Buy Me A Coffee](https://www.buymeacoffee.com/abedalkareem).  
+
+## Follow me ❤️  
+
+[Facebook](https://www.facebook.com/Abedalkareem.Omreyh/) | [Twitter](https://twitter.com/abedalkareemomr) | [Instagram](https://instagram.com/abedalkareemomreyh/) | [Youtube](https://www.youtube.com/user/AbedalkareemOmreyh)
   
 ## License
 

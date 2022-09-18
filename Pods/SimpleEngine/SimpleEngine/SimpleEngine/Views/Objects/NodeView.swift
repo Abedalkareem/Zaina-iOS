@@ -25,11 +25,11 @@ open class NodeView: ObjectView {
 
   // MARK: - Private properties
 
-  private var imageView: UIImageView!
+  private var imageView = UIImageView()
 
   // MARK: - init
 
-  public override init(frame: CGRect) {
+  override public init(frame: CGRect) {
     super.init(frame: frame)
     setup()
   }
@@ -48,10 +48,10 @@ open class NodeView: ObjectView {
 
     imageView.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      imageView!.topAnchor.constraint(equalTo: topAnchor),
-      imageView!.bottomAnchor.constraint(equalTo: bottomAnchor),
-      imageView!.leadingAnchor.constraint(equalTo: leadingAnchor),
-      imageView!.trailingAnchor.constraint(equalTo: trailingAnchor)
+      imageView.topAnchor.constraint(equalTo: topAnchor),
+      imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+      imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+      imageView.trailingAnchor.constraint(equalTo: trailingAnchor)
     ])
   }
 }

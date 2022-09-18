@@ -35,11 +35,11 @@ class ZainaSpriteView: SpriteView {
                             CollideTypes.dish,
                             CollideTypes.oven]
 
-    frames.top = Frames(images: [#imageLiteral(resourceName: "top2"), #imageLiteral(resourceName: "top1")], duration: 0.3)
-    frames.left = Frames(images: [#imageLiteral(resourceName: "left2"), #imageLiteral(resourceName: "left1")], duration: 0.3)
-    frames.right = Frames(images: [#imageLiteral(resourceName: "right2"), #imageLiteral(resourceName: "right1")], duration: 0.3)
-    frames.bottom = Frames(images: [#imageLiteral(resourceName: "bottom1"), #imageLiteral(resourceName: "bottom2")], duration: 0.3)
-    frames.idel = Frames(images: [#imageLiteral(resourceName: "idel"), #imageLiteral(resourceName: "idel2")], duration: 0.3)
+    framesHolder = FramesHolder(idel: Frames(images: [#imageLiteral(resourceName: "idel"), #imageLiteral(resourceName: "idel2")], duration: 0.3))
+    framesHolder?.top = Frames(images: [#imageLiteral(resourceName: "top2"), #imageLiteral(resourceName: "top1")], duration: 0.3)
+    framesHolder?.left = Frames(images: [#imageLiteral(resourceName: "left2"), #imageLiteral(resourceName: "left1")], duration: 0.3)
+    framesHolder?.right = Frames(images: [#imageLiteral(resourceName: "right2"), #imageLiteral(resourceName: "right1")], duration: 0.3)
+    framesHolder?.bottom = Frames(images: [#imageLiteral(resourceName: "bottom1"), #imageLiteral(resourceName: "bottom2")], duration: 0.3)
   }
 
   // MARK: -

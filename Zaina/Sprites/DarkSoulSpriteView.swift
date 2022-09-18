@@ -30,10 +30,10 @@ class DarkSoulSpriteView: SpriteView {
                             CollideTypes.tree,
                             CollideTypes.zain]
 
-    frames.top = Frames(images: [#imageLiteral(resourceName: "monster_top_1"), #imageLiteral(resourceName: "monster_top_2")], duration: 0.3)
-    frames.left = Frames(images: [#imageLiteral(resourceName: "monster_left_1"), #imageLiteral(resourceName: "monster_left_2")], duration: 0.3)
-    frames.right = Frames(images: [#imageLiteral(resourceName: "monster_right_1"), #imageLiteral(resourceName: "monster_right_2")], duration: 0.3)
-    frames.bottom = Frames(images: [#imageLiteral(resourceName: "monster_bottom_1"), #imageLiteral(resourceName: "monster_bottom_2")], duration: 0.3)
-    frames.idel = Frames(images: [#imageLiteral(resourceName: "monster_idel_1"), #imageLiteral(resourceName: "monster_idel_2")], duration: 0.3)
+    framesHolder = FramesHolder(idel: Frames(images: [#imageLiteral(resourceName: "monster_idel_1"), #imageLiteral(resourceName: "monster_idel_2")], duration: 0.3))
+    framesHolder?.top = Frames(images: [#imageLiteral(resourceName: "monster_top_1"), #imageLiteral(resourceName: "monster_top_2")], duration: 0.3)
+    framesHolder?.left = Frames(images: [#imageLiteral(resourceName: "monster_left_1"), #imageLiteral(resourceName: "monster_left_2")], duration: 0.3)
+    framesHolder?.right = Frames(images: [#imageLiteral(resourceName: "monster_right_1"), #imageLiteral(resourceName: "monster_right_2")], duration: 0.3)
+    framesHolder?.bottom = Frames(images: [#imageLiteral(resourceName: "monster_bottom_1"), #imageLiteral(resourceName: "monster_bottom_2")], duration: 0.3)
   }
 }

@@ -35,7 +35,7 @@ open class BackgroundView: UIView {
 
   // MARK: - Private properties
 
-  private var imageView: UIImageView?
+  private lazy var imageView = UIImageView()
 
   // MARK: - init
 
@@ -46,7 +46,7 @@ open class BackgroundView: UIView {
   ///            If you set a pattren image don't forget to set the `ImageType` to `pattern`.
   ///   - imageType: The type of the `image` it could be `full` or `pattern`.
   ///
-  public init(frame: CGRect = .zero, image: UIImage, imageType: ImageType = .full) {
+  public init(image: UIImage, frame: CGRect = .zero, imageType: ImageType = .full) {
     super.init(frame: frame)
     self.image = image
     self.imageType = imageType
@@ -54,7 +54,7 @@ open class BackgroundView: UIView {
     setup()
   }
 
-  public override init(frame: CGRect) {
+  override  public init(frame: CGRect) {
     super.init(frame: frame)
     setup()
   }
@@ -65,17 +65,16 @@ open class BackgroundView: UIView {
   }
 
   private func setup() {
-    imageView = UIImageView()
-    imageView?.image = image
-    imageView?.contentMode = .scaleAspectFill
-    addSubview(imageView!)
+    imageView.image = image
+    imageView.contentMode = .scaleAspectFill
+    addSubview(imageView)
 
-    imageView?.translatesAutoresizingMaskIntoConstraints = false
+    imageView.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      imageView!.topAnchor.constraint(equalTo: topAnchor),
-      imageView!.bottomAnchor.constraint(equalTo: bottomAnchor),
-      imageView!.leadingAnchor.constraint(equalTo: leadingAnchor),
-      imageView!.trailingAnchor.constraint(equalTo: trailingAnchor)
+      imageView.topAnchor.constraint(equalTo: topAnchor),
+      imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+      imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+      imageView.trailingAnchor.constraint(equalTo: trailingAnchor)
     ])
   }
 
@@ -84,11 +83,11 @@ open class BackgroundView: UIView {
   private func updateImage() {
     switch imageType {
     case .full:
-      imageView?.image = image
+      imageView.image = image
       backgroundColor = nil
     case .pattern:
       backgroundColor = UIColor(patternImage: image)
-      imageView?.image = nil
+      imageView.image = nil
     }
   }
 

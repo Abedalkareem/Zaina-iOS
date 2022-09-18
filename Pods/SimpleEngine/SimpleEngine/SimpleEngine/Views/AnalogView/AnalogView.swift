@@ -6,10 +6,10 @@
 //  Copyright © 2019 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import GameController
+import UIKit
 
-/// An Analog controller to control the `Sprite` movement.
+/// An Analog controller to control the `SpriteView` movement.
 @IBDesignable
 open class AnalogView: UIView {
 
@@ -17,12 +17,14 @@ open class AnalogView: UIView {
 
   // MARK: - IBInspectables
 
+  /// The analog image.
   @IBInspectable open var analogImage: UIImage = UIImage() {
     didSet {
       analogImageView.image = analogImage
     }
   }
 
+  /// The analog background image.
   @IBInspectable open var backgroundImage: UIImage = UIImage() {
      didSet {
        backgroundImageView.image = backgroundImage
@@ -31,6 +33,7 @@ open class AnalogView: UIView {
 
   // MARK: - Properties
 
+  /// An analog object that give `x`, `y`, and `Direction`.
   open var analog: Analog = Analog(direction: .center, x: 0, y: 0) {
     didSet {
       analogMoved?(analog)
@@ -45,7 +48,7 @@ open class AnalogView: UIView {
 
   // MARK: - init
 
-  public override init(frame: CGRect) {
+  override public init(frame: CGRect) {
     super.init(frame: frame)
     setupViews()
   }
@@ -153,8 +156,8 @@ open class AnalogView: UIView {
     // going left in case of x and top in case of y,
     // while the value in positive means that the user move to
     // right in case of y or bottom in case of x.
-    x = x - 0.5
-    y = y - 0.5
+    x -= 0.5
+    y -= 0.5
 
     analog = Analog(direction: direction, x: x, y: y)
 
@@ -170,20 +173,20 @@ open class AnalogView: UIView {
   /// ```
   ///
   func attach(controller: GCController?) {
-        
+
     let valueChangedHandler: GCControllerDirectionPadValueChangedHandler = { _, x, y in
       var x: CGFloat = CGFloat(x) * 0.5 + 0.5
       var y: CGFloat = CGFloat(-y) * 0.5 + 0.5
       let direction = Direction(x: x, y: y)
-      x = x - 0.5
-      y = y - 0.5
+      x -= 0.5
+      y -= 0.5
       self.analog = Analog(direction: direction, x: x, y: y)
     }
 
     controller?.extendedGamepad?.leftThumbstick.valueChangedHandler = valueChangedHandler
     controller?.extendedGamepad?.dpad.valueChangedHandler = valueChangedHandler
   }
-  
+
   open func analogDidMove(analogMoved: @escaping AnalogMoved) {
     self.analogMoved = analogMoved
   }
@@ -202,11 +205,11 @@ open class AnalogView: UIView {
     ///
     public static var alpha: CGFloat = 0.5
     ///
-    /// Analog size. The default is `150`.
+    /// Analog size. The default is `140`.
     ///
     public static var analogSize: CGFloat = 140
     ///
-    /// Analog margen. The default is `0.5`.
+    /// Analog margen. The default is `15`.
     ///
     public static var margen: CGFloat = 15
   }

@@ -6,21 +6,22 @@
 //  Copyright © 2019 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import GameController
+import UIKit
 
 open class BaseGameViewController: UIViewController {
 
   // MARK: - IBOutlet
 
+  // swiftlint:disable private_outlet
+  /// A scene to add `SpriteView`s and `NodeView`s to it.
   @IBOutlet open weak var sceneView: SceneView!
 
   // MARK: - Properties
 
-  
   ///
-  /// If you want to use a controller then you can set the controller
-  /// you want to this property.
+  /// A property to attach a physical controller to the analog.
+  ///
   /// ```
   ///   controller = GCController.controllers().first
   /// ```
@@ -30,19 +31,20 @@ open class BaseGameViewController: UIViewController {
       analogView.attach(controller: controller)
     }
   }
-  
+
   ///
-  /// Analog to be attached to one `SpriteView` to control it.
+  /// An analog to be attached to a `SpriteView` to control it.
   ///
-  open var analogView: AnalogView!
+  open lazy var analogView = AnalogView()
 
   ///
   /// A property to pause or resume the game.
-  /// If you set it to true the game will pause but, still you need to
+  /// If you set it to true the game will be paused but, still you need to
   /// handle some code by your own, like if you have a timer you need to
   /// stop it and resume it again. to do that you can override the
-  /// `didPause` and `didResume` and inside the did pause you can stop any timer
-  /// and in did resume you can start it again.
+  /// `didPause` and `didResume`.
+  /// Inside the `didPause` you can stop any timer
+  /// and in `didResume` you can start it again.
   /// The default value is `false`.
   ///
   open var paused: Bool = false {
@@ -64,13 +66,13 @@ open class BaseGameViewController: UIViewController {
 
   override open func viewDidLoad() {
     super.viewDidLoad()
-    
+
     addAnalogView()
     start()
     setDefaultController()
   }
 
-  open override func viewDidAppear(_ animated: Bool) {
+  override open func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     addObservers()
   }
@@ -84,7 +86,7 @@ open class BaseGameViewController: UIViewController {
   private func setDefaultController() {
     controller = GCController.controllers().first
   }
-  
+
   ///
   /// Start the game. resume `sceneView`, set `shouldKeepUpdatingTheScene` to `true`
   /// and start the timer.
@@ -96,8 +98,8 @@ open class BaseGameViewController: UIViewController {
   }
 
   ///
-  /// Resume the game. it's same as `start` but, it's also calling `didResume`
-  /// so you can be notified.
+  /// Resume the game. It's same as `start` but, it's also calling `didResume` so you can be notified.
+  ///
   @objc
   private func resume() {
     start()
@@ -116,8 +118,7 @@ open class BaseGameViewController: UIViewController {
   }
 
   ///
-  /// Pause the game. it's same as `stop` but, it's also calling `didPause`
-  /// so you can be notified.
+  /// Pause the game. It's same as `stop` but, it's also calling `didPause` so you can be notified.
   ///
   @objc
   private func pause() {
@@ -126,7 +127,6 @@ open class BaseGameViewController: UIViewController {
   }
 
   private func addAnalogView() {
-    analogView = AnalogView()
     view.addSubview(analogView)
 
     makeAnalogViewConstraints()
@@ -182,7 +182,11 @@ open class BaseGameViewController: UIViewController {
   // MARK: - Timer
 
   private func startTimer() {
-    timer = Timer.scheduledTimer(timeInterval: 0.016, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+    timer = Timer.scheduledTimer(timeInterval: 0.016,
+                                 target: self,
+                                 selector: #selector(update),
+                                 userInfo: nil,
+                                 repeats: true)
   }
 
   private func stopTimer() {
@@ -193,7 +197,7 @@ open class BaseGameViewController: UIViewController {
   // MARK: - Public methods
 
   ///
-  /// override to make changes or move objects.
+  /// Override it to make changes or move objects.
   /// if you override it you need to call `super.update` at
   /// some point.
   ///
@@ -203,12 +207,12 @@ open class BaseGameViewController: UIViewController {
   }
 
   ///
-  /// check if any two objects collided.
+  /// To check if any two objects collided.
   /// if you override it you need to call `super.checkIfObjectsCollided` at
   /// some point.
   ///
   open func checkIfObjectsCollided() {
-    let subviews = sceneView.subviews.compactMap({ $0 as? ObjectView })
+    let subviews = sceneView.subviews.compactMap { $0 as? ObjectView }
     for object1 in subviews {
       for object2 in subviews {
         guard object1 != object2 else {
@@ -220,7 +224,7 @@ open class BaseGameViewController: UIViewController {
         let shouldReportCollideToViewController = shouldKeepUpdatingTheScene &&
           object1.onCollisionEnter(with: object2) &&
           object2.onCollisionEnter(with: object1)
-        if shouldReportCollideToViewController  {
+        if shouldReportCollideToViewController {
           shouldKeepUpdatingTheScene = objectsDidCollide(object1: object1, object2: object2)
         }
       }
@@ -228,7 +232,7 @@ open class BaseGameViewController: UIViewController {
   }
 
   ///
-  /// override this method to get notify when two objects collided.
+  /// Override this method to get notify when two objects collided.
   /// return true if you want to still get updates aftet two objects collide.
   ///
   open func objectsDidCollide(object1: ObjectView, object2: ObjectView) -> Bool { true }

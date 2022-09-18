@@ -29,7 +29,8 @@ open class Debouncer {
 
   open func debounce(action: @escaping (() -> Void)) {
     workItem?.cancel()
-    workItem = DispatchWorkItem(block: { action() })
-    queue.asyncAfter(deadline: .now() + interval, execute: workItem!)
+    workItem = DispatchWorkItem { action() }
+    guard let workItem = workItem else { return }
+    queue.asyncAfter(deadline: .now() + interval, execute: workItem)
   }
 }

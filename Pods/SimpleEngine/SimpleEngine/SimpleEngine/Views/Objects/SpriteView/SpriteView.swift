@@ -34,12 +34,12 @@ open class SpriteView: ObjectView {
   /// You can set the images (frames) that will show when the user move to right, left,
   /// top, bottom, topLeft, bottomLeft, topRight, bottomRight or idel.
   ///
-  open var frames = FramesHolder()
+  open var framesHolder: FramesHolder?
 
   ///
-  /// The ` SpriteView` will stop when it collide with one of this types.
-  /// Like if some Tree has a Type of `8` and you add this number to this array when this sprite view
-  /// collide with this tree it will not move through it.
+  /// The `SpriteView` will stop when it collide with one of this types.
+  /// E.g. If some Tree has a Type of `8` and you add this number to this array, when this sprite view
+  /// collide with the tree it will not move through it.
   ///
   open var stopWhenCollideTypes = [Int]()
 
@@ -55,20 +55,20 @@ open class SpriteView: ObjectView {
       }
     }
   }
-  
+
   // MARK: - Private properties
 
   // The `x` and `y` that you can set to reach to some x and y in the `SceneView`.
   private var desireX: CGFloat?
   private var desireY: CGFloat?
 
-  private var imageView: UIImageView!
+  private lazy var imageView = UIImageView()
 
   private var stopOtherAnimations = false
 
   // MARK: - init
 
-  public override init(frame: CGRect) {
+  override public init(frame: CGRect) {
     super.init(frame: frame)
     setup()
   }
@@ -84,16 +84,15 @@ open class SpriteView: ObjectView {
   /// It can be overrided to do extra setups in the subview side.
   ///
   open func setup() {
-    imageView = UIImageView()
     imageView.contentMode = .scaleAspectFit
     addSubview(imageView)
 
     imageView.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      imageView!.topAnchor.constraint(equalTo: topAnchor),
-      imageView!.bottomAnchor.constraint(equalTo: bottomAnchor),
-      imageView!.leadingAnchor.constraint(equalTo: leadingAnchor),
-      imageView!.trailingAnchor.constraint(equalTo: trailingAnchor)
+      imageView.topAnchor.constraint(equalTo: topAnchor),
+      imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+      imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+      imageView.trailingAnchor.constraint(equalTo: trailingAnchor)
     ])
   }
 
@@ -103,7 +102,7 @@ open class SpriteView: ObjectView {
   /// - Parameters:
   ///   - x: X to move to.
   ///   - y: Y to move to.
-  ///   - shouldBeRemovedAtTheEnd: Should it be removed at the end.
+  ///   - shouldBeRemovedAtTheEnd: Should the sprite be removed at the end.
   ///   default is `false`.
   ///
   open func moveTo(x: CGFloat, y: CGFloat) {
@@ -153,7 +152,7 @@ open class SpriteView: ObjectView {
   ///
   open func attachTo(_ analogView: AnalogView) {
     analog = analogView.analog
-    analogView.analogDidMove { [weak self] (analog) in
+    analogView.analogDidMove { [weak self] analog in
       self?.analog = analog
     }
   }
@@ -163,7 +162,7 @@ open class SpriteView: ObjectView {
   /// `super.onCollisionEnter(with object:)` must always be called when
   /// you override this method.
   ///
-  /// - Parameter object: The object the collided.
+  /// - Parameter object: The object that collided with this object.
   ///
   /// - Returns: Return true if the object should report the collide to the view controller.
   /// The defualt is `true`.
@@ -187,7 +186,7 @@ open class SpriteView: ObjectView {
     }
     return true
   }
-  
+
   override open func update() {
     if let desireX = desireX, let desireY = desireY {
       // check if the sprite view reached to the desire x and y then stop it there.
@@ -222,7 +221,7 @@ open class SpriteView: ObjectView {
   /// - Parameters:
   ///   - frames: The frames to animate.
   ///   - repeatCount: How many time should the frames repeated.
-  ///   The default is `0`.
+  ///   The default is `0` which means forever.
   ///   - stopOtherAnimations: Should stop all the other animations
   ///   like the animation for moving or idel. The default is `false`.
   ///   - didFinish: a closure to be called when the animation finishs.
@@ -258,7 +257,9 @@ open class SpriteView: ObjectView {
       !stopOtherAnimations else {
       return // in case the the direction did not change go back.
     }
-    let frames = self.frames.for(direction)
+    guard let frames = self.framesHolder?.for(direction) else {
+      return
+    }
     startAnimationWith(frames: frames)
   }
 
@@ -267,7 +268,7 @@ open class SpriteView: ObjectView {
       guard let superview = superview else {
         return
       }
-      
+
       let newX = frame.origin.x + (speed * x)
       let newY = frame.origin.y + (speed * y)
 

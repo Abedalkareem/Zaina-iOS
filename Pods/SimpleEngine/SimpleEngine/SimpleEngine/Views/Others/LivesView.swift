@@ -73,7 +73,7 @@ open class LivesView: UIView {
       currentLivesCount = livesCount
     }
   }
-  
+
   ///
   /// Current number of lives. This will be changed
   /// when you remove or add lives.
@@ -87,8 +87,8 @@ open class LivesView: UIView {
 
   // MARK: - Private properties
 
-  private var backgroundImageView: UIImageView!
-  private var stackView: UIStackView!
+  private var backgroundImageView = UIImageView()
+  private var stackView = UIStackView()
 
   private var backgroundImageInsets: UIEdgeInsets = .zero
   private var _livesDidUpdate: LivesDidUpdate?
@@ -100,8 +100,8 @@ open class LivesView: UIView {
     setup()
   }
 
-  required public init(coder: NSCoder) {
-    super.init(coder: coder)!
+  public required init?(coder: NSCoder) {
+    super.init(coder: coder)
     setup()
   }
 
@@ -109,17 +109,15 @@ open class LivesView: UIView {
 
     backgroundColor = .clear
 
-    backgroundImageView = UIImageView()
     backgroundImageView.contentMode = .scaleToFill
     addSubview(backgroundImageView)
 
-    stackView = UIStackView()
     stackView.axis = .horizontal
     stackView.distribution = .equalSpacing
     stackView.alignment = .leading
     stackView.spacing = spacing
     addSubview(stackView)
-    
+
     makeConstraints()
   }
 
@@ -151,7 +149,7 @@ open class LivesView: UIView {
 
   // MARK: - View lifecycle
 
-  open override func layoutSubviews() {
+  override open func layoutSubviews() {
     super.layoutSubviews()
     updateBackgroundImage()
   }
@@ -169,7 +167,7 @@ open class LivesView: UIView {
           let imageView = UIImageView(image: liveImage)
           imageView.contentMode = .scaleAspectFit
           stackView.addArrangedSubview(imageView)
-      }
+        }
     }
   }
 
@@ -183,7 +181,7 @@ open class LivesView: UIView {
   }
 
   ///
-  /// Add lives from the current lives.
+  /// Remove lives from the current lives.
   ///
   open func remove(_ number: Int) {
     guard currentLivesCount != 0 else {

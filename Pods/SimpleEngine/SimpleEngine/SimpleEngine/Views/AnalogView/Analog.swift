@@ -15,9 +15,7 @@ public struct Analog {
 }
 
 extension Analog: Equatable {
-  public static func ==(lhs: Analog, rhs: Analog) -> Bool {
-      return lhs.direction == rhs.direction
+  public static func == (lhs: Analog, rhs: Analog) -> Bool {
+    lhs.direction == rhs.direction
   }
 }
-
-

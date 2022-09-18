@@ -8,7 +8,15 @@
 
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
+
+  private var appWindow: UIWindow? {
+    UIApplication.shared.connectedScenes
+      .compactMap { $0 as? UIWindowScene }
+      .first { $0.activationState == .foregroundActive }?
+      .windows
+      .first { $0.isKeyWindow }
+  }
 
   ///
   /// Use it to change the root view controller.
@@ -16,9 +24,9 @@ extension UIViewController {
   /// - Parameter animated: A bool value to determine either changing the view controller
   ///  should set as root with animation or not.
   ///
-  open func changeViewController(_ viewController: UIViewController?, animated: Bool = true) {
+  func changeViewController(_ viewController: UIViewController?, animated: Bool = true) {
 
-    guard let window = UIApplication.shared.keyWindow else {
+    guard let window = appWindow else {
       return
     }
 
@@ -26,17 +34,18 @@ extension UIViewController {
       window.rootViewController = viewController
       return
     }
-    
+
     let view = UIView(frame: window.bounds)
     view.backgroundColor = .black
     window.addSubview(view)
     view.alpha = 0
-    UIView.animate(withDuration: 0.5, animations: {
+    UIView.animate(withDuration: 0.5,
+                   animations: {
       view.alpha = 1
-    }) { _ in
+    }, completion: { _ in
       window.rootViewController = viewController
       view.removeFromSuperview()
-    }
+    })
   }
 
 }

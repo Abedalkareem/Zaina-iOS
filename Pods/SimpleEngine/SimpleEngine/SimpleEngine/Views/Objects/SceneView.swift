@@ -25,7 +25,7 @@ open class SceneView: UIView {
 
   // MARK: - init
 
-  public override init(frame: CGRect) {
+  override public init(frame: CGRect) {
     super.init(frame: frame)
     setup()
   }
@@ -41,8 +41,8 @@ open class SceneView: UIView {
 
   private func pauseObjects(paused: Bool) {
     subviews
-      .compactMap({ $0 as? ObjectView })
-      .forEach({ $0.paused = paused })
+      .compactMap { $0 as? ObjectView }
+      .forEach { $0.paused = paused }
   }
 
 }

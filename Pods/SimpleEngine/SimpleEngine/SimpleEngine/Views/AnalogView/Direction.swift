@@ -7,16 +7,15 @@
 //
 import UIKit
 
-
-/// direction value is from 0 to 1 as the `Direction` enum.
+/// Direction value is a value between 0 to 1 that mapped to a `Direction`.
 ///
-/// the value from 0 to 0.5 in case of x mean the direction is `left`.
-/// the value from 0.5 to 1 in case of x mean the direction is `right`.
-/// the value from 0 to 0.5 in case of x mean the direction is `top`.
-/// the value from 0.5 to 1 in case of x mean the direction is `bottom`.
-/// and the combination between the two of them give you `topRight`, `topLeft`,
+/// The value from 0 to 0.5 in case of x mean the direction is `left`.
+/// The value from 0.5 to 1 in case of x mean the direction is `right`.
+/// The value from 0 to 0.5 in case of y mean the direction is `top`.
+/// The value from 0.5 to 1 in case of y mean the direction is `bottom`.
+/// The combination between the two of them give you `topRight`, `topLeft`,
 /// `bottomRight` and `bottomLeft`.
-/// if the two values is exatly 0.5, then the direction will be `center`.
+/// If the two values are exatly 0.5, then the direction will be `center`.
 public enum Direction {
   case topLeft
   case bottomLeft

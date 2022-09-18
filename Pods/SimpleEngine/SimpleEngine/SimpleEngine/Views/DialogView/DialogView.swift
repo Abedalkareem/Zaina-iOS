@@ -48,16 +48,16 @@ open class DialogView: UIView {
 
   // MARK: - Private properties
 
-  private var label: UILabel!
-  private var firstButton: UIButton!
-  private var secondButton: UIButton!
+  private var label = UILabel()
+  private var firstButton = UIButton()
+  private var secondButton = UIButton()
 
-  private var backgroundView: UIView!
+  private var backgroundView = UIView()
   private var action: ActionClosure?
 
   // MARK: - init
 
-  public override init(frame: CGRect) {
+  override public init(frame: CGRect) {
     super.init(frame: frame)
     setupView()
   }
@@ -116,7 +116,7 @@ open class DialogView: UIView {
     NSLayoutConstraint.activate([
       label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
       label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-      label.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+      label.topAnchor.constraint(equalTo: topAnchor, constant: 20)
     ])
 
     NSLayoutConstraint.activate([
@@ -140,7 +140,8 @@ open class DialogView: UIView {
 
   open func animate(isShowing: Bool, completion: ((Bool) -> Void)? = nil) {
     alpha = isShowing ? 0 : 1
-    UIView.animate(withDuration: 0.5, animations: {
+    UIView.animate(withDuration: 0.5,
+                   animations: {
       self.alpha = isShowing ? 1 : 0
     }, completion: completion)
   }
@@ -162,10 +163,10 @@ open class DialogView: UIView {
   // MARK: - Show
 
   open class func showIn(view: UIView,
-                           message: String,
-                           firstButtonTitle: String,
-                           secondButtonTitle: String = "",
-                           action: ActionClosure? = nil) {
+                         message: String,
+                         firstButtonTitle: String,
+                         secondButtonTitle: String = "",
+                         action: ActionClosure? = nil) {
     let dialogView = DialogView()
     dialogView.message = message
     dialogView.firstButtonTitle = firstButtonTitle

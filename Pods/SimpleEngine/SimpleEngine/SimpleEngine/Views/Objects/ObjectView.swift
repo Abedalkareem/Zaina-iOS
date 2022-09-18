@@ -19,7 +19,8 @@ open class ObjectView: UIView {
 
   ///
   /// The type of the `ObjectView` is a unique number for the same kind of objects, like the trees or enemy.
-  /// This will be used when to object collides together. and if should the object stop when colliding with another object.
+  /// This will be used when to object collides together. and if should the object stop
+  /// when colliding with another object.
   ///
   @IBInspectable open var type: Int = 0
 
@@ -48,7 +49,7 @@ open class ObjectView: UIView {
 
   // MARK: - init
 
-  public override init(frame: CGRect) {
+  override public init(frame: CGRect) {
     super.init(frame: frame)
     setup()
   }
@@ -64,7 +65,7 @@ open class ObjectView: UIView {
 
   // MARK: - View lifecycle
 
-  open override func didMoveToSuperview() {
+  override open func didMoveToSuperview() {
     super.didMoveToSuperview()
     if superview == nil {
       stopTimer()
@@ -73,7 +74,11 @@ open class ObjectView: UIView {
 
   private func startTimer() {
     stopTimer()
-    timer = Timer.scheduledTimer(timeInterval: 0.016, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+    timer = Timer.scheduledTimer(timeInterval: 0.016,
+                                 target: self,
+                                 selector: #selector(update),
+                                 userInfo: nil,
+                                 repeats: true)
   }
 
   private func stopTimer() {
@@ -89,14 +94,14 @@ open class ObjectView: UIView {
   ///
   /// A method will be called when any object collided with this object.
   ///
-  /// - Parameter object: The object the collided.
+  /// - Parameter object: The object that collided with this current object.
   ///
   /// - Returns: Return true if the object should report the collide to the view controller.
   /// The defualt is `true`.
   ///
   @discardableResult
   open func onCollisionEnter(with object: ObjectView?) -> Bool {
-    return true
+    true
   }
 
   ///

@@ -33,7 +33,7 @@ public class MovingBackgroundView: UIView {
     setup()
   }
 
-  public override init(frame: CGRect) {
+  override public init(frame: CGRect) {
     super.init(frame: frame)
     setup()
   }
@@ -56,7 +56,7 @@ public class MovingBackgroundView: UIView {
 
   // MARK: - View lifecycle
 
-  public override func didMoveToSuperview() {
+  override public func didMoveToSuperview() {
     super.didMoveToSuperview()
 
     if superview == nil {
@@ -97,9 +97,11 @@ public class MovingBackgroundView: UIView {
     var newFrame = orginalFrame
     newFrame.origin.x = -orginalFrame.size.width
     view.frame = newFrame
-    UIView.animate(withDuration: 0.5, delay: .zero, options: [.repeat, .curveLinear], animations: {
+    UIView.animate(withDuration: 0.5,
+                   delay: .zero,
+                   options: [.repeat, .curveLinear]) {
       view.frame = orginalFrame
-    })
+    }
   }
 
   private func animateSecondView() {
@@ -110,8 +112,10 @@ public class MovingBackgroundView: UIView {
     var newFrame = orginalFrame
     newFrame.origin.x = +orginalFrame.size.width
     secondView.frame = orginalFrame
-    UIView.animate(withDuration: 0.5, delay: .zero, options: [.repeat, .curveLinear], animations: {
+    UIView.animate(withDuration: 0.5,
+                   delay: .zero,
+                   options: [.repeat, .curveLinear]) {
       secondView.frame = newFrame
-    })
+    }
   }
 }
