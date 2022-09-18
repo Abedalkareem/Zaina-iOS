@@ -6,8 +6,8 @@
 //  Copyright © 2019 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import SimpleEngine
+import UIKit
 
 class GameOverViewController: UIViewController {
 
@@ -20,14 +20,14 @@ class GameOverViewController: UIViewController {
 
     playBackgroundSong()
   }
-  
+
   private func playBackgroundSong() {
     SimpleMusicPlayer.shared.playBackgroundMusicWith(music: Music.gameOver)
   }
 
   // MARK: - IBActions
 
-  @IBAction func tryAgain(_ sender: Any) {
+  @IBAction private func tryAgain(_ sender: Any) {
     SimpleMusicPlayer.shared.playBackgroundMusicWith(music: Music.piano90e)
     changeViewController(Status.currentLevelViewController())
   }

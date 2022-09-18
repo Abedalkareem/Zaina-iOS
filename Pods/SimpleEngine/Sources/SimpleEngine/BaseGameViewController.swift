@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameController
 
 open class BaseGameViewController: UIViewController {
 
@@ -16,6 +17,20 @@ open class BaseGameViewController: UIViewController {
 
   // MARK: - Properties
 
+  
+  ///
+  /// If you want to use a controller then you can set the controller
+  /// you want to this property.
+  /// ```
+  ///   controller = GCController.controllers().first
+  /// ```
+  ///
+  open var controller: GCController? = nil {
+    didSet {
+      analogView.attach(controller: controller)
+    }
+  }
+  
   ///
   /// Analog to be attached to one `SpriteView` to control it.
   ///
@@ -49,9 +64,10 @@ open class BaseGameViewController: UIViewController {
 
   override open func viewDidLoad() {
     super.viewDidLoad()
-
+    
     addAnalogView()
     start()
+    setDefaultController()
   }
 
   open override func viewDidAppear(_ animated: Bool) {
@@ -65,6 +81,10 @@ open class BaseGameViewController: UIViewController {
     paused = true
   }
 
+  private func setDefaultController() {
+    controller = GCController.controllers().first
+  }
+  
   ///
   /// Start the game. resume `sceneView`, set `shouldKeepUpdatingTheScene` to `true`
   /// and start the timer.

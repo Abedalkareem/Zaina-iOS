@@ -8,14 +8,14 @@
 
 import UIKit
 
-class Status {
+enum Status {
 
   ///
   /// Return the current level.
   ///
   static var currentLevel: Int {
     get {
-      return UserDefaults.standard.integer(forKey: "currentLevel")
+      UserDefaults.standard.integer(forKey: "currentLevel")
     }
     set {
       UserDefaults.standard.set(newValue, forKey: "currentLevel")
@@ -26,9 +26,9 @@ class Status {
   /// Return current level view controller.
   ///
   static func currentLevelViewController() -> UIViewController {
-    let type: UIViewController.Type?
+    let type: UIViewController.Type
     let storyboard: Storyboard!
-    
+
     switch currentLevel {
     case 0:
       type = IntranceViewController.self
@@ -58,8 +58,8 @@ class Status {
       type = IntranceViewController.self
       storyboard = .forest
     }
-    
-    return UIStoryboard.create(storyboard: storyboard, controller: type!)
+
+    return UIStoryboard.create(storyboard: storyboard, controller: type)
   }
-  
+
 }

@@ -55,7 +55,7 @@ open class SpriteView: ObjectView {
       }
     }
   }
-
+  
   // MARK: - Private properties
 
   // The `x` and `y` that you can set to reach to some x and y in the `SceneView`.
@@ -153,8 +153,8 @@ open class SpriteView: ObjectView {
   ///
   open func attachTo(_ analogView: AnalogView) {
     analog = analogView.analog
-    analogView.analogDidMove { [unowned self] (analog) in
-      self.analog = analog
+    analogView.analogDidMove { [weak self] (analog) in
+      self?.analog = analog
     }
   }
 

@@ -6,13 +6,12 @@
 //  Copyright © 2019 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import SimpleEngine
+import UIKit
 
 class HouseViewController: BaseGameViewController {
 
   // MARK: - IBOutlets
-
 
   // MARK: - Private properties
 
@@ -29,7 +28,7 @@ class HouseViewController: BaseGameViewController {
     setupPlayer()
     addDarkSouls()
 
-    (0...10).forEach({ _ in addRandomFood() })
+    (0...10).forEach { _ in addRandomFood() }
 
     setup()
   }
@@ -71,10 +70,14 @@ class HouseViewController: BaseGameViewController {
   }
 
   private func startDarkSoulTimer() {
-    darkSoulsTimer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(moveDarkSouls), userInfo: nil, repeats: true)
+    darkSoulsTimer = Timer.scheduledTimer(timeInterval: 4,
+                                          target: self,
+                                          selector: #selector(moveDarkSouls),
+                                          userInfo: nil,
+                                          repeats: true)
     moveDarkSouls()
   }
-  
+
   // MARK: - Add sprites
 
   private func addDarkSouls() {
@@ -85,7 +88,7 @@ class HouseViewController: BaseGameViewController {
       darkSoulsSpriteViews.append(darkSoulSpriteView)
     }
   }
-  
+
   private func setupPlayer() {
     playerView = ZainaSpriteView()
     playerView.attachTo(analogView)
@@ -148,4 +151,3 @@ class HouseViewController: BaseGameViewController {
   }
 
 }
-

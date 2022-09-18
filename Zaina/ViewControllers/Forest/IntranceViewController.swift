@@ -6,8 +6,8 @@
 //  Copyright © 2019 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import SimpleEngine
+import UIKit
 
 class IntranceViewController: BaseGameViewController {
 
@@ -33,8 +33,7 @@ class IntranceViewController: BaseGameViewController {
   private func showIntranceDialog() {
     DialogView.showIn(view: view,
                       message: "intrance_first_message".localize,
-                      firstButtonTitle: "intrance_first_message_action".localize)
-    { _ in
+                      firstButtonTitle: "intrance_first_message_action".localize) { _ in
       self.showSecondDialog()
     }
   }

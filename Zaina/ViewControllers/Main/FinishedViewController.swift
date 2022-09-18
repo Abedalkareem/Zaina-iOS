@@ -6,8 +6,8 @@
 //  Copyright © 2019 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import SimpleEngine
+import UIKit
 
 class FinishedViewController: BaseGameViewController {
 
@@ -17,7 +17,7 @@ class FinishedViewController: BaseGameViewController {
   private var omarView: OmarSpriteView!
 
   // MARK: - ViewController lifecycle
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -53,7 +53,7 @@ class FinishedViewController: BaseGameViewController {
 
   // MARK: - IBActions
 
-  @IBAction func goBack(_ sender: Any) {
+  @IBAction private func goBack(_ sender: Any) {
     Status.currentLevel = 0
     changeViewController(UIStoryboard.create(storyboard: .main, controller: MainViewController.self))
   }

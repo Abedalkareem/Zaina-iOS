@@ -23,6 +23,7 @@ extension UIStoryboard {
                         controller: T.Type,
                         bundle: Bundle? = Bundle.main) -> T {
     let uiStoryboard = UIStoryboard(name: storyboard.rawValue, bundle: nil)
+    // swiftlint:disable force_cast
     return uiStoryboard.instantiateViewController(withIdentifier: String(describing: controller.self)) as! T
   }
 }

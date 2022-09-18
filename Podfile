@@ -7,6 +7,5 @@ target 'Zaina' do
 
   # Pods for Zaina
   pod "SimpleEngine"
-  pod 'Google-Mobile-Ads-SDK'
 
 end

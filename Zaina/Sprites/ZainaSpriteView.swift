@@ -6,8 +6,8 @@
 //  Copyright © 2019 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import SimpleEngine
+import UIKit
 
 class ZainaSpriteView: SpriteView {
 
@@ -17,7 +17,7 @@ class ZainaSpriteView: SpriteView {
   let height: CGFloat = 40
 
   // MARK: - Setup
-  
+
   override func setup() {
     super.setup()
 

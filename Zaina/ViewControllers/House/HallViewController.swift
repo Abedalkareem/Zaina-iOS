@@ -6,8 +6,8 @@
 //  Copyright © 2019 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import SimpleEngine
+import UIKit
 
 class HallViewController: BaseGameViewController {
 
@@ -23,7 +23,7 @@ class HallViewController: BaseGameViewController {
   private var omarTimer: Timer?
 
   // MARK: - ViewController lifecycle
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -105,12 +105,20 @@ class HallViewController: BaseGameViewController {
   // MARK: - Timers
 
   private func startDarkSoulTimer() {
-    darkSoulsTimer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(moveDarkSouls), userInfo: nil, repeats: true)
+    darkSoulsTimer = Timer.scheduledTimer(timeInterval: 4,
+                                          target: self,
+                                          selector: #selector(moveDarkSouls),
+                                          userInfo: nil,
+                                          repeats: true)
     moveDarkSouls()
   }
 
   private func startOmarTimer() {
-    omarTimer = Timer.scheduledTimer(timeInterval: isOmarFound ? 0.5 : 2, target: self, selector: #selector(moveOmar), userInfo: nil, repeats: true)
+    omarTimer = Timer.scheduledTimer(timeInterval: isOmarFound ? 0.5 : 2,
+                                     target: self,
+                                     selector: #selector(moveOmar),
+                                     userInfo: nil,
+                                     repeats: true)
     moveOmar()
   }
 

@@ -113,9 +113,11 @@ public protocol MusicType: RawRepresentable where RawValue == String {
 
 extension SimpleMusicPlayer: AVAudioPlayerDelegate {
   public func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-    guard let index = subAudioPlayers.firstIndex(where: { $0.player == player }) else {
-      return
+    DispatchQueue(label: "app.virus.audio").async { [weak self] in
+      guard let index = self?.subAudioPlayers.firstIndex(where: { $0.player == player }) else {
+        return
+      }
+      self?.subAudioPlayers.remove(at: index)
     }
-    subAudioPlayers.remove(at: index)
   }
 }

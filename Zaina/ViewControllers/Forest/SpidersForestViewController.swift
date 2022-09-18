@@ -6,8 +6,8 @@
 //  Copyright © 2019 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import SimpleEngine
+import UIKit
 
 class SpidersForestViewController: BaseGameViewController {
 
@@ -19,7 +19,7 @@ class SpidersForestViewController: BaseGameViewController {
   private var knifeButton: UIButton!
 
   // MARK: - ViewController lifecycle
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -86,7 +86,11 @@ class SpidersForestViewController: BaseGameViewController {
   }
 
   private func startSpiderTimer() {
-    spiderTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(moveSpider), userInfo: nil, repeats: true)
+    spiderTimer = Timer.scheduledTimer(timeInterval: 1,
+                                       target: self,
+                                       selector: #selector(moveSpider),
+                                       userInfo: nil,
+                                       repeats: true)
     moveSpider()
   }
 

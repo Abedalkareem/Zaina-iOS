@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameController
 
 /// An Analog controller to control the `Sprite` movement.
 @IBDesignable
@@ -161,6 +162,28 @@ open class AnalogView: UIView {
 
   // MARK: - Public methods
 
+  ///
+  /// If you want to use a controller then you can pass the controller
+  /// you want to this method.
+  /// ```
+  ///   analogView.attach(controller: GCController.controllers().first)
+  /// ```
+  ///
+  func attach(controller: GCController?) {
+        
+    let valueChangedHandler: GCControllerDirectionPadValueChangedHandler = { _, x, y in
+      var x: CGFloat = CGFloat(x) * 0.5 + 0.5
+      var y: CGFloat = CGFloat(-y) * 0.5 + 0.5
+      let direction = Direction(x: x, y: y)
+      x = x - 0.5
+      y = y - 0.5
+      self.analog = Analog(direction: direction, x: x, y: y)
+    }
+
+    controller?.extendedGamepad?.leftThumbstick.valueChangedHandler = valueChangedHandler
+    controller?.extendedGamepad?.dpad.valueChangedHandler = valueChangedHandler
+  }
+  
   open func analogDidMove(analogMoved: @escaping AnalogMoved) {
     self.analogMoved = analogMoved
   }

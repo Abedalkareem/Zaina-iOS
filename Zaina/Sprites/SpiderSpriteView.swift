@@ -6,13 +6,13 @@
 //  Copyright © 2019 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import SimpleEngine
+import UIKit
 
 class SpiderSpriteView: SpriteView {
 
   // MARK: - Properties
-  
+
   let width = 40
   let height = 27
 

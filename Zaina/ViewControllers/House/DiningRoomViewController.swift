@@ -6,8 +6,8 @@
 //  Copyright © 2019 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import SimpleEngine
+import UIKit
 
 class DiningRoomViewController: BaseGameViewController {
 
@@ -22,7 +22,6 @@ class DiningRoomViewController: BaseGameViewController {
 
   private var playerView: ZainaSpriteView!
   private var omarView: OmarSpriteView!
-
 
   // MARK: - ViewController lifecycle
 
@@ -46,17 +45,17 @@ class DiningRoomViewController: BaseGameViewController {
     DialogView.showIn(view: view,
                       message: "dining_room_first_message".localize,
                       firstButtonTitle: "dining_room_first_message_action".localize) { _ in
-                        self.showSecondDialog()
+      self.showSecondDialog()
     }
   }
 
   private func showSecondDialog() {
     omarView.moveTo(x: view.frame.width - 50, y: view.frame.height + 50)
     DialogView.showIn(view: view,
-                         message: "dining_room_second_message".localize,
-                         firstButtonTitle: "dining_room_second_message_action".localize) { _ in
+                      message: "dining_room_second_message".localize,
+                      firstButtonTitle: "dining_room_second_message_action".localize) { _ in
 
-       }
+    }
   }
 
   private func playBackgroundSong() {
@@ -101,14 +100,12 @@ class DiningRoomViewController: BaseGameViewController {
     }
   }
 
-
   private func collideBetween(zaina: ObjectView, andLight light: ObjectView) -> Bool {
     if let light = (light as? LightNodeView) {
       light.changeValue()
     }
     return true
   }
-
 
   private func collideBetween(zaina: ObjectView, andExit: ObjectView) -> Bool {
     guard light1SpriteView.isOn, light2SpriteView.isOn,

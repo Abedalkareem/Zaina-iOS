@@ -6,8 +6,8 @@
 //  Copyright © 2019 abedalkareem. All rights reserved.
 //
 
-import UIKit
 import SimpleEngine
+import UIKit
 
 class HouseExitViewController: BaseGameViewController {
 
@@ -77,7 +77,11 @@ class HouseExitViewController: BaseGameViewController {
   // MARK: - Timers
 
   private func startOmarTimer() {
-    omarTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(moveOmar), userInfo: nil, repeats: true)
+    omarTimer = Timer.scheduledTimer(timeInterval: 0.5,
+                                     target: self,
+                                     selector: #selector(moveOmar),
+                                     userInfo: nil,
+                                     repeats: true)
     moveOmar()
   }
 
